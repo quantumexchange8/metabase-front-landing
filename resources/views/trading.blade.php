@@ -11,7 +11,9 @@
             flex-direction: column;
             margin-bottom: 90px;
         }
-
+        .trading-header-mobile {
+            display: none;
+        }
         .trading-text1 {
             color: #FFF;
             text-align: center;
@@ -149,6 +151,9 @@
             line-height: 16px; /* 114.286% */
             margin: 0;
         }
+        .aldy-text-mobile {
+            display: none;
+        }
         .open-text {
             /* color: #000; */
             text-align: center;
@@ -231,8 +236,8 @@
             padding: 8px;
         }
 
-        .dark-mode th, td {
-            border: 2px solid rgb(0, 0, 0);
+        .dark-mode th, .dark-mode td {
+            border: 2px solid #000000;
             text-align: center;
             padding: 8px;
         }
@@ -360,11 +365,16 @@
             border-radius: 10px;
             border: 0.5px solid #5CA346;
         }
+        .app-dark-mobile {
+            display: none;
+        }
         .light-mode .stable-img {
             display: block;
+            /* width: 100%; */
         }
         .light-mode .stable-dark-img {
             display: none;
+            width: 100%;
         }
         .dark-mode .stable-img {
             display: none;
@@ -375,6 +385,184 @@
         .dark-mode .app-dark {
             border-radius: 10px;
             border: 0.5px solid #5CA346;
+        }
+        @media screen and (max-width: 1000px)
+        {
+            .trading-header {
+                display: none;
+            }
+            .trading-header-mobile {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            .text-overlay-mobile {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+            .trading-text1 {
+                color: #FFF;
+
+                text-align: center;
+                font-family: SF Pro Text;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px; 
+                margin: 0;
+                width: 100%;
+            }
+            .trading-text2 {
+                color: #FFF;
+                text-align: center;
+                font-family: SF Pro Text;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: 14px; /* 116.667% */
+            }
+            .wheat-container {
+                height: 30px;
+            }
+            .open-text {
+                font-size: 14px;
+                line-height: normal;
+                font-family: SF Pro Text;
+            }
+            .app-dark-mobile {
+                display: block;
+            }
+            .app-dark {
+                display: none;
+            }
+            .aldy-text {
+                display: none;
+            }
+            .aldy-text-mobile {
+                display: block;
+                text-align: center;
+                font-family: SF Pro Text;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 12px;
+                margin: 0;
+            }
+            .span-text-grn {
+                font-size: 10px;
+                line-height: 12px;
+            }
+            .trading2 {
+                margin-bottom: 66px;
+            }
+            .low-text-green {
+                font-size: 20px;
+                line-height: 30px;
+                font-family: SF Pro Text;
+            }
+            .stable-img {
+                width: 70px;
+                height: 70px;
+            }
+            .stbl-text {
+                font-size: 10px;
+                line-height: 10px;
+                font-family: SF Pro Text;
+            }
+            .worry-text-green {
+                font-size: 16px;
+                line-height: 16px;
+                font-family: SF Pro Text;
+                margin-bottom: 16px;
+            }
+            .worry-text-white {
+                font-family: SF Pro Text;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 274;
+                line-height: 14px;
+            }
+            .trading4 {
+                margin-bottom: 66px;
+            }
+            .worry-text-white2 {
+                width: 100%;
+                font-size: 12px;
+                line-height: 14px;
+                font-family: SF Pro Text;
+            }
+
+            table {
+                white-space: nowrap;
+                min-width: 100%;
+            }
+            th, td {
+                min-width: 128px; /* Set a minimum width for each cell to prevent squeezing content */
+            }
+            .trading6 {
+                overflow-x: auto;
+                margin-bottom: 66px;
+            }
+            .trading7  {
+                overflow-x: auto;
+                margin-bottom: 66px;
+            }
+            .trading-line {
+                margin-bottom: 36px;
+            }
+            .trading9 {
+                overflow-x: auto;
+                margin-bottom: 66px;
+            }
+            .worry-text-white3 {
+                font-size: 12px;
+                line-height: 14px;
+                font-family: SF Pro Text;
+            }
+            .trading10 {
+                margin-bottom: 66px;
+            }
+            .trading11 {
+                margin-bottom: 100px;
+            }
+            .trading12 {
+                margin-bottom: 100px;
+            }
+            .trading14 {
+                margin-bottom: 66px;
+            }
+            .disclaimer-text-white {
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 500;
+                font-family: SF Pro Display;
+            }
+            .numbered-list li {
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 300;
+                margin-bottom: 0px;
+            }
+            .numbered-list {
+                padding-left: 16px;
+            }
+            .note-text {
+                font-family: SF Pro Text;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 300;
+            }
+            .trading15 {
+                margin-bottom: 66px;
+            }
         }
     </style>
 
@@ -400,35 +588,62 @@
         </div>
     </div>
 
+    <div class="trading-header-mobile">
+        <img src="assets/image/trading/trading-mobile.png" alt="">
+        <div class="text-overlay-mobile">
+            <div class="main-content">
+                <div class="flex flex-col gap-16 mobile-ml-mr">
+                    <p class="trading-text1">
+                        One account - <br> a world of opportunities
+                    </p>
+                    <p class="trading-text2">
+                        Access a wealth of trading, investment and saving solutions from the
+                        comfort and security of your multi-currency Metabase account.
+                        Enjoy the freedom offered by a versatile Super-CRM and all the popular
+                        digital currencies payment options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="main-content">
-        <div class="trading1">
+        <div class="trading1 mobile-ml-mr">
             <div class="wheat-container">
                 <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
             </div>
         </div>
-        <div class="trading2">
-            <div class="flex gap-20">
+        <div class="trading2 mobile-ml-mr">
+            <div class="flex gap-20 flex-col-mobile">
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
                     <img src="assets/image/footer/window.svg" class="app-dark">
+
+                    <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
                 </div>
                 <div>
                     <p class="aldy-text">
                         Already have a friend at Metabase?<br>
                         Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
                     </p>
+                    <p class="aldy-text-mobile">
+                        Already have a friend at Metabase?
+                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="trading2-3">
+        <div class="trading2-3 mobile-ml-mr">
             <p class="low-text-green">
                 LOW TO HIGH RISK STRATEGIES
             </p>
         </div>
 
-        <div class="trading3">
+        <div class="trading3 mobile-ml-mr">
             <div class="flex" style="justify-content: space-between">
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/trading/4.png" class="stable-img">
@@ -461,7 +676,7 @@
             </div>
         </div>
         
-        <div class="trading4">
+        <div class="trading4 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -487,9 +702,9 @@
             </div>
         </div>
 
-        <div class="trading-line"></div>
+        <div class="trading-line mobile-ml-mr"></div>
 
-        <div class="trading5">
+        <div class="trading5 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -509,7 +724,7 @@
             </div>
         </div>
 
-        <div class="trading6">
+        <div class="trading6 mobile-ml-mr">
             <table>
                 <thead>
                     <tr>
@@ -734,7 +949,7 @@
             </table>
         </div>
 
-        <div class="trading7">
+        <div class="trading7 mobile-ml-mr">
             <table>
                 <thead>
                     <tr>
@@ -786,7 +1001,9 @@
             </table>
         </div>
 
-        <div class="trading8">
+        <div class="trading-line mobile-ml-mr"></div>
+
+        <div class="trading8 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -801,7 +1018,7 @@
             </div>
         </div>
 
-        <div class="trading9">
+        <div class="trading9 mobile-ml-mr">
             <table>
                 <thead>
                     <tr>
@@ -896,7 +1113,9 @@
             </table>
         </div>
 
-        <div class="trading10">
+        <div class="trading-line mobile-ml-mr"></div>
+
+        <div class="trading10 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -905,14 +1124,14 @@
                 </div>
                 <div>
                     <p class="worry-text-white3">
-                        Subject to the limitations set forth in the General Terms and Conditions, the Risk Disclosure Statement and the Special Terms and Conditions for Forex to which we draw your attention, Metabase’s trading platforms are designed to automatically trigger a liquidation of open positions when the Margin Level ([equity/used margin] x 100) reaches the Stop Out level, which varies depending on the technology you are using (the “Automatic Liquidation System”).   <br><br>
+                        Subject to the limitations set forth in the General Terms and Conditions, the Risk Disclosure Statement and the Special Terms and Conditions for Forex to which we draw your attention, Metabase's trading platforms are designed to automatically trigger a liquidation of open positions when the Margin Level ([equity/used margin] x 100) reaches the Stop Out level, which varies depending on the technology you are using (the “Automatic Liquidation System”).   <br><br>
                         The Automatic Liquidation System has been set up for the sole benefit of Metabase Ltd. While the Automatic Liquidation System aims at avoiding that the Client is losing more than the Forex Margin and while Metabase Ltd will ensure that, in the vast majority of cases, the Automatic Liquidation System is activated as soon as the Liquidation Percentage is reached, it is entitled but not obliged to do so. No warranty is given by Metabase Ltd in this regard. The Client may still suffer a loss much higher than the Forex Margin.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="trading11">
+        <div class="trading11 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -928,35 +1147,43 @@
             </div>
         </div>
 
-        <div class="trading12">
+        <div class="trading12 mobile-ml-mr">
             <div class="flex content-center">
-                <img src="assets/image/trading/logobig.svg">
+                <img src="assets/image/trading/logobig.svg" style="width:100%">
             </div>
         </div>
 
-        <div class="trading13">
+        <div class="trading13 mobile-ml-mr">
             <div class="wheat-container">
                 <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
             </div>
         </div>
 
-        <div class="trading14">
-            <div class="flex gap-20">
+        <div class="trading14 mobile-ml-mr">
+            <div class="flex gap-20 flex-col-mobile">
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
                     <img src="assets/image/footer/window.svg" class="app-dark">
+
+                    <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
                 </div>
                 <div>
                     <p class="aldy-text">
                         Already have a friend at Metabase?<br>
                         Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
                     </p>
+                    <p class="aldy-text-mobile">
+                        Already have a friend at Metabase?
+                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="trading15">
+        <div class="trading15 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
@@ -976,8 +1203,6 @@
                             <li>Trading Results: The results of Forex trading may vary due to market fluctuations. Past performance does not guarantee future results.</li>
                             <li>Market Manipulation: Investors are not allowed to engage in any market manipulation activities, including but not limited to manipulating prices, spreading false information, or abusing market rules.</li>
                         </ol>
-                        <br>
-                        <br>
                         <span class="note-text">
                             Please note that this company does not provide any guarantees or representations, either express or implied, regarding the success or failure of Forex trading results or any specific investment strategy. Investors should carefully read and understand these risks before engaging in Forex trading and seek professional advice when necessary.
                         </span> 

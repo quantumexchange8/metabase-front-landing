@@ -35,6 +35,7 @@
     <!--script-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('assets/js/scroll-to-top.js') }}"></script>
+    <script src="{{ asset('assets/js/marquee.js') }}"></script>
     <!--script-->
     
     
@@ -103,6 +104,13 @@
         var mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
         localStorage.setItem('mode', mode);
     });
+</script>
+
+<script>
+    function toggleNav() {
+            var overlay = document.getElementById('overlayContainer');
+            overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'block' : 'none';
+        }
 </script>
 </body>
 </html>

@@ -36,9 +36,10 @@
         font-style: normal;
         font-weight: 700;
         line-height: 30px; /* 62.5% */
+        margin: 0;
     }
     .btn-green {
-        border: 1px solid #5CA346;
+        border: 2px solid #5CA346;
         background: transparent;
         border-radius: 17px;
         width: 197px;
@@ -91,6 +92,10 @@
     .home1 {
         margin-top: 50px;
         margin-bottom: 80px;
+        display: block;
+    }
+    .home1-mobile {
+        display: none;
     }
     .home2 {
         margin-bottom: 36px;
@@ -107,6 +112,9 @@
         font-weight: 700;
         line-height: 40px; /* 83.333% */
         margin: 0;
+    }
+    .trade-word-mobile {
+        display: none;
     }
     .our-word {
         text-align: center;
@@ -176,8 +184,12 @@
         width: 70%;
     }
     .core {
+        display: block;
         width: 100%;
         height: auto;
+    }
+    .core-mobile {
+        display: none;
     }
     .overlay-text {
         position: absolute;
@@ -200,6 +212,9 @@
         max-width: 1000px;
         margin: 0 auto;
     }
+    .main-content-image-mobile {
+        display: none;
+    }
     .acc-word {
         color: #5CA346;
         text-align: center;
@@ -209,6 +224,9 @@
         font-weight: 700;
         line-height: normal;
         margin: 0;
+    }
+    .crm-img {
+        width: 100%;
     }
     .select-word {
         /* color: #000; */
@@ -297,6 +315,9 @@
         width: 100%;
         margin-bottom: 100px;
     }
+    .home5-mobile {
+        display: none;
+    }
     .home5-1 {
         width: 100%;
         margin-bottom: 150px;
@@ -307,6 +328,9 @@
     .idk {
         position: relative;
         margin-bottom: 100px;
+    }
+    .idk-mobile {
+        display: none;
     }
     .idk-img {
         width: 100%;
@@ -419,6 +443,9 @@
         width: 100%;
         margin-bottom: 100px;
     }
+    .home8-mobile {
+        display: none;
+    }
     .tired-text-green {
         color: #5CA346;
         text-align: center;
@@ -454,6 +481,9 @@
     }
     .home11 {
         margin-bottom: 66px;
+    }
+    .home11-mobile {
+        display: none;
     }
     .home12 {
         margin-bottom: 100px;
@@ -509,6 +539,354 @@
         border-radius: 10px;
         border: 0.5px solid #5CA346;
     }
+    .home-header-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .home-header {
+            display: none;
+        }
+
+        .home-header-mobile {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 38px;
+        }
+        .home-mobile-img {
+            width: 100%;
+        }
+
+        .text-overlay-mobile {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+        .unlock-word {
+            font-size: 20px;
+        }
+        .btn-green {
+            width: 150px;
+            height: 30px;
+            flex-shrink: 0;
+            border: 2px solid #5CA346;
+        }
+        .btn-green span {
+            font-size: 12px !important;
+            color: #FFF;
+        }
+        .investing-word {
+            font-size: 12px;
+            line-height: 14px;
+            font-family: SF Pro Text;
+        }
+        .investing-row {
+            width: 100%;
+        }
+        .invest-img {
+            width: 70px;
+            height: 70px;
+        }
+        .mobile-gap {
+            gap: 26px;
+        }
+        .invest-word {
+            font-size: 12px;
+        }
+        .home1 {
+            display: none;
+        }
+        .home1-mobile {
+            display: block;
+            margin-bottom: 50px;
+        }
+        .marquee1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee-animation 150s linear infinite;
+            width: fit-content; /* Adjust the width based on your image size */
+            gap: 25px;
+        }
+        @keyframes marquee-animation {
+            0% {
+            transform: translateX(0);
+            }
+            100% {
+            transform: translateX(-100%);
+            }
+        }
+
+        .marquee2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .marquee-content2 {
+            display: flex;
+            animation: marquee-animation2 150s linear infinite;
+            width: fit-content; /* Adjust the width based on your image size */
+            gap: 20px;
+        }
+
+        @keyframes marquee-animation2 {
+            0% {
+            transform: translateX(0);
+            }
+            100% {
+            transform: translateX(-100%);
+            }
+        }
+
+        .trade-word {
+            display: none;
+            /* font-size: 20px;
+            line-height: 20px; */
+        }
+        .trade-word-mobile {
+            display: block;
+            color: #5CA346;
+            text-align: center;
+            font-family: SF Pro Text;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px; /* 100% */
+            margin: 0;
+        }
+        .our-word {
+            font-family: SF Pro Text;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            width: 100%;
+        }
+        .core-img {
+            width: 100%
+        }
+        .home2 {
+            margin-bottom: 16px;
+        }
+        .core {
+            width: 100%;
+            height: auto;
+        }
+        .main-content-image {
+            display: none;
+        }
+        .main-content-image-mobile {
+            display: flex;
+        }
+        .core-adv {
+            margin-bottom: 50px;
+        }
+        .overlay-text-mobile {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .overlay-text-mobile2 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .ourcore-word {
+            color: #FFF;
+            text-align: right;
+            font-family: SF Pro Display;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 590;
+            line-height: 20px; /* 100% */
+        }
+        .word-big {
+            font-size: 36px;
+            height: auto;
+        }
+        .word-small {
+            font-size: 10px;
+        }
+        .plus-text {
+            font-size: 20px;
+        }
+        .core {
+            display: none;
+        }
+        .core-mobile {
+            display: block;
+        }
+        .explore-cont {
+            width: 45%;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .explore-word {
+            /* width: 70%; */
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .acc-word {
+            font-size: 20px;
+            line-height: normal;
+            font-family: SF Pro Text;
+        }
+        .select-word {
+            font-size: 12px;
+            line-height: 14px;
+            font-family: SF Pro Text;
+            width: 100%;
+        }
+        .home4 {
+            margin-bottom: 42px;
+        }
+        .home5 {
+            display: none;
+        }
+        .home5-mobile {
+            display: block;
+            width: 100%;
+            margin: 0 40px;
+        }
+        .std-border {
+            border-radius: 12.5px;
+        }
+        .ecn-border {
+            border-radius: 12.5px;
+        }
+        .esaving-border {
+            border-radius: 12.5px;
+        }
+        .einvest-border {
+            border-radius: 12.5px;
+        }
+        .std-word-purple {
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+        }
+        .std-word-orange {
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+        }
+        .std-word-green {
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+        }
+        .std-word-blue {
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+        }
+        .acct-type {
+            color: #000;
+            font-family: SF Pro Text;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px; /* 116.667% */
+            padding-left: 20px;
+        }
+        .acct-type li {
+            margin-bottom: 10px;
+        }
+        .home5-1 {
+            margin-bottom: 42px;
+        }
+        .idk {
+            display: none;
+        }
+        .idk-mobile {
+            display: block;
+            width: 100%;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .confidence-text {
+            font-size: 32px;
+            line-height: 30px;
+            margin-bottom: 16px;
+        }
+        .taking-word {
+            font-size: 14px;
+            line-height: 16px;
+            width: 70%;
+        }
+        .open-text-green {
+            font-size: 14px;
+            line-height: normal;
+            margin-bottom: 16px;
+        }
+        .invest-text {
+            font-size: 12px;
+            line-height: 14px; /* 116.667% */
+            width: 100%;
+        }
+        .open-text {
+            font-size: 14px;
+            line-height: normal;
+        }
+        .home8 {
+            display: none;
+        }
+        .home8-mobile {
+            display: flex;
+            margin-bottom: 50px;
+        }
+        .aldy-text {
+            font-size: 10px;
+            font-family: SF Pro Text;
+            text-align: center;
+        }
+        .span-text-grn {
+            font-size: 10px;
+        }
+        .tired-text-green {
+            font-size: 20px;
+        }
+        .tired-text {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .gap-30 {
+            gap: 15px;
+        }
+        .img09 {
+            width: 219.601px;
+            height: 451.712px;
+        }
+        .home11 {
+            margin-bottom: 66px;
+            display: none;
+        }
+        .home11-mobile {
+            display: block;
+            margin-bottom: 36px;
+        }
+        .btn-green span {
+            color: #000;
+            font-size: 12px;
+        }
+        .home12 {
+            margin-bottom: 66px;
+        }
+    }
 </style>
 
     <div class="home-header">
@@ -516,7 +894,7 @@
         <img src="assets/image/home/home1-dark.png" class="home-dark-img">
         <div class="text-overlay">
             <div class="main-content">
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-56">
                     <div>
                         <p class="unlock-word">UNLOCK YOUR POTENTIAL</p>
                     </div>
@@ -561,9 +939,45 @@
         </div>
     </div>
 
+    <div class="home-header-mobile">
+        <img src="assets/image/home/home1-mobile.png" class="home-mobile-img">
+        <div class="text-overlay-mobile">
+            <div class="main-content">
+                <div class="flex flex-col item gap-16 mobile-ml-mr">
+                    <div>
+                        <p class="unlock-word">
+                            UNLOCK YOUR POTENTIAL
+                        </p>
+                    </div>
+                    <div class="flex flex-col item">
+                        <div class="flex content-center gap-16">
+                            <div>
+                                <button class="btn-green">
+                                    <span style="color: #FFFFFF">Register Live Account</span>
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn-green">
+                                    <span style="color: #FFFFFF">Log in to your portal</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="investing-row">
+                        <p class="investing-word">
+                            Investing isn't just for the wealthy. At Metabase,<br>
+                            we believe that everyone  deserves access to high-quality
+                            investment products and services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="main-content">
         <div class="home1">
-            <div class="flex gap-29">
+            <div class="flex gap-29 mobile-gap">
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/04.png" class="invest-img">
                     <p class="invest-word">
@@ -609,11 +1023,78 @@
             </div>
         </div>
 
-        <div class="home2">
+        <div class="home1-mobile">
+            <div class="marquee1">
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/04.png" class="invest-img">
+                            <p class="invest-word">
+                                FOREX
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/07.png" class="invest-img">
+                            <p class="invest-word">
+                                METALS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/05.png" class="invest-img">
+                            <p class="invest-word">
+                                ENERGY
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/06.png" class="invest-img">
+                            <p class="invest-word">
+                                COMMODITIES
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/03.png" class="invest-img">
+                            <p class="invest-word">
+                                STOCKS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/01.png" class="invest-img">
+                            <p class="invest-word">
+                                CRYPTO
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marquee-item">
+                        <div class="flex flex-col item">
+                            <img src="/assets/image/home/08.png" class="invest-img">
+                            <p class="invest-word">
+                                INDICES
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home2 mobile-ml-mr">
             <div class="flex flex-col item gap-26">
                 <div>
                     <p class="trade-word">
                         TRADE WITH METABASE EXCELLENCE
+                    </p>
+                    <p class="trade-word-mobile">
+                        TRADE WITH<br> METABASE EXCELLENCE
                     </p>
                 </div>
                 <div class="home2-2">
@@ -625,7 +1106,7 @@
             </div>
         </div>
 
-        <div class="home3">
+        <div class="home3 mobile-ml-mr">
             <img src="assets/image/home/01new.png" class="core-img">
 
         </div>
@@ -633,6 +1114,7 @@
 
     <div class="core-adv">
         <img src="assets/image/home/core.png" class="core">
+        <img src="assets/image/home/core-mobile.png" class="core-mobile">
         <div class="main-content-image">
             <div class="flex flex-col overlay-text">
                 <div class="flex flex-col gap-60">
@@ -670,10 +1152,50 @@
             </div>
             
         </div>
+
+        <div class="main-content-image-mobile mobile-ml-mr">
+            <div class="flex content-center overlay-text-mobile gap-67">
+                <div class="explore-cont">
+                    <p class="explore-word">
+                        Explore of Forex and CFD instruments with
+                        transparent pricing tailored to your trading level.
+                        Select a tier below to view its conditions.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-26">
+                        <div>
+                            <p class="ourcore-word">
+                                Our Core <br>
+                                Advantage
+                            </p>
+                        </div>
+                        <div>
+                            <p class="word-big">0</p>
+                            <p class="word-small">Requotes & Rejections</p>
+                        </div>
+                        <div>
+                            <div><p class="word-big">24-7</p></div>
+                            <div><p class="word-small">Support</p></div>
+                        </div>
+                        <div>
+                            <div class="flex flex-end">
+                                <p class="word-big">
+                                    300
+                                </p>
+                                <span class="plus-text">+</span>
+                            </div>
+                            <div><p class="word-small">Trading Instruments</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 
     <div class="main-content">
-        <div class="home4">
+        <div class="home4 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
                     <p class="acc-word">
@@ -736,7 +1258,53 @@
             </div>
         </div>
 
-        <div class="home5-1">
+        <div class="home5-mobile">
+            <div class="flex space-btw">
+                <div class="flex flex-col item" style="width: 70px">
+                    <img src="assets/image/home/std-mobile.png" class="std-border">
+                    <p class="std-word-purple">STANDARD<br> ACCOUNT</p>
+                    {{-- <p class="std-word-text">
+                        STANDARD account is
+                        a common type of
+                        trading account, suitable
+                        for both individuals.
+                    </p> --}}
+                </div>
+                <div class="flex flex-col item" style="width: 70px">
+                    <img src="assets/image/home/ecn-mobile.png" class="ecn-border">
+                    <p class="std-word-orange">ECN<br> ACCOUNT</p>
+                    {{-- <p class="std-word-text" style="width: 115px">
+                        ECN account obtain
+                        competitive pricing
+                        from multiple
+                        liquidity providers.
+                    </p> --}}
+                </div>
+                <div class="flex flex-col item" style="width: 70px">
+                    <img src="assets/image/home/esaving-mobile.png" class="esaving-border">
+                    <p class="std-word-green">eSAVING<br> ACCOUNT</p>
+                    {{-- <p class="std-word-text">
+                        eSAVING account is
+                        a worry-free savings
+                        and investment account
+                        designed for investors.
+                    </p> --}}
+                </div>
+                <div class="flex flex-col item" style="width: 70px">
+                    <img src="assets/image/home/einvest-mobile.png" class="einvest-border">
+                    <p class="std-word-blue">eINVEST<br> ACCOUNT</p>
+                    {{-- <p class="std-word-text">
+                        eINVEST account allows
+                        investors to achieve stable
+                        investment returns even in
+                        the volatile and unpredictable
+                        financial markets.
+                    </p> --}}
+                </div>
+            </div>
+        </div>
+
+        <div class="home5-1 mobile-ml-mr">
             <ul class="acct-type">
                 <li>
                     STANDARD account is a common type of trading account, suitable for both individuals.
@@ -775,8 +1343,27 @@
         </div>
     </div>
 
+    <div class="idk-mobile">
+        <img src="assets/image/home/idk-mobile.png" alt="" class="idk-img-mobile">
+        <div class="main-content-image-mobile mobile-ml-mr">
+            <div class="overlay-text-mobile2">
+                <div class="flex flex-col mobile-ml-mr">
+                    <p class="confidence-text">
+                        Confidence is an attitude.
+                    </p>
+                    <p class="taking-word">
+                        Taking your investment plan seriously
+                        is equivalent to taking your
+                        future prospects seriously.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     <div class="main-content">
-        <div class="home6">
+        <div class="home6 mobile-ml-mr">
             <div>
                 <p class="open-text-green">
                     Open your free investment account
@@ -790,7 +1377,7 @@
             </div>
         </div>
 
-        <div class="home7">
+        <div class="home7 mobile-ml-mr">
             <div class="wheat-container">
                 <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
             </div>
@@ -811,11 +1398,31 @@
             </div>
         </div>
 
-        <div class="home9">
-            <img src="assets/image/home/crm.svg">
+        <div class="home8-mobile mobile-ml-mr">
+            <div class="flex flex-col gap-20">
+                <div class="flex gap-8">
+                    <img src="assets/image/apple-mobile.svg" class="app-dark">
+                    <img src="assets/image/google-mobile.svg" class="app-dark">
+                    <img src="assets/image/windows-mobile.svg" class="app-dark">
+                </div>
+                <div>
+                    {{-- <p class="aldy-text">
+                        Already have a friend at Metabase?
+                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    </p> --}}
+                    <p class="aldy-text">
+                        Already have a friend at Metabase? Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span> 
+                    </p>
+                    
+                </div>
+            </div>
         </div>
 
-        <div class="home10">
+        <div class="home9 mobile-ml-mr-15">
+            <img src="assets/image/home/crm.svg" class="crm-img">
+        </div>
+
+        <div class="home10 mobile-ml-mr">
             <div class="flex flex-col gap-30">
                 <div class="tired-content">
                     <p class="tired-text-green">
@@ -835,9 +1442,25 @@
 
         <div class="home11">
             <div class="flex gap-20">
-                <img src="assets/image/home/09.png">
-                <img src="assets/image/home/10.png">
-                <img src="assets/image/home/11.png">
+                <img src="assets/image/home/09.png" class="img09">
+                <img src="assets/image/home/10.png" class="img09">
+                <img src="assets/image/home/11.png" class="img09">
+            </div>
+        </div>
+
+        <div class="home11-mobile">
+            <div class="marquee2">
+                <div class="marquee-content2">
+                    <div class="marquee-item2">
+                        <img src="assets/image/home/09.png" class="img09">
+                    </div>
+                    <div class="marquee-item2">
+                        <img src="assets/image/home/10.png" class="img09">
+                    </div>
+                    <div class="marquee-item2">
+                        <img src="assets/image/home/11.png" class="img09">
+                    </div>
+                </div>
             </div>
         </div>
 

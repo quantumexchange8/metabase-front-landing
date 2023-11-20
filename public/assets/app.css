@@ -45,7 +45,7 @@ body {
 /* LIGHT MODE / DARK MODE */
 .light-mode {
     /* Add styles for the light mode */
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     color: #000000;
 }
 
@@ -79,6 +79,14 @@ body {
     flex-direction: column;
 }
 
+@media screen and (max-width: 1000px)
+{
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+}
+
+
 .space-btw {
     justify-content: space-between;
 }
@@ -95,6 +103,12 @@ body {
 }
 .gap-10 {
     gap: 10px;
+}
+.gap-14 {
+    gap: 14px;
+}
+.gap-15 {
+    gap: 15px;
 }
 .gap-16 {
     gap: 16px;
@@ -129,11 +143,17 @@ body {
 .gap-52 {
     gap: 52px;
 }
+.gap-56 {
+    gap: 56px;
+}
 .gap-60 {
     gap: 60px;
 }
 .gap-66 {
     gap: 66px;
+}
+.gap-67 {
+    gap: 67px;
 }
 .gap-90 {
     gap: 90px;
@@ -212,6 +232,10 @@ body {
     color: rgb(248, 248, 248);
 }
 
+.overlay-container {
+    display: none;
+}
+
 .btn-primary {
     width: 80px;
     height: 26px;
@@ -269,6 +293,23 @@ body {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1000px)
+{
+    .main-content {
+        /* margin-left: 15px;
+        margin-right: 15px; */
+        width: 100%;
+    }
+    .mobile-ml-mr {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .mobile-ml-mr-15 {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
 /* CONTENT */
 
 

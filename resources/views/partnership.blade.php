@@ -87,6 +87,9 @@
             width: 100%;
             margin-bottom: 166px;
         }
+        .partner4-mobile {
+            display: none;
+        }
         .partner5 {
             width: 100%;
             margin-bottom: 89px;
@@ -124,6 +127,9 @@
             font-weight: 700;
             line-height: 16px; /* 100% */
             margin: 0;
+        }
+        .stbl-text-mobile {
+            display: none;
         }
         .enjoy-text-green {
             color: #5CA346;
@@ -207,6 +213,9 @@
             line-height: 35px; /* 116.667% */
             margin: 0;
         }
+        .reward-text-white-mobile {
+            display: none;
+        }
         .dark-mode .reward-text-white {
             color: #FFF;
         }
@@ -223,6 +232,12 @@
 
         th, td {
             border: 2px solid #f1f1f1;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .dark-mode th, .dark-mode td {
+            border: 2px solid #000000;
             text-align: center;
             padding: 8px;
         }
@@ -370,6 +385,216 @@
         .dark-mode .atr-dark-img {
             display: block;
         }
+        .partner-header-mobile {
+            display: none;
+        }
+        .dark-mode .app-dark {
+            border-radius: 10px;
+            border: 0.5px solid #5CA346;
+        }
+        .app-dark-mobile {
+            display: none;
+        }
+        @media screen and (max-width: 1000px)
+        {
+            .partner-header {
+                display: none;
+            }
+            .partner-header-mobile {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+            .text-overlay-mobile {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+            .partner-text1 {
+                font-size: 20px;
+                line-height: 25px;
+                margin: 0;
+            }
+            .partner-text2 {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .partner-text-green {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .atr-img {
+                width: 70px;
+                height: 70px;
+            }
+            .stbl-text {
+                display: none;
+            }
+            .stbl-text-mobile {
+                display: block;
+                color: #5CA346;
+
+                text-align: center;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 10px;
+                font-family: SF Pro Text;
+                margin: 0;
+            }
+            .gap-36 {
+                gap: 16px;
+            }
+            .partner2 {
+                margin-bottom: 50px;
+            }
+            .enjoy-text-green2 {
+                font-size: 16px;
+                line-height: 16px;
+                text-align: center;
+            }
+            .enjoy-text-white {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 274;
+                line-height: 14px;
+                text-align: center;
+                width: 100%;
+            }
+            .partner3 {
+                margin-bottom: 36px;
+            }
+            .partner4 {
+                width: 100%;
+                margin-bottom: 166px;
+                display: none;
+            }
+            .partner4-mobile {
+                display: block;
+                margin-bottom: 100px;
+            }
+            .marquee3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .marquee-content3 {
+                display: flex;
+                animation: marquee-animation3 150s linear infinite;
+                width: fit-content; /* Adjust the width based on your image size */
+                gap: 14px;
+            }
+            @keyframes marquee-animation3 {
+                0% {
+                transform: translateX(0);
+                }
+                100% {
+                transform: translateX(-100%);
+                }
+            }
+            .mobile5-img {
+                width: 223.995px;
+                height: 460.75px;
+            }
+            .log-text-span {
+                margin-top: 26px;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            .log-text {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .reward-text-green {
+                font-size: 20px;
+                line-height: 20px;
+            }
+            .reward-text-white {
+                font-size: 12px;
+                line-height: 14px;
+                display: none;
+            }
+            .reward-text-white-mobile {
+                color: #000;
+
+                text-align: center;
+                font-family: SF Pro Text;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: 14px; /* 116.667% */
+                margin: 0;
+                display: block; 
+            }
+            .partner5 {
+                margin-bottom: 36px;
+            }
+            .partner6 {
+                overflow-x: auto;
+                margin-bottom: 50px;
+            }
+            .partner8 {
+                overflow-x: auto;
+                margin-bottom: 50px;
+            }
+            .partner9 {
+                text-align: center;
+                margin-bottom: 66px;
+            }
+            .tnc-text {
+                font-size: 14px;
+                font-family: SF Pro Text;
+            }
+            table {
+                white-space: nowrap;
+                min-width: 100%;
+            }
+            th, td {
+                min-width: 128px; /* Set a minimum width for each cell to prevent squeezing content */
+            }
+            .wheat-container {
+                height: 30px;
+            }
+            .open-text {
+                font-size: 14px;
+                line-height: normal;
+                font-family: SF Pro Text;
+            }   
+            .app-dark-mobile {
+                display: block;
+            }
+            .app-dark {
+                display: none;
+            }
+            .aldy-text {
+                display: none;
+            }
+            .aldy-text-mobile {
+                display: block;
+                text-align: center;
+                font-family: SF Pro Text;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 12px;
+                margin: 0;
+            }
+            .span-text-grn {
+                font-size: 10px;
+                line-height: 12px;
+            }
+            .partner11 {
+                margin-bottom: 60px;
+            }
+        }
     </style>
 
     <div class="partner-header">
@@ -391,14 +616,32 @@
         </div>
     </div>
 
+    <div class="partner-header-mobile">
+        <img src="assets/image/partner/partner-mobile.png" class="company-mobile-img">
+        <div class="text-overlay-mobile">
+            <div class="main-content">
+                <div class="flex flex-col gap-16 mobile-ml-mr">
+                    <p class="partner-text1">
+                        Don't give up your forest<br>
+                        for the sake of one tree.
+                    </p>
+                    <p class="partner-text2">
+                        Solutions for Introducing Advisor (IA)<br>
+                        Build your client base, earn more revenue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="main-content">
-        <div class="partner1">
+        <div class="partner1 mobile-ml-mr">
             <p class="partner-text-green">
                 Rely on a rock solid partner
             </p>
         </div>
 
-        <div class="partner2">
+        <div class="partner2 mobile-ml-mr">
             <div class="flex" style="justify-content: space-between">
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/partner/4.svg" class="atr-img">
@@ -406,6 +649,10 @@
                     <p class="stbl-text">
                         Attractive tailored<br>
                         reward scheme
+                    </p>
+                    <p class="stbl-text-mobile">
+                        Attractive<br>
+                        reward<br> scheme
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
@@ -415,6 +662,11 @@
                         Advanced Client<br>
                         Tracking System
                     </p>
+                    <p class="stbl-text-mobile">
+                        Client <br>
+                        Tracking<br>
+                        System
+                    </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/partner/2.svg" class="atr-img">
@@ -422,6 +674,11 @@
                     <p class="stbl-text">
                         Automated<br>
                         revenue reporting
+                    </p>
+                    <p class="stbl-text-mobile">
+                        Automated<br>
+                        revenue<br>
+                        reporting
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
@@ -431,18 +688,23 @@
                         Powerful and<br>
                         user-friendly CRM
                     </p>
+                    <p class="stbl-text-mobile">
+                        Powerful<br>
+                        and user-<br>
+                        friendly CRM
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="partner3">
+        <div class="partner3 mobile-ml-mr">
             <p class="enjoy-text-green2">
                 Enjoy Metabase quality investment experience?
                 Don't be selfish, invite your friends now!
             </p>
             <p class="enjoy-text-white">
                 Recommend Metabase and earn cash bonuses up 
-                to USD 100.00 per referral*.Just follow the simple 
+                to <br> USD 100.00 per referral*.Just follow the simple 
                 steps below:
             </p>
         </div>
@@ -490,11 +752,67 @@
             
         </div>
 
-        <div class="partner5">
+        <div class="partner4-mobile">
+            <div class="marquee3">
+                <div class="marquee-content3">
+                    <div class="marquee-item3">
+                        <div class="flex flex-col item">
+                            <img src="assets/image/partner/5.png" class="mobile5-img">
+                            <div class="w-f">
+                                <p class="log-text-span">How to be a sponsor?</p>
+                                <p class="log-text">
+                                    Just log into your ePortal to obtain
+                                    your referral link, then share it
+                                    with your friends.
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="marquee-item3">
+                        <div class="flex flex-col item">
+                            <img src="assets/image/partner/6.png" class="mobile5-img">
+                            <div class="w-f">
+                                <p class="log-text-span">If you have been sponsored</p>
+                                <p class="log-text">
+                                    Your friend must register an
+                                    investment account using your
+                                    referral link.
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="marquee-item3">
+                        <div class="flex flex-col item">
+                            <img src="assets/image/partner/7.png" class="mobile5-img">
+                            <div class="w-f">
+                                <p class="log-text-span">How to claim your referral bonuses</p>
+                                <p class="log-text">
+                                    Both parties will be eligible for the
+                                    referral bonus once your friend
+                                    deposits and trades for a minimum
+                                    of 14 business days.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partner5 mobile-ml-mr">
             <p class="reward-text-green">Your Rewards</p>
             <p class="reward-text-white">
                 After the referred client funds <br>
                 their account, both the sponsor and the referred client will receive a<br>
+                bonus on their accounts proportional to the deposit, as detailed below.
+            </p>
+            <p class="reward-text-white-mobile">
+                After the referred client funds 
+                their account, both the sponsor and the referred client will receive a
                 bonus on their accounts proportional to the deposit, as detailed below.
             </p>
         </div>
@@ -512,28 +830,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Minimum Trading Lot Referred Client</td>
+                        <td>Minimum Deposit Referred Client</td>
                         <td rowspan="14">14</td>
+                        <td>3,000.00</td>
+                        <td>5,000.00</td>
+                        <td>10,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Trading Lot Referred Client</td>
                         <td>5 Standard Lots</td>
                         <td>15 Standard Lots</td>
                         <td>50 Standard Lots</td>
                     </tr>
-                    <tr>
-                        <td>Minimum Deposit Referred Client</td>
-                        <td>5,000.00</td>
-                        <td>10,000.00</td>
-                        <td>30,000.00</td>
-                    </tr>
+                    
                     <tr>
                         <td>Cash Bonus Referrer</td>
                         <td>100.00</td>
                         <td>300.00</td>
-                        <td>1,000.00</td>
+                        <td>500.00</td>
                     </tr>
                     <tr>
                         <td>Cash Bonus Referred Client</td>
-                        <td>50.00</td>
-                        <td>150.00</td>
+                        <td>100.00</td>
+                        <td>300.00</td>
                         <td>500.00</td>
                     </tr>
                 </tbody>
@@ -572,14 +891,14 @@
                     <tr>
                         <td>Deposited Trading Bonus Referrer</td>
                         <td>500.00</td>
-                        <td>1,500.00</td>
-                        <td>5,000.00</td>
+                        <td>1,000.00</td>
+                        <td>3,000.00</td>
                     </tr>
                     <tr>
                         <td>Deposited Trading Bonus Referred Client</td>
-                        <td>250.00</td>
-                        <td>750.00</td>
-                        <td>2,500.00</td>
+                        <td>500.00</td>
+                        <td>1000.00</td>
+                        <td>3,000.00</td>
                     </tr>
                 </tbody>
             </table>
@@ -593,22 +912,30 @@
             </a>
         </div>
 
-        <div class="partner10">
+        <div class="partner10 mobile-ml-mr">
             <div class="wheat-container">
                 <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
             </div>
         </div>
 
-        <div class="partner11">
-            <div class="flex gap-20">
+        <div class="partner11 mobile-ml-mr">
+            <div class="flex flex-col-mobile gap-20">
                 <div class="flex gap-10">
-                    <img src="assets/image/footer/apple.svg">
-                    <img src="assets/image/footer/google.svg">
-                    <img src="assets/image/footer/window.svg">
+                    <img src="assets/image/footer/apple.svg" class="app-dark">
+                    <img src="assets/image/footer/google.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark">
+
+                    <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
                 </div>
                 <div>
                     <p class="aldy-text">
                         Already have a friend at Metabase?<br>
+                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    </p>
+                    <p class="aldy-text-mobile">
+                        Already have a friend at Metabase?
                         Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
                     </p>
                 </div>

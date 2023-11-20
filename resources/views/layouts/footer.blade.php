@@ -118,6 +118,70 @@
         margin: 0 auto;
         gap: 70px;
     }
+    .footer-desc-mobile {
+        display: none;
+    }
+    @media screen and (max-width: 1000px){
+        .footer-desc {
+            display: none;
+        }
+        .footer-desc-mobile {
+            border-radius: 0px 0px var(--corner-radius, 55px) var(--corner-radius, 55px);
+            background: rgba(92, 163, 70, 0.10);
+            /* display: flex;
+            flex-direction: column; */
+            width: 100%;
+            height: 857px;
+            display: block;
+            padding: 37px 40px 60px 40px;
+            box-sizing: border-box;
+        }
+        .ft-description {
+            font-size: 12px;
+            line-height: 18px;
+            color: #000;
+        }
+        .copyright-word {
+            color: #5CA346;
+
+            font-family: SF Pro Text;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px; /* 140% */
+        }
+        .mb-66 {
+            margin-bottom: 66px;
+        }
+        .discover-word {
+            color: #5CA346;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        .app-dark {
+            width: 100%;
+        }
+        .mb-36 {
+            margin-bottom: 36px;
+        }
+        .risk-text-red {
+            color: #F00;
+
+            font-family: SF Pro Text;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+            margin-bottom: 16px;
+        }
+        .risk-content {
+            font-size: 10px;
+            color: #000;
+        }
+    }
 </style>
 <footer class="footer-desc">
     <div class="flex flex-col ft-container">
@@ -376,4 +440,71 @@
             </div>
         </div>
     </div>
+</footer>
+
+<footer class="footer-desc-mobile">
+    <div class="flex flex-col gap-26 mb-66">
+        <div>
+            <img src="assets/image/logo-mobile-long.svg" alt="">
+        </div>
+        <div>
+            <p class="ft-description">
+                Metabase establish in 2022. It committed to delivering a 
+                comprehensive and reliable trading experience for forex 
+                traders globally. With our team of industry experts and 
+                cutting-edge technology, we empower traders with the 
+                necessary tools and knowledge to navigate the dynamic 
+                foreign exchange market.
+                <br>
+                <br>
+                Our platform provides comprehensive resources, competitive 
+                offerings, and robust customer support to ensure a secure 
+                and successful trading journey. We strive to be the trusted 
+                partner for traders seeking a comprehensive and rewarding
+                forex trading experience.
+            </p>
+        </div>
+        <div>
+            <p class="copyright-word">
+                NFA ID: 0555449<br>
+                Copyright © Metabase 2023. All rights reserved.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-16 mb-36">
+        <div>
+            <p class="discover-word">Discover our applications</p>
+        </div>
+        <div class="flex gap-10">
+            <img src="assets/image/apple-mobile.svg" class="app-dark">
+            <img src="assets/image/google-mobile.svg" class="app-dark">
+            <img src="assets/image/windows-mobile.svg" class="app-dark">
+        </div>
+    </div>
+
+    
+    <div class="flex gap-8 mb-66">
+        <div class="social-box">
+            <img src="assets/image/footer/telegram.svg">
+        </div>
+        <div class="social-box">
+            <img src="assets/image/footer/fb.svg">
+        </div>
+        <div class="social-box">
+            <img src="assets/image/footer/ig.svg">
+        </div>
+        <div class="social-box">
+            <img src="assets/image/footer/linkdin.svg">
+        </div>
+    </div>
+
+    <div class="flex flex-col">
+        <p class="risk-text-red">
+            Risk Warning:
+        </p>
+        <p class="risk-content">
+            Trading foreign exchange, spot precious metals and any other product on the Forex platform involves significant risk of loss and may not be suitable for all investors. Prior to opening an account with Metabase, consider your level of experience, investment objectives, assets, income and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not speculate, invest or hedge with capital you cannot afford to lose, that is borrowed or urgently needed or necessary for personal or family subsistence. You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts. The content of this website represents advertising material and has not been submitted to nor approved by any supervisory authority.
+        </p>
+    </div>
+    
 </footer>
