@@ -182,8 +182,21 @@
     }
     .explore-cont {
         width: 70%;
+        display: flex;
+        align-items: flex-end;
     }
     .core {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .core-dark {
+        display: none;
+    }
+    .dark-mode .core {
+        display: none;
+    }
+    .dark-mode .core-dark {
         display: block;
         width: 100%;
         height: auto;
@@ -292,22 +305,22 @@
         margin: 0;
     }
     .std-border {
-        box-shadow: 7.5px 7.5px 7.5px 0px rgba(109, 0, 128, 0.30);
+        /* box-shadow: 7.5px 7.5px 7.5px 0px rgba(109, 0, 128, 0.30); */
         border-radius: 30px;
         margin-bottom: 16px;
     }
     .ecn-border {
-        box-shadow: 7.5px 7.5px 7.5px 0px rgba(255, 153, 0, 0.30);
+        /* box-shadow: 7.5px 7.5px 7.5px 0px rgba(255, 153, 0, 0.30); */
         border-radius: 30px;
         margin-bottom: 16px;
     }
     .esaving-border {
-        box-shadow: 7.5px 7.5px 7.5px 0px rgba(0, 128, 66, 0.30);
+        /* box-shadow: 7.5px 7.5px 7.5px 0px rgba(0, 128, 66, 0.30); */
         border-radius: 30px;
         margin-bottom: 16px;
     }
     .einvest-border {
-        box-shadow: 7.5px 7.5px 7.5px 0px rgba(0, 40, 252, 0.30);
+        /* box-shadow: 7.5px 7.5px 7.5px 0px rgba(0, 40, 252, 0.30); */
         border-radius: 30px;
         margin-bottom: 16px;
     }
@@ -324,6 +337,7 @@
     }
     .iphone-img {
         width: 100%;
+        margin-bottom: -5px;
     }
     .idk {
         position: relative;
@@ -542,7 +556,9 @@
     .home-header-mobile {
         display: none;
     }
-
+    .core-mobile-dark {
+        display: none;
+    }
     @media screen and (max-width: 1000px) {
         .home-header {
             display: none;
@@ -560,6 +576,26 @@
         }
         .home-mobile-img {
             width: 100%;
+        }
+        .home-mobile-dark-img {
+            display: none;
+        }
+        .dark-mode .home-mobile-dark-img {
+            width: 100%;
+            display: block;
+        }
+        .dark-mode .home-mobile-img {
+            display: none;
+        }
+
+        .dark-mode .core-mobile {
+            display: none;
+        }
+        .core-mobile-dark {
+            display: none;
+        }
+        .dark-mode .core-mobile-dark {
+            display: block;
         }
 
         .text-overlay-mobile {
@@ -764,15 +800,27 @@
         }
         .std-border {
             border-radius: 12.5px;
+            box-shadow: none;
+            width: 70px;
+            height: 70px;
         }
         .ecn-border {
             border-radius: 12.5px;
+            box-shadow: none;
+            width: 70px;
+            height: 70px;
         }
         .esaving-border {
             border-radius: 12.5px;
+            box-shadow: none;
+            width: 70px;
+            height: 70px;
         }
         .einvest-border {
             border-radius: 12.5px;
+            box-shadow: none;
+            width: 70px;
+            height: 70px;
         }
         .std-word-purple {
             font-size: 10px;
@@ -802,6 +850,7 @@
             font-weight: 500;
             line-height: 14px; /* 116.667% */
             padding-left: 20px;
+            margin-top: 40px;
         }
         .acct-type li {
             margin-bottom: 10px;
@@ -848,6 +897,7 @@
         .home8-mobile {
             display: flex;
             margin-bottom: 50px;
+            width: 100%;
         }
         .aldy-text {
             font-size: 10px;
@@ -878,6 +928,7 @@
         .home11-mobile {
             display: block;
             margin-bottom: 36px;
+            width: 100%;
         }
         .btn-green span {
             color: #000;
@@ -886,6 +937,54 @@
         .home12 {
             margin-bottom: 66px;
         }
+        .dark-mode .core-dark {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        .dark-mode .acct-type {
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 40px;
+        }
+
+        .idk-img-mobile {
+            display: block;
+        }
+        .idk-img-mobile-dark {
+            display: none;
+        }
+        .dark-mode .idk-img-mobile {
+            display: none;
+        }
+
+        .dark-mode .idk-img-mobile-dark {
+            display: block;
+            width: 100%;
+        }
+        .dark-mode .app-dark {
+            width: 100%;
+        }
+        .dark-mode .ft-description {
+            color: #FFF;
+        }
+        .dark-mode .risk-content {
+            color: #fff;
+        }
+        .slide-item2-container {
+            display: flex !important;
+            justify-content: center !important;
+        }
+    }
+
+    @media screen and (max-width: 1350px)
+    {
+        .gap-60 {
+            gap: 30px;
+        }
+    }
+    .w-full {
+        width: 100%;
     }
 </style>
 
@@ -941,6 +1040,7 @@
 
     <div class="home-header-mobile">
         <img src="assets/image/home/home1-mobile.png" class="home-mobile-img">
+        <img src="assets/image/home/home1-mobile-dark.png" class="home-mobile-dark-img">
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col item gap-16 mobile-ml-mr">
@@ -1114,7 +1214,9 @@
 
     <div class="core-adv">
         <img src="assets/image/home/core.png" class="core">
+        <img src="assets/image/home/core-dark.png" class="core-dark">
         <img src="assets/image/home/core-mobile.png" class="core-mobile">
+        <img src="assets/image/home/core-mobile-dark.png" class="core-mobile-dark">
         <div class="main-content-image">
             <div class="flex flex-col overlay-text">
                 <div class="flex flex-col gap-60">
@@ -1132,23 +1234,32 @@
                         <div><p class="word-big">24-7</p></div>
                         <div><p class="word-small">Support</p></div>
                     </div>
-                    <div>
-                        <div class="flex flex-end">
-                            <p class="word-big">
-                                300
+                    <div class="flex space-btw">
+                        <div class="explore-cont">
+                            <p class="explore-word">
+                                Explore of Forex and CFD instruments with
+                                transparent pricing tailored to your trading level.
+                                Select a tier below to view its conditions.
                             </p>
-                            <span class="plus-text">+</span>
                         </div>
-                        <div><p class="word-small">Trading Instruments</p></div>
+                        <div>
+                            <div class="flex flex-end">
+                                <p class="word-big">
+                                    300
+                                </p>
+                                <span class="plus-text">+</span>
+                            </div>
+                            <div><p class="word-small">Trading Instruments</p></div>
+                        </div>
                     </div>
                 </div>
-                <div class="explore-cont">
+                {{-- <div class="explore-cont">
                     <p class="explore-word">
                         Explore of Forex and CFD instruments with
                         transparent pricing tailored to your trading level.
                         Select a tier below to view its conditions.
                     </p>
-                </div>
+                </div> --}}
             </div>
             
         </div>
@@ -1261,7 +1372,7 @@
         <div class="home5-mobile">
             <div class="flex space-btw">
                 <div class="flex flex-col item" style="width: 70px">
-                    <img src="assets/image/home/std-mobile.png" class="std-border">
+                    <img src="assets/image/home/std-mobile.svg" class="std-border">
                     <p class="std-word-purple">STANDARD<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
@@ -1271,7 +1382,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
-                    <img src="assets/image/home/ecn-mobile.png" class="ecn-border">
+                    <img src="assets/image/home/ecn-mobile.svg" class="ecn-border">
                     <p class="std-word-orange">ECN<br> ACCOUNT</p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
@@ -1281,7 +1392,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
-                    <img src="assets/image/home/esaving-mobile.png" class="esaving-border">
+                    <img src="assets/image/home/esaving-mobile.svg" class="esaving-border">
                     <p class="std-word-green">eSAVING<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
@@ -1291,7 +1402,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
-                    <img src="assets/image/home/einvest-mobile.png" class="einvest-border">
+                    <img src="assets/image/home/einvest-mobile.svg" class="einvest-border">
                     <p class="std-word-blue">eINVEST<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows
@@ -1345,6 +1456,7 @@
 
     <div class="idk-mobile">
         <img src="assets/image/home/idk-mobile.png" alt="" class="idk-img-mobile">
+        <img src="assets/image/home/idk-mobile-dark.png" alt="" class="idk-img-mobile-dark">
         <div class="main-content-image-mobile mobile-ml-mr">
             <div class="overlay-text-mobile2">
                 <div class="flex flex-col mobile-ml-mr">
@@ -1399,11 +1511,11 @@
         </div>
 
         <div class="home8-mobile mobile-ml-mr">
-            <div class="flex flex-col gap-20">
+            <div class="flex flex-col gap-20 w-full">
                 <div class="flex gap-8">
                     <img src="assets/image/apple-mobile.svg" class="app-dark">
                     <img src="assets/image/google-mobile.svg" class="app-dark">
-                    <img src="assets/image/windows-mobile.svg" class="app-dark">
+                    {{-- <img src="assets/image/windows-mobile.svg" class="app-dark"> --}}
                 </div>
                 <div>
                     {{-- <p class="aldy-text">
@@ -1449,7 +1561,7 @@
         </div>
 
         <div class="home11-mobile">
-            <div class="marquee2">
+            {{-- <div class="marquee2">
                 <div class="marquee-content2">
                     <div class="marquee-item2">
                         <img src="assets/image/home/09.png" class="img09">
@@ -1460,6 +1572,19 @@
                     <div class="marquee-item2">
                         <img src="assets/image/home/11.png" class="img09">
                     </div>
+                </div>
+            </div> --}}
+            <div class="slick-slider2">
+                <div class="slide-item2-container">
+                    <img src="assets/image/home/09.png" class="img09">
+                </div>
+
+                <div class="slide-item2-container">
+                    <img src="assets/image/home/10.png" class="img09">
+                </div>
+
+                <div class="slide-item2-container">
+                    <img src="assets/image/home/11.png" class="img09">
                 </div>
             </div>
         </div>

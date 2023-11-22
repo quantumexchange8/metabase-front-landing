@@ -129,6 +129,7 @@
         line-height: 120px; /* 93.75% */
         margin: 0;
         width: 100%;
+        margin-bottom: 20px;
     }
     .company2-text2 {
         /* color: #000; */
@@ -319,6 +320,10 @@
         width: 100%;
     }
 
+    .dot-bg-mobile1 {
+        display: none;
+    }
+
     @media screen and (max-width: 1000px)
     {
         .metabase-text-large {
@@ -353,7 +358,7 @@
         }
         .text-overlay-mobile {
             position: absolute;
-            top: 70%;
+            top: 75%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
@@ -383,8 +388,32 @@
             margin-bottom: 66px;
             position: relative;
         }
+        .dot-bg-mobile1 {
+            background-image: url('/assets/image/company/mobile-dot.svg');
+            background-position: center;
+            background-size: cover !important; /* Optional - adjust as needed */
+            background-repeat: no-repeat;
+            display: block;
+            margin-bottom: 66px;
+            position: relative;
+            padding: 20px;
+        }
+        .dark-mode .dot-bg-mobile1 {
+            background-image: url('/assets/image/company/dot-dark.svg');
+        }
         .dot-bg-mobile-img {
             width: 100%;
+            display: block;
+        }
+        .dot-bg-mobile-img-dark {
+            display: none;
+        }
+        .dark-mode .dot-bg-mobile-img {
+            display: none;
+        }
+        .dark-mode .dot-bg-mobile-img-dark {
+            width: 100%;
+            display: block;
         }
         .company2-text {
             font-size: 48px;
@@ -398,7 +427,7 @@
         .company3-text {
             font-size: 24px;
             line-height: 25px;
-            width: 75%;
+            /* width: 75%; */
             margin-bottom: 16px;
         }
 
@@ -515,7 +544,7 @@
             font-family: SF Pro Text;
         }
         .wheat-container {
-            height: 30px;
+            height: 50px;
         }
         .aldy-text {
             display: none;
@@ -545,6 +574,32 @@
         .app-dark {
             display: none;
         }
+        .app-window {
+            display: none;
+        }
+        .app-dark-mobile {
+            width: 100%;
+            border: #5CA346 1px solid;
+            border-radius: 10px;
+        }
+        .aldy-text-mobile {
+            margin: 0;
+        }
+        .company-mobile-img-dark {
+            display: none;
+        }
+        .company-mobile-img {
+            display: block;
+            width: 100%;
+        }
+        .dark-mode .company-mobile-img {
+            display: none;
+        }
+        .dark-mode .company-mobile-img-dark {
+            display: block;
+            width: 100%;
+        }
+        
     }
     </style>
 
@@ -570,6 +625,7 @@
 
     <div class="company-header-mobile">
         <img src="assets/image/company/company-mobile.png" class="company-mobile-img">
+        <img src="assets/image/company/company-mobile-dark.png" class="company-mobile-img-dark">
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
@@ -624,9 +680,9 @@
         </div>
     </div>
 
-    <div class="dot-bg-mobile">
-        <img src="assets/image/company/mobile-dot.svg" alt="" class="dot-bg-mobile-img">
-        <div class="text-overlay-mobile2">
+    <div class="dot-bg-mobile1">
+        {{-- <img src="assets/image/company/mobile-dot.svg" alt="" class="dot-bg-mobile-img"> --}}
+        {{-- <div class="text-overlay-mobile2"> --}}
             
             <div class="flex flex-col gap-16 mobile-ml-mr">
                 <p class="company2-text">
@@ -648,7 +704,7 @@
                 </p>
             </div>
            
-        </div>
+        {{-- </div> --}}
     </div>
         
     <div class="main-content">
@@ -670,8 +726,8 @@
 
         <div class="company3-mobile mobile-ml-mr">
             <p class="company3-text">
-                KEY SUCCESS FACTORS
-                NOT LIMITED TO FINANCIAL ASSETS
+                KEY SUCCESS<br> FACTORS
+                NOT LIMITED<br> TO FINANCIAL ASSETS
             </p>
             <div class="flex" style="justify-content: flex-start;">
                 <p class="company3-text2-mobile">
@@ -755,6 +811,7 @@
 
     <div class="dot-bg-mobile">
         <img src="assets/image/company/dot-bg2-mobile.svg" alt="" class="dot-bg-mobile-img">
+        <img src="assets/image/company/dot-dark.svg" alt="" class="dot-bg-mobile-img-dark">
         <div class="text-overlay-mobile2">
             
             <div class="flex flex-col gap-16 mobile-ml-mr">
@@ -845,11 +902,11 @@
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
-                    <img src="assets/image/footer/window.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark app-window">
 
                     <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
-                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
                 <div>
                     <p class="aldy-text">

@@ -126,7 +126,7 @@
             display: none;
         }
         .footer-desc-mobile {
-            border-radius: 0px 0px var(--corner-radius, 55px) var(--corner-radius, 55px);
+            /* border-radius: 0px 0px var(--corner-radius, 55px) var(--corner-radius, 55px); */
             background: rgba(92, 163, 70, 0.10);
             /* display: flex;
             flex-direction: column; */
@@ -135,6 +135,9 @@
             display: block;
             padding: 37px 40px 60px 40px;
             box-sizing: border-box;
+        }
+        .dark-mode .footer-desc-mobile {
+            background: rgba(92, 163, 70, 0.30);
         }
         .ft-description {
             font-size: 12px;
@@ -160,7 +163,7 @@
             line-height: normal;
             margin-bottom: 0;
         }
-        .app-dark {
+        .app-dark-footer {
             width: 100%;
         }
         .mb-36 {
@@ -180,6 +183,12 @@
         .risk-content {
             font-size: 10px;
             color: #000;
+        }
+        .dark-mode .ft-description {
+            color: #FFF;
+        }
+        .dark-mode .risk-content {
+            color: #fff;
         }
     }
 </style>
@@ -476,9 +485,9 @@
             <p class="discover-word">Discover our applications</p>
         </div>
         <div class="flex gap-10">
-            <img src="assets/image/apple-mobile.svg" class="app-dark">
-            <img src="assets/image/google-mobile.svg" class="app-dark">
-            <img src="assets/image/windows-mobile.svg" class="app-dark">
+            <img src="assets/image/apple-mobile.svg" class="app-dark-footer">
+            <img src="assets/image/google-mobile.svg" class="app-dark-footer">
+            <img src="assets/image/windows-mobile.svg" class="app-dark-footer app-window">
         </div>
     </div>
 

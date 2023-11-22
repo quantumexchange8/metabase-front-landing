@@ -110,6 +110,9 @@
             width: 100%;
             margin-bottom: 200px;
         }
+        .partner9 a {
+            text-decoration: none;
+        }
         .partner10 {
             width: 100%;
             margin-bottom: 18px;
@@ -231,7 +234,7 @@
         }
 
         th, td {
-            border: 2px solid #f1f1f1;
+            border: 2px solid #ffffff;
             text-align: center;
             padding: 8px;
         }
@@ -395,6 +398,9 @@
         .app-dark-mobile {
             display: none;
         }
+        .aldy-text-mobile {
+            display: none;
+        }
         @media screen and (max-width: 1000px)
         {
             .partner-header {
@@ -480,6 +486,7 @@
             .partner4-mobile {
                 display: block;
                 margin-bottom: 100px;
+                width: 100%;
             }
             .marquee3 {
                 display: flex;
@@ -516,6 +523,7 @@
             .reward-text-green {
                 font-size: 20px;
                 line-height: 20px;
+                margin-bottom: 16px;
             }
             .reward-text-white {
                 font-size: 12px;
@@ -561,7 +569,7 @@
                 min-width: 128px; /* Set a minimum width for each cell to prevent squeezing content */
             }
             .wheat-container {
-                height: 30px;
+                height: 50px;
             }
             .open-text {
                 font-size: 14px;
@@ -594,6 +602,47 @@
             .partner11 {
                 margin-bottom: 60px;
             }
+            .partner1 {
+                margin-bottom: 26px;
+            }
+            .app-window {
+                display: none;
+            }
+            .app-dark-mobile {
+                width: 100%;
+            }
+            .company-mobile-img {
+                display: block;
+                width: 100%;
+            }
+            .company-mobile-img-dark {
+                display: none;
+
+            }
+            .dark-mode .company-mobile-img {
+                display: none;
+            }
+            .dark-mode .company-mobile-img-dark {
+                display: block;
+                width: 100%;
+            }
+            .dark-mode .atr-dark-img {
+                width: 70px;
+                height: 70px;
+            }
+            .dark-mode .app-dark-mobile {
+                border: #5CA346 1px solid;
+                border-radius: 10px;
+            }
+            .w-f-slick {
+                width: 60%;
+            }
+            .dark-mode .slick-dots li.slick-active button:before {
+                color: #19ff00;
+            }
+            .dark-mode .slick-dots li button:before {
+                color: #00ff16;
+            }
         }
     </style>
 
@@ -618,6 +667,7 @@
 
     <div class="partner-header-mobile">
         <img src="assets/image/partner/partner-mobile.png" class="company-mobile-img">
+        <img src="assets/image/partner/partner-mobile-dark.png" class="company-mobile-img-dark">
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
@@ -753,7 +803,7 @@
         </div>
 
         <div class="partner4-mobile">
-            <div class="marquee3">
+            {{-- <div class="marquee3">
                 <div class="marquee-content3">
                     <div class="marquee-item3">
                         <div class="flex flex-col item">
@@ -797,6 +847,52 @@
                                     of 14 business days.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            <div class="slick-slider3">
+                <div class="slide-item3-container">
+                    <div class="flex flex-col item">
+                        <img src="assets/image/partner/5.png" class="mobile5-img">
+                        <div class="w-f-slick">
+                            <p class="log-text-span">How to be a sponsor?</p>
+                            <p class="log-text">
+                                Just log into your ePortal to obtain
+                                your referral link, then share it
+                                with your friends.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item3-container">
+                    <div class="flex flex-col item">
+                        <img src="assets/image/partner/6.png" class="mobile5-img">
+                        <div class="w-f-slick">
+                            <p class="log-text-span">If you have been sponsored</p>
+                            <p class="log-text">
+                                Your friend must register an
+                                investment account using your
+                                referral link.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="slide-item3-container">
+                    <div class="flex flex-col item">
+                        <img src="assets/image/partner/7.png" class="mobile5-img">
+                        <div class="w-f-slick">
+                            <p class="log-text-span">How to claim your referral bonuses</p>
+                            <p class="log-text">
+                                Both parties will be eligible for the
+                                referral bonus once your friend
+                                deposits and trades for a minimum
+                                of 14 business days.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -859,11 +955,11 @@
             </table>
         </div>
 
-        <div class="partner7">
+        {{-- <div class="partner7">
             <p class="or-text">Or</p>
-        </div>
+        </div> --}}
 
-        <div class="partner8">
+        {{-- <div class="partner8">
             <table>
                 <thead>
                     <tr>
@@ -902,10 +998,10 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> --}}
 
         <div class="partner9">
-            <a href="#">
+            <a href="/assets/pdf/METABASE_REFERRAL_RPOGRAM_T&C.pdf" target="_blank">
                 <span class="tnc-text">
                     *See the full terms and conditions of this offer.
                 </span>
@@ -923,11 +1019,11 @@
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
-                    <img src="assets/image/footer/window.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark app-window">
 
                     <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
-                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
                 <div>
                     <p class="aldy-text">

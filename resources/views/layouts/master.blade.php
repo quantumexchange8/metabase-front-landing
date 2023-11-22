@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +16,12 @@
 
     <!--icon-->
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
+
+    <!--Slick css-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 <body class="light-mode">
@@ -33,9 +41,10 @@
     </div>
 
     <!--script-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script src="{{ asset('assets/js/scroll-to-top.js') }}"></script>
     <script src="{{ asset('assets/js/marquee.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
     <!--script-->
     
     
@@ -62,7 +71,34 @@
             $('body').removeClass('dark-mode');
             icon.css('color', '#5CA346');
         }
+
+        function toggleDarkMode() {
+            $('body').toggleClass('dark-mode');
+            var isDarkMode = $('body').hasClass('dark-mode');
+            icon.css('color', isDarkMode ? '#ffffff' : '#5CA346');
+
+            // Store the mode in local storage
+            localStorage.setItem('mode', isDarkMode ? 'dark' : 'light');
+        }
+
+        // Click event for light mode
+        $('#lightMode').on('click', function () {
+            // If not already in light mode, toggle to light mode
+            if ($('body').hasClass('dark-mode')) {
+                toggleDarkMode();
+            }
+        });
+
+        // Click event for dark mode
+        $('#darkMode').on('click', function () {
+            // If not already in dark mode, toggle to dark mode
+            if (!$('body').hasClass('dark-mode')) {
+                toggleDarkMode();
+            }
+        });
     });
+
+
 
     function myFunction() {
         var body = document.querySelector('body');
@@ -111,6 +147,16 @@
             var overlay = document.getElementById('overlayContainer');
             overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'block' : 'none';
         }
+</script>
+
+<script>
+    $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
 </script>
 </body>
 </html>

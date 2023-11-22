@@ -50,7 +50,7 @@
             align-items: center;
             background: #fff;
             z-index: 999;
-            padding: 48px 26px 48px 26px;
+            padding: 26px 26px 26px 26px;
             box-sizing: border-box;
             overflow-y: auto;
         }
@@ -141,9 +141,12 @@
         }
         .container-img {
             position: relative;
-            margin-left: -27px;
+            /* margin-left: -27px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
+        
         .ticket {
             width: 100%; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
@@ -170,6 +173,51 @@
             font-style: normal;
             font-weight: 700;
             line-height: 14px; /* 116.667% */
+        }
+        .mt-5 {
+            /* margin-top: 25px; */
+        }
+        /* .slick-slide img {
+            display: block !important;
+        } */
+        /* .slick-prev:before, .slick-next:before {
+            display: none;
+        } */
+        .slick-dots li {
+            width: 5px;
+        }
+        .light-mobile-img {
+            width: 100%;
+        }
+        .app-mobile {
+            width: 100%;
+        }
+
+        .dark-mode .nav-toggle {
+            background: rgba(92, 163, 70, 0.40);
+        }
+        .dark-mode .overlay-container {
+            background: #000;
+        }
+        .dark-mode .container {
+            background: rgba(92, 163, 70, 0.30);
+        }
+
+        .dark-mode .nav-text-dark {
+            color: #FFF;
+        }
+        .slick-dots li button:before {
+            color: #5CA346;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #000000;
+        }
+        .dark-mode .btn-green-mobile {
+            background: transparent;
+        }
+        .dark-mode .btn-green-mobile span {
+            color: #FFF;
         }
     }
 </style>
@@ -398,40 +446,68 @@
                 </div>
             </div>
             
+            <div class="slick-slider">
+                {{-- <div class="container-img">
+                    <img src="assets/image/ticket.svg" alt="" class="ticket">
+                    <img src="assets/image/coming.svg" alt="" class="coming">
+                </div>
 
-            <div class="container-img">
-                <img src="assets/image/ticket.svg" alt="" class="ticket">
-                <img src="assets/image/coming.svg" alt="" class="coming">
+                <div class="container-img">
+                    <img src="assets/image/ticket.svg" alt="" class="ticket">
+                    <img src="assets/image/coming.svg" alt="" class="coming">
+                </div>
+
+                <div class="container-img">
+                    <img src="assets/image/ticket.svg" alt="" class="ticket">
+                    <img src="assets/image/coming.svg" alt="" class="coming">
+                </div> --}}
+
+                <div class="slide-item1-container">
+                    <img src="assets/image/interest_booster.svg" alt="" class="ticket">
+                </div>
+
+                <div class="slide-item1-container">
+                    <img src="assets/image/alchemist.svg" alt="" class="ticket">
+                </div>
+
+                <div class="slide-item1-container">
+                    <img src="assets/image/trading_insurance.svg" alt="" class="ticket">
+                </div>
+
+                <div class="slide-item1-container">
+                    <img src="assets/image/trading_contest.svg" alt="" class="ticket">
+                </div>
             </div>
 
+            <div class="flex flex-col gap-25 mt-5">
 
-            <div class="flex content-center gap-14">
-                <img src="assets/image/apple-mobile.svg" alt="">
-                <img src="assets/image/google-mobile.svg" alt="">
-            </div>
+                <div class="flex content-center gap-14">
+                    <img src="assets/image/apple-mobile.svg" class="app-mobile" alt="">
+                    <img src="assets/image/google-mobile.svg" class="app-mobile" alt="">
+                </div>
 
-            <div class="flex flex-col gap-25">
                 <div class="flex content-center gap-29">
-                    <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/light-mobile.svg" alt="">
+
+                    <div class="flex flex-col gap-10 item" id="lightMode">
+                        <img src="assets/image/light-mobile.svg" class="light-mobile-img" alt="">
                         <span class="light-green-text">
                             Light
                         </span>
                     </div>
-                    <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/dark-mobile.svg" alt="">
+                    <div class="flex flex-col gap-10 item" id="darkMode">
+                        <img src="assets/image/dark-mobile.svg" class="light-mobile-img" alt="">
                         <span class="light-green-text">
                             Dark
                         </span>
                     </div>
                     <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/en-mobile.svg" alt="">
+                        <img src="assets/image/en-mobile.svg" class="light-mobile-img" alt="">
                         <span class="light-green-text">
                             English
                         </span>
                     </div>
                     <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/cn-mobile.svg" alt="">
+                        <img src="assets/image/cn-mobile.svg" class="light-mobile-img" alt="">
                         <span class="light-green-text">
                             中文
                         </span>
@@ -451,7 +527,7 @@
                     </div>
         
                     <div class="flex content-center">
-                        <button class="btn-close" onclick="toggleNav()">
+                        <button class="btn-green-mobile" onclick="toggleNav()">
                             <span>Close</span>
                         </button>
                     </div>

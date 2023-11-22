@@ -205,7 +205,7 @@
         }
         .text-overlay-mobile {
                 position: absolute;
-                top: 70%;
+                top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 100%;
@@ -250,6 +250,7 @@
             .sup-text-green {
                 font-size: 12px;
                 line-height: 12px;
+                width: 100%;
             }
             .support1 {
                 margin-bottom: 66px;
@@ -279,7 +280,7 @@
                 display: none;
             }
             .wheat-container {
-                height: 30px;
+                height: 50px;
             }
             .open-text {
                 font-size: 14px;
@@ -309,6 +310,45 @@
                 font-size: 10px;
                 line-height: 12px;
             }
+            .gap-36 {
+                gap: 16px;
+            }
+            .app-window {
+                display: none;
+            }
+            .app-dark-mobile {
+                width: 100%;
+            }
+            .support-light {
+                display: block;
+                width: 100%;
+            }
+            .support-dark {
+                display: none;
+            }
+
+            .dark-mode .support-light {
+                display: none;
+            }
+
+            .dark-mode .support-dark {
+                display: block;
+                width: 100%;
+            }
+
+            .dark-mode .rep-dark-img {
+                width: 100px;
+                height: 100px;
+            }
+            .rep-img3 {
+                width: 100px;
+                height: 100px;
+            }
+
+            .dark-mode .app-dark-mobile {
+                border: #5CA346 1px solid;
+                border-radius: 10px;
+            }
         }
     </style>
 
@@ -331,7 +371,8 @@
     </div>
 
     <div class="support-header-mobile">
-        <img src="assets/image/support/support-mobile.png">
+        <img src="assets/image/support/support-mobile.png" class="support-light">
+        <img src="assets/image/support/support-mobile-dark.png" class="support-dark">
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
@@ -381,7 +422,7 @@
             <div class="flex content-center item gap-150 gap-150-mobile">
                 <img src="assets/image/support/2.svg" alt="" class="rep-img">
                 <img src="assets/image/support/rep-dark.png" alt="" class="rep-dark-img">
-                <img src="assets/image/support/3.svg" alt="" class="rep-img">
+                <img src="assets/image/support/3.svg" class="rep-img3" alt="" >
             </div>
         </div>
 
@@ -418,11 +459,11 @@
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
-                    <img src="assets/image/footer/window.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark app-window">
 
                     <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
-                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
                 <div>
                     <p class="aldy-text">

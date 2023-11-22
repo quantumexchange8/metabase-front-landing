@@ -144,7 +144,7 @@
         }
         .aldy-text {
             /* color: #000; */
-            font-family: SF Pro Display;
+            font-family: SF Pro Text;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -231,7 +231,7 @@
         }
 
         th, td {
-            border: 2px solid #f1f1f1;
+            border: 2px solid #ffffff;
             text-align: center;
             padding: 8px;
         }
@@ -303,7 +303,7 @@
         }
         .aldy-text {
             /* color: #000; */
-            font-family: SF Pro Display;
+            font-family: SF Pro Text;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -382,10 +382,6 @@
         .dark-mode .stable-dark-img {
             display: block;
         }
-        .dark-mode .app-dark {
-            border-radius: 10px;
-            border: 0.5px solid #5CA346;
-        }
         @media screen and (max-width: 1000px)
         {
             .trading-header {
@@ -430,7 +426,7 @@
                 line-height: 14px; /* 116.667% */
             }
             .wheat-container {
-                height: 30px;
+                height: 50px;
             }
             .open-text {
                 font-size: 14px;
@@ -467,6 +463,7 @@
                 font-size: 20px;
                 line-height: 30px;
                 font-family: SF Pro Text;
+                text-align: center;
             }
             .stable-img {
                 width: 70px;
@@ -505,7 +502,7 @@
                 min-width: 100%;
             }
             th, td {
-                min-width: 128px; /* Set a minimum width for each cell to prevent squeezing content */
+                /* min-width: 128px; Set a minimum width for each cell to prevent squeezing content */
             }
             .trading6 {
                 overflow-x: auto;
@@ -563,6 +560,47 @@
             .trading15 {
                 margin-bottom: 66px;
             }
+            .app-window {
+                display: none;
+            }
+            .app-dark-mobile {
+                width: 100%;
+            }
+            .gap-36 {
+                gap: 16px;
+            }
+            .mobile-desc {
+                display: none;
+            }
+            th {
+                font-size: 12px;
+            }
+            .trading-mobile-light {
+                display: block;
+                width: 100%;
+            }
+            .trading-mobile-dark {
+                display: none;
+            }
+            .dark-mode .trading-mobile-light {
+                display: none;
+            }
+            .dark-mode .trading-mobile-dark {
+                display: block;
+                width: 100%;
+            }
+
+            .dark-mode .app-dark-mobile {
+                border: #5CA346 1px solid;
+                border-radius: 10px;
+            }
+            .trading2-3 {
+                margin-bottom: 26px;
+            }
+            .dark-mode .stable-dark-img {
+                width: 70px;
+                height: 70px;
+            }
         }
     </style>
 
@@ -589,7 +627,8 @@
     </div>
 
     <div class="trading-header-mobile">
-        <img src="assets/image/trading/trading-mobile.png" alt="">
+        <img src="assets/image/trading/trading-mobile.png" class="trading-mobile-light" alt="">
+        <img src="assets/image/trading/trading-mobile-dark.png" class="trading-mobile-dark" alt="">
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
@@ -618,11 +657,11 @@
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
-                    <img src="assets/image/footer/window.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark app-window">
 
                     <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
-                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
                 <div>
                     <p class="aldy-text">
@@ -729,221 +768,221 @@
                 <thead>
                     <tr>
                         <th>SYMBOL</th>
-                        <th>DESCRIPTIONS</th>
+                        <th class="mobile-desc">DESCRIPTIONS</th>
                         <th>MIN SPREADS (pips)</th>
                         <th>MIN TRADE SIZE</th>
-                        <th>MAX TRADE SIZE</th>
+                        <th class="mobile-desc">MAX TRADE SIZE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>AUDCAD</td>
-                        <td>Australian Dollar vs. Canadian Dollar</td>
+                        <td class="mobile-desc">Australian Dollar vs. Canadian Dollar</td>
                         <td>1.6</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>AUDCHF</td>
-                        <td>Australian Dollar vs. Swiss Franc</td>
+                        <td class="mobile-desc">Australian Dollar vs. Swiss Franc</td>
                         <td>1.3</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>AUDJPY</td>
-                        <td>Australian Dollar vs. Japanese Yen</td>
+                        <td class="mobile-desc">Australian Dollar vs. Japanese Yen</td>
                         <td>1.4</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
 
                     <tr>
                         <td>AUDNZD</td>
-                        <td>Australian Dollar vs. New Zealand Dollar</td>
+                        <td class="mobile-desc">Australian Dollar vs. New Zealand Dollar</td>
                         <td>2.0</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>AUDUSD</td>
-                        <td>Australian Dollar vs. US Dollar</td>
+                        <td class="mobile-desc">Australian Dollar vs. US Dollar</td>
                         <td>1.2</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
 
                     <tr>
                         <td>CADCHF</td>
-                        <td>Canadian Dollar vs. Swiss Franc</td>
+                        <td class="mobile-desc">Canadian Dollar vs. Swiss Franc</td>
                         <td>1.3</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>CADCHF</td>
-                        <td>Canadian Dollar vs. Swiss Franc</td>
+                        <td class="mobile-desc">Canadian Dollar vs. Swiss Franc</td>
                         <td>1.3</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
 
                     <tr>
                         <td>CADJPY</td>
-                        <td>Canadian Dollar vs. Japanese Yen</td>
+                        <td class="mobile-desc">Canadian Dollar vs. Japanese Yen</td>
                         <td>1.4</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>CHFJPY</td>
-                        <td>Swiss Franc vs. Japanese Yen</td>
+                        <td class="mobile-desc">Swiss Franc vs. Japanese Yen</td>
                         <td>1.7</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
 
                     <tr>
                         <td>EURAUD</td>
-                        <td>Euro vs. Australian Dollar</td>
+                        <td class="mobile-desc">Euro vs. Australian Dollar</td>
                         <td>2.3</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURCAD</td>
-                        <td>Euro vs. Canadian Dollar</td>
+                        <td class="mobile-desc">Euro vs. Canadian Dollar</td>
                         <td>2.3</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURCHF</td>
-                        <td>Euro vs. Swiss Franc</td>
+                        <td class="mobile-desc">Euro vs. Swiss Franc</td>
                         <td>1.9</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURGBP</td>
-                        <td>Euro vs. British Pound</td>
+                        <td class="mobile-desc">Euro vs. British Pound</td>
                         <td>1.2</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURJPY</td>
-                        <td>Euro vs. Japanese Yen</td>
+                        <td class="mobile-desc">Euro vs. Japanese Yen</td>
                         <td>2.0</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURNZD</td>
-                        <td>Euro vs. New Zealand Dollar</td>
+                        <td class="mobile-desc">Euro vs. New Zealand Dollar</td>
                         <td>2.5</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>EURUSD</td>
-                        <td>Euro vs. US Dollar</td>
+                        <td class="mobile-desc">Euro vs. US Dollar</td>
                         <td>1.1</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>GBPAUD</td>
-                        <td>British Pound vs. Australian Dollar</td>
+                        <td class="mobile-desc">British Pound vs. Australian Dollar</td>
                         <td>2.7</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>GBPCAD</td>
-                        <td>British Pound vs. Canadian Dollar</td>
+                        <td class="mobile-desc">British Pound vs. Canadian Dollar</td>
                         <td>2.7</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>GBPCHF</td>
-                        <td>British Pound vs. Swiss Franc</td>
+                        <td class="mobile-desc">British Pound vs. Swiss Franc</td>
                         <td>2.1</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>GBPJPY</td>
-                        <td>British Pound vs. Japanese Yen</td>
+                        <td class="mobile-desc">British Pound vs. Japanese Yen</td>
                         <td>2.4</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>GBPNZD</td>
-                        <td>British Pound vs. New Zealand Dollar</td>
+                        <td class="mobile-desc">British Pound vs. New Zealand Dollar</td>
                         <td>2.9</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>GBPUSD</td>
-                        <td>British Pound vs. US Dollar</td>
+                        <td class="mobile-desc">British Pound vs. US Dollar</td>
                         <td>1.4</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
 
                     <tr>
                         <td>NZDCAD</td>
-                        <td>New Zealand Dollar vs. Canadian Dollar</td>
+                        <td class="mobile-desc">New Zealand Dollar vs. Canadian Dollar</td>
                         <td>1.5</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>NZDCHF</td>
-                        <td>New Zealand Dollar vs. Swiss Franc</td>
+                        <td class="mobile-desc">New Zealand Dollar vs. Swiss Franc</td>
                         <td>1.2</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>NZDJPY</td>
-                        <td>New Zealand Dollar vs. Japanese Yen</td>
+                        <td class="mobile-desc">New Zealand Dollar vs. Japanese Yen</td>
                         <td>1.3</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>NZDUSD</td>
-                        <td>New Zealand Dollar vs. US Dollar</td>
+                        <td class="mobile-desc">New Zealand Dollar vs. US Dollar</td>
                         <td>1.8</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
 
                     <tr>
                         <td>USDCAD</td>
-                        <td>US Dollar vs. Canadian Dollar</td>
+                        <td class="mobile-desc">US Dollar vs. Canadian Dollar</td>
                         <td>2.2</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>USDCHF</td>
-                        <td>US Dollar vs. Swiss Franc</td>
+                        <td class="mobile-desc">US Dollar vs. Swiss Franc</td>
                         <td>1.6</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>USDJPY</td>
-                        <td>US Dollar vs. Japanese Yen</td>
+                        <td class="mobile-desc">US Dollar vs. Japanese Yen</td>
                         <td>1.2</td>
                         <td>0.01</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                 </tbody>
             </table>
@@ -954,48 +993,48 @@
                 <thead>
                     <tr>
                         <th>SYMBOL</th>
-                        <th>DESCRIPTIONS</th>
+                        <th class="mobile-desc">DESCRIPTIONS</th>
                         <th>MIN SPREADS (pips)</th>
                         <th>MIN TRADE SIZE</th>
-                        <th>MAX TRADE SIZE</th>
+                        <th class="mobile-desc">MAX TRADE SIZE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>XAUUSD</td>
-                        <td>Gold vs. US Dollar</td>
+                        <td class="mobile-desc">Gold vs. US Dollar</td>
                         <td>23</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>XAUEUR</td>
-                        <td>Gold vs. Euro</td>
+                        <td class="mobile-desc">Gold vs. Euro</td>
                         <td>21</td>
                         <td>0.01</td>
-                        <td>50</td>
+                        <td class="mobile-desc">50</td>
                     </tr>
                     <tr>
                         <td>XAGUSD</td>
-                        <td>Silver vs. US Dollar</td>
+                        <td class="mobile-desc">Silver vs. US Dollar</td>
                         <td>109</td>
                         <td>0.01</td>
-                        <td>20</td>
+                        <td class="mobile-desc">20</td>
                     </tr>
 
                     <tr>
                         <td>XPDUSD</td>
-                        <td>Palladium</td>
+                        <td class="mobile-desc">Palladium</td>
                         <td>31</td>
                         <td>0.01</td>
-                        <td>10</td>
+                        <td class="mobile-desc">10</td>
                     </tr>
                     <tr>
                         <td>XPTUSD</td>
-                        <td>Platinum</td>
+                        <td class="mobile-desc">Platinum</td>
                         <td>35</td>
                         <td>0.01</td>
-                        <td>10</td>
+                        <td class="mobile-desc">10</td>
                     </tr>
                 </tbody>
             </table>
@@ -1023,91 +1062,91 @@
                 <thead>
                     <tr>
                         <th>SYMBOL</th>
-                        <th>DESCRIPTIONS</th>
+                        <th class="mobile-desc">DESCRIPTIONS</th>
                         <th>MIN SPREADS (pips)</th>
                         <th>MIN TRADE SIZE</th>
-                        <th>MAX TRADE SIZE</th>
+                        <th class="mobile-desc">MAX TRADE SIZE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>#CHINA50</td>
-                        <td>Spot China 50 (USD)</td>
+                        <td class="mobile-desc">Spot China 50 (USD)</td>
                         <td>7.50</td>
                         <td>1</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>#NIK225</td>
-                        <td>Spot Japan 225 (JPY)</td>
+                        <td class="mobile-desc">Spot Japan 225 (JPY)</td>
                         <td>15.00</td>
                         <td>10</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
                     <tr>
                         <td>#DE40</td>
-                        <td>Spot Germany 40 (EUR)</td>
+                        <td class="mobile-desc">Spot Germany 40 (EUR)</td>
                         <td>2.00</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
 
                     <tr>
                         <td>#FR40</td>
-                        <td>Spot France 40 (EUR)</td>
+                        <td class="mobile-desc">Spot France 40 (EUR)</td>
                         <td>1.60</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#ES</td>
-                        <td>Spot Spain 35 (EUR)</td>
+                        <td class="mobile-desc">Spot Spain 35 (EUR)</td>
                         <td>5.20</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#CH</td>
-                        <td>Spot Switzerland 20 (CHF)</td>
+                        <td class="mobile-desc">Spot Switzerland 20 (CHF)</td>
                         <td>3.14</td>
                         <td>1</td>
-                        <td>100</td>
+                        <td class="mobile-desc">100</td>
                     </tr>
 
                     <tr>
                         <td>#US500</td>
-                        <td>Spot US 500 (USD)</td>
+                        <td class="mobile-desc">Spot US 500 (USD)</td>
                         <td>0.65</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#NAS100</td>
-                        <td>Spot US Tech 100 (USD)</td>
+                        <td class="mobile-desc">Spot US Tech 100 (USD)</td>
                         <td>1.70</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#GB100</td>
-                        <td>Spot UK 100 (GBP)</td>
+                        <td class="mobile-desc">Spot UK 100 (GBP)</td>
                         <td>1.60</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#EU50</td>
-                        <td>Spot EU Stocks 50 (EUR)</td>
+                        <td class="mobile-desc">Spot EU Stocks 50 (EUR)</td>
                         <td>2.10</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                     <tr>
                         <td>#US30</td>
-                        <td>Spot US 30 (USD)</td>
+                        <td class="mobile-desc">Spot US 30 (USD)</td>
                         <td>3.20</td>
                         <td>1</td>
-                        <td>200</td>
+                        <td class="mobile-desc">200</td>
                     </tr>
                 </tbody>
             </table>
@@ -1164,11 +1203,11 @@
                 <div class="flex gap-10">
                     <img src="assets/image/footer/apple.svg" class="app-dark">
                     <img src="assets/image/footer/google.svg" class="app-dark">
-                    <img src="assets/image/footer/window.svg" class="app-dark">
+                    <img src="assets/image/footer/window.svg" class="app-dark app-window">
 
                     <img src="assets/image/company/google-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
-                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile">
+                    <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
                 <div>
                     <p class="aldy-text">
