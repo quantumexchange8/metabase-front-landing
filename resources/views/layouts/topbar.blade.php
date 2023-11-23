@@ -219,6 +219,15 @@
         .dark-mode .btn-green-mobile span {
             color: #FFF;
         }
+        .gap-30-t {
+            gap: 28px;
+        }
+        .slick-prev:before, .slick-next:before {
+            display: none;
+        }
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
     }
 </style>
 
@@ -283,7 +292,7 @@
 <div class="overlay-container" id="overlayContainer" style="display: none">
     <!-- Content of your container goes here -->
     <div class="container">
-        <div class="flex flex-col gap-30">
+        <div class="flex flex-col gap-30-t">
             <div class="flex flex-col gap-26">
                 <img src="assets/image/logo-mobile-long.svg" class="logo-mobile-long">
                 <div class="container-nav">
@@ -446,7 +455,7 @@
                 </div>
             </div>
             
-            <div class="slick-slider">
+            <div class="slick-slider" style="margin-left: -25px">
                 {{-- <div class="container-img">
                     <img src="assets/image/ticket.svg" alt="" class="ticket">
                     <img src="assets/image/coming.svg" alt="" class="coming">

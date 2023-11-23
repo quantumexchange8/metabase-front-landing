@@ -569,6 +569,7 @@
             margin-bottom: 78px;
         }
         .app-dark-mobile {
+            width: 100%;
             display: block;
         }
         .app-dark {
@@ -577,7 +578,7 @@
         .app-window {
             display: none;
         }
-        .app-dark-mobile {
+        .dark-mode .app-dark-mobile {
             width: 100%;
             border: #5CA346 1px solid;
             border-radius: 10px;

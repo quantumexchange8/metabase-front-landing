@@ -560,6 +560,12 @@
         display: none;
     }
     @media screen and (max-width: 1000px) {
+        .app-dark {
+            width: 100%;
+        }
+        .app-window {
+            display: none;
+        }
         .home-header {
             display: none;
         }
@@ -765,6 +771,7 @@
         }
         .core-mobile {
             display: block;
+            width: 100%;
         }
         .explore-cont {
             width: 45%;
@@ -950,6 +957,7 @@
 
         .idk-img-mobile {
             display: block;
+            width: 100%;
         }
         .idk-img-mobile-dark {
             display: none;
@@ -1017,9 +1025,9 @@
                         </div>
     
                         <div class="flex content-center gap-10">
-                            <img src="assets/image/footer/apple.svg" class="app-dark">
-                            <img src="assets/image/footer/google.svg" class="app-dark">
-                            <img src="assets/image/footer/window.svg" class="app-dark">
+                            <img src="assets/image/footer/apple.svg">
+                            <img src="assets/image/footer/google.svg">
+                            <img src="assets/image/home/windows.svg">
                         </div>
     
                         <div class="investing-row">
@@ -1515,7 +1523,7 @@
                 <div class="flex gap-8">
                     <img src="assets/image/apple-mobile.svg" class="app-dark">
                     <img src="assets/image/google-mobile.svg" class="app-dark">
-                    {{-- <img src="assets/image/windows-mobile.svg" class="app-dark"> --}}
+                    <img src="assets/image/windows-mobile.svg" class="app-dark app-window">
                 </div>
                 <div>
                     {{-- <p class="aldy-text">
