@@ -602,6 +602,7 @@
         }
         .dark-mode .core-mobile-dark {
             display: block;
+            width: 100%;
         }
 
         .text-overlay-mobile {
@@ -651,15 +652,20 @@
             margin-bottom: 50px;
         }
         .marquee1 {
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .marquee-content {
+            white-space: nowrap;
             display: flex;
             animation: marquee-animation 150s linear infinite;
-            width: fit-content; /* Adjust the width based on your image size */
+            /* width: fit-content; Adjust the width based on your image size */
             gap: 25px;
+        }
+        .marquee-item {
+            flex-shrink: 0; /* Prevent items from shrinking */
         }
         @keyframes marquee-animation {
             0% {
@@ -667,6 +673,18 @@
             }
             100% {
             transform: translateX(-100%);
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            .marquee-content {
+                display: -webkit-box;
+                -webkit-box-orient: horizontal;
+                overflow: hidden;
+                -webkit-marquee: {
+                    -webkit-marquee-direction: backwards;
+                    -webkit-marquee-speed: normal;
+                };
             }
         }
 
@@ -983,6 +1001,10 @@
             display: flex !important;
             justify-content: center !important;
         }
+
+        .dark-mode .slick-dots li.slick-active button:before {
+            color: #00ff16;
+        }
     }
 
     @media screen and (max-width: 1350px)
@@ -993,6 +1015,19 @@
     }
     .w-full {
         width: 100%;
+    }
+
+    @media screen and (min-width: 1500px)
+    {
+        .iphone-img {
+            margin-bottom: -5px;
+        }
+    }
+    @media screen and (min-width: 2000px)
+    {
+        .iphone-img {
+            margin-bottom: -7px;
+        }
     }
 </style>
 
@@ -1334,7 +1369,7 @@
         <div class="home5">
             <div class="flex content-center gap-90">
                 <div class="flex flex-col item" style="width: 150px">
-                    <img src="assets/image/home/std.png" class="std-border">
+                    <img src="assets/image/home/std.svg" class="std-border">
                     <p class="std-word-purple">STANDARD<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
@@ -1344,7 +1379,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 150px">
-                    <img src="assets/image/home/ecn.png" class="ecn-border">
+                    <img src="assets/image/home/ecn.svg" class="ecn-border">
                     <p class="std-word-orange">ECN<br> ACCOUNT</p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
@@ -1354,7 +1389,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 150px">
-                    <img src="assets/image/home/esaving.png" class="esaving-border">
+                    <img src="assets/image/home/esaving.svg" class="esaving-border">
                     <p class="std-word-green">eSAVING<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
@@ -1364,7 +1399,7 @@
                     </p> --}}
                 </div>
                 <div class="flex flex-col item" style="width: 176px">
-                    <img src="assets/image/home/einvest.png" class="einvest-border">
+                    <img src="assets/image/home/einvest.svg" class="einvest-border">
                     <p class="std-word-blue">eINVEST<br> ACCOUNT</p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows

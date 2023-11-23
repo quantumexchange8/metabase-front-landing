@@ -43,24 +43,29 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
             /* display: flex; */
             justify-content: center;
             align-items: center;
-            background: #fff;
+            background: transparent;
             z-index: 999;
             padding: 26px 26px 26px 26px;
             box-sizing: border-box;
             overflow-y: auto;
         }
 
+        .container-white {
+            background: #fff;
+            border-radius: 30px;
+        }
+
         .container {
             max-width: 378px;
             width: 100%;
             /* max-height: 801px; */
-            height: 100%;
-            padding: 26px;
+            height: auto;
+            padding: 28px;
             box-sizing: border-box;
             text-align: center;
             border-radius: 30px;
@@ -110,7 +115,7 @@
         }
         .btn-green-mobile {
             width: 155px;
-            height: 40px;
+            height: 50px;
             border-radius: 40px;
             border: 2px solid #5CA346;
         }
@@ -197,10 +202,17 @@
             background: rgba(92, 163, 70, 0.40);
         }
         .dark-mode .overlay-container {
+            background: transparent;
+        }
+        .dark-mode .container-white {
             background: #000;
+            border-radius: 30px;
         }
         .dark-mode .container {
             background: rgba(92, 163, 70, 0.30);
+        }
+        .dark-mode .close-word {
+            color: #FFF;
         }
 
         .dark-mode .nav-text-dark {
@@ -220,13 +232,24 @@
             color: #FFF;
         }
         .gap-30-t {
-            gap: 28px;
+            gap: 40px;
         }
         .slick-prev:before, .slick-next:before {
             display: none;
         }
         .slick-prev, .slick-next {
             display: none !important;
+        }
+        .close-word {
+            color: #000;
+            text-align: center;
+            font-family: SF Pro Text;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration: underline;
+            text-decoration-color: red;
         }
     }
 </style>
@@ -291,259 +314,262 @@
 
 <div class="overlay-container" id="overlayContainer" style="display: none">
     <!-- Content of your container goes here -->
-    <div class="container">
-        <div class="flex flex-col gap-30-t">
-            <div class="flex flex-col gap-26">
-                <img src="assets/image/logo-mobile-long.svg" class="logo-mobile-long">
-                <div class="container-nav">
-                    <div class="flex flex-col gap-15">
-                        <div>
-                            <a href="#">
-                                <span class="nav-text-green">
-                                    EXPLORE
-                                </span> 
-                            </a>
-                        </div>
-
-                        <div class="flex flex-col gap-20">
-                            <div>
-                                <a href="{{ route('home') }}" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        HOME
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="{{ route('company') }}" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        COMPANY
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="{{ route('trading') }}" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        TRADING
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="{{ route('partnership') }}" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        PARTNER
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="{{ route('support') }}" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        SUPPORT
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-15">
-                        <div>
-                            <a href="#"> 
-                                <span class="nav-text-green">
-                                    CLIENT
-                                </span>
-                            </a>
-                        </div>
-
-                        <div class="flex flex-col gap-20">
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        REGISTER
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        PORTAL
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        CASH IN
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        CASH OUT
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        PASSWORD
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-15">
-                        <div>
-                            <a href="#"> 
-                                <span class="nav-text-green">
-                                    BENEFIT
-                                </span> 
-                            </a>
-                        </div>
-
-                        <div class="flex flex-col gap-20">
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        BONUSES
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        CREDIT
-                                    </span>
-                                </a>
-                            </div>
-
+    <div class="container-white">
+        <div class="container">
+            <div class="flex flex-col gap-30-t">
+                <div class="flex flex-col gap-26">
+                    <img src="assets/image/logo-mobile-long.svg" class="logo-mobile-long">
+                    <div class="container-nav">
+                        <div class="flex flex-col gap-15">
                             <div>
                                 <a href="#">
                                     <span class="nav-text-green">
-                                        INQUIRY
-                                    </span>
+                                        EXPLORE
+                                    </span> 
                                 </a>
                             </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        EMAIL
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="#" class="nav-mobile">
-                                    <span class="nav-text-dark">
-                                        TELEGRAM
-                                    </span>
-                                </a>
+    
+                            <div class="flex flex-col gap-20">
+                                <div>
+                                    <a href="{{ route('home') }}" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            HOME
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="{{ route('company') }}" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            COMPANY
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="{{ route('trading') }}" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            TRADING
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="{{ route('partnership') }}" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            PARTNER
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="{{ route('support') }}" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            SUPPORT
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="slick-slider" style="margin-left: -25px">
-                {{-- <div class="container-img">
-                    <img src="assets/image/ticket.svg" alt="" class="ticket">
-                    <img src="assets/image/coming.svg" alt="" class="coming">
-                </div>
-
-                <div class="container-img">
-                    <img src="assets/image/ticket.svg" alt="" class="ticket">
-                    <img src="assets/image/coming.svg" alt="" class="coming">
-                </div>
-
-                <div class="container-img">
-                    <img src="assets/image/ticket.svg" alt="" class="ticket">
-                    <img src="assets/image/coming.svg" alt="" class="coming">
-                </div> --}}
-
-                <div class="slide-item1-container">
-                    <img src="assets/image/interest_booster.svg" alt="" class="ticket">
-                </div>
-
-                <div class="slide-item1-container">
-                    <img src="assets/image/alchemist.svg" alt="" class="ticket">
-                </div>
-
-                <div class="slide-item1-container">
-                    <img src="assets/image/trading_insurance.svg" alt="" class="ticket">
-                </div>
-
-                <div class="slide-item1-container">
-                    <img src="assets/image/trading_contest.svg" alt="" class="ticket">
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-25 mt-5">
-
-                <div class="flex content-center gap-14">
-                    <img src="assets/image/apple-mobile.svg" class="app-mobile" alt="">
-                    <img src="assets/image/google-mobile.svg" class="app-mobile" alt="">
-                </div>
-
-                <div class="flex content-center gap-29">
-
-                    <div class="flex flex-col gap-10 item" id="lightMode">
-                        <img src="assets/image/light-mobile.svg" class="light-mobile-img" alt="">
-                        <span class="light-green-text">
-                            Light
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-10 item" id="darkMode">
-                        <img src="assets/image/dark-mobile.svg" class="light-mobile-img" alt="">
-                        <span class="light-green-text">
-                            Dark
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/en-mobile.svg" class="light-mobile-img" alt="">
-                        <span class="light-green-text">
-                            English
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-10 item">
-                        <img src="assets/image/cn-mobile.svg" class="light-mobile-img" alt="">
-                        <span class="light-green-text">
-                            中文
-                        </span>
-                    </div>
-                    
-                    
-                </div>
     
-                <div class="flex flex-col gap-15">
-                    <div class="flex content-center gap-15">
-                        <button class="btn-green-mobile">
-                            <span>REGISTER<br> LIVE ACCOUNT</span>
-                        </button>
-                        <button class="btn-green-mobile">
-                            <span>LOG IN TO YOUR<br> PORTAL</span>
-                        </button>
+                        <div class="flex flex-col gap-15">
+                            <div>
+                                <a href="#"> 
+                                    <span class="nav-text-green">
+                                        CLIENT
+                                    </span>
+                                </a>
+                            </div>
+    
+                            <div class="flex flex-col gap-20">
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            REGISTER
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            PORTAL
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            CASH IN
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            CASH OUT
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            PASSWORD
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col gap-15">
+                            <div>
+                                <a href="#"> 
+                                    <span class="nav-text-green">
+                                        BENEFIT
+                                    </span> 
+                                </a>
+                            </div>
+    
+                            <div class="flex flex-col gap-20">
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            BONUSES
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            CREDIT
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#">
+                                        <span class="nav-text-green">
+                                            INQUIRY
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            EMAIL
+                                        </span>
+                                    </a>
+                                </div>
+    
+                                <div>
+                                    <a href="#" class="nav-mobile">
+                                        <span class="nav-text-dark">
+                                            TELEGRAM
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                {{-- <div class="slick-slider" style="margin-left: -25px"> --}}
+                    {{-- <div class="container-img">
+                        <img src="assets/image/ticket.svg" alt="" class="ticket">
+                        <img src="assets/image/coming.svg" alt="" class="coming">
+                    </div>
+    
+                    <div class="container-img">
+                        <img src="assets/image/ticket.svg" alt="" class="ticket">
+                        <img src="assets/image/coming.svg" alt="" class="coming">
+                    </div>
+    
+                    <div class="container-img">
+                        <img src="assets/image/ticket.svg" alt="" class="ticket">
+                        <img src="assets/image/coming.svg" alt="" class="coming">
+                    </div> --}}
+    
+                    {{-- <div class="slide-item1-container">
+                        <img src="assets/image/interest_booster.svg" alt="" class="ticket">
+                    </div>
+    
+                    <div class="slide-item1-container">
+                        <img src="assets/image/alchemist.svg" alt="" class="ticket">
+                    </div>
+    
+                    <div class="slide-item1-container">
+                        <img src="assets/image/trading_insurance.svg" alt="" class="ticket">
+                    </div>
+    
+                    <div class="slide-item1-container">
+                        <img src="assets/image/trading_contest.svg" alt="" class="ticket">
+                    </div>
+                </div> --}}
+    
+                <div class="flex flex-col gap-25 mt-5">
+    
+                    <div class="flex content-center gap-14">
+                        <img src="assets/image/apple-mobile.svg" class="app-mobile" alt="">
+                        <img src="assets/image/google-mobile.svg" class="app-mobile" alt="">
+                    </div>
+    
+                    <div class="flex content-center gap-29">
+    
+                        <div class="flex flex-col gap-10 item" id="lightMode">
+                            <img src="assets/image/light-mobile.svg" class="light-mobile-img" alt="">
+                            <span class="light-green-text">
+                                Light
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-10 item" id="darkMode">
+                            <img src="assets/image/dark-mobile.svg" class="light-mobile-img" alt="">
+                            <span class="light-green-text">
+                                Dark
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-10 item">
+                            <img src="assets/image/en-mobile.svg" class="light-mobile-img" alt="">
+                            <span class="light-green-text">
+                                English
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-10 item">
+                            <img src="assets/image/cn-mobile.svg" class="light-mobile-img" alt="">
+                            <span class="light-green-text">
+                                中文
+                            </span>
+                        </div>
+                        
+                        
                     </div>
         
-                    <div class="flex content-center">
-                        <button class="btn-green-mobile" onclick="toggleNav()">
-                            <span>Close</span>
-                        </button>
+                    <div class="flex flex-col gap-40">
+                        <div class="flex content-center gap-15">
+                            <button class="btn-green-mobile">
+                                <span>REGISTER<br> LIVE ACCOUNT</span>
+                            </button>
+                            <button class="btn-green-mobile">
+                                <span>LOG IN TO YOUR<br> PORTAL</span>
+                            </button>
+                        </div>
+            
+                        <div class="flex content-center">
+                            {{-- <button class="btn-green-mobile" > --}}
+                                <span class="close-word" onclick="toggleNav()">CLOSE</span>
+                            {{-- </button> --}}
+                        </div>
                     </div>
                 </div>
+                
+                
             </div>
-            
-            
         </div>
     </div>
+    
 </div>

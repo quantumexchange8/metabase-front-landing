@@ -17,11 +17,12 @@
     <!--icon-->
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <!--Slick css-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 <body class="light-mode">
@@ -143,10 +144,18 @@
 </script>
 
 <script>
+    var overlay = document.getElementById('overlayContainer');
+
     function toggleNav() {
-            var overlay = document.getElementById('overlayContainer');
             overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'block' : 'none';
         }
+
+        // function hideOverlayOnScroll() {
+        //     // Set display to 'none' when the user scrolls
+        //     overlay.style.display = 'none';
+        // }
+
+        // window.addEventListener('scroll', hideOverlayOnScroll);
 </script>
 
 <script>
