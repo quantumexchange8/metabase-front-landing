@@ -43,7 +43,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: auto;
+            width: 100%;
             height: auto;
             /* display: flex; */
             justify-content: center;
@@ -61,7 +61,7 @@
         }
 
         .container {
-            max-width: 378px;
+            /* max-width: 378px; */
             width: 100%;
             /* max-height: 801px; */
             height: auto;

@@ -42,3 +42,7 @@ Route::get('trading', function () {
 Route::get('support', function () {
     return view('support');
 })->name('support');
+
+Route::get('privacy_policy', function() {
+    return view('privacy_policy');
+})->name('privacy_policy ');

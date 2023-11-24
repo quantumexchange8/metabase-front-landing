@@ -663,6 +663,7 @@
             animation: marquee-animation 150s linear infinite;
             /* width: fit-content; Adjust the width based on your image size */
             gap: 25px;
+            transform: translate3d(0, 0, 0);
         }
         .marquee-item {
             flex-shrink: 0; /* Prevent items from shrinking */
@@ -675,8 +676,16 @@
             transform: translateX(-100%);
             }
         }
+        @-webkit-keyframes marquee-animation {
+            0% {
+                -webkit-transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
 
-        @media screen and (-webkit-min-device-pixel-ratio:0) {
+        /* @media screen and (-webkit-min-device-pixel-ratio:0) {
             .marquee-content {
                 display: -webkit-box;
                 -webkit-box-orient: horizontal;
@@ -686,7 +695,7 @@
                     -webkit-marquee-speed: normal;
                 };
             }
-        }
+        } */
 
         .marquee2 {
             display: flex;

@@ -147,16 +147,24 @@
     var overlay = document.getElementById('overlayContainer');
 
     function toggleNav() {
-            overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'block' : 'none';
+        overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'block' : 'none';
+    }
+
+    function hideOverlayOnScroll() {
+        // Set display to 'none' when the user scrolls
+        overlay.style.display = 'none';
+    }
+
+    function closeOverlayOnClickOutside(event) {
+        if (!overlay.contains(event.target)) {
+            overlay.style.display = 'none';
         }
+    }
 
-        // function hideOverlayOnScroll() {
-        //     // Set display to 'none' when the user scrolls
-        //     overlay.style.display = 'none';
-        // }
-
-        // window.addEventListener('scroll', hideOverlayOnScroll);
+    window.addEventListener('scroll', hideOverlayOnScroll);
+    document.addEventListener('mousedown', closeOverlayOnClickOutside);
 </script>
+
 
 <script>
     $('.autoplay').slick({
