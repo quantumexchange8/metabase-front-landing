@@ -9,8 +9,10 @@
         text-align: center;
     }
     .pp2 {
-        margin-top: 50px;
-        margin-bottom: 100px;
+        /* margin-top: 50px;
+        margin-bottom: 100px; */
+        margin: 50px 40px 100px 40px;
+        width: 100%;
     }
     .pp2 p {
         font-family: SF Pro Text;
@@ -40,6 +42,10 @@
         text-decoration: underline;
     }
     @media screen and (max-width: 1000px) {
+        .pp2 {
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
         .pp2 p {
             width: 100%;
             height: auto;
@@ -60,7 +66,7 @@
         <b>Privacy Policy</b>
     </div>
 
-    <div class="pp2">
+    <div class="pp2 mobile-ml-mr">
         <p>
             <b class="header">1. Our Commitment</b>
             <br>

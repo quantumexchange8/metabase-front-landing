@@ -73,7 +73,7 @@
             /* display: none; */
             overflow: auto;
             /* min-height: 827px; */
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
         .logo-mobile-long {
             width: 200px;
