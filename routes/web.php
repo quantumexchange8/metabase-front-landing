@@ -43,6 +43,6 @@ Route::get('support', function () {
     return view('support');
 })->name('support');
 
-Route::get('privacy_policy', function() {
+Route::get('privacy-policy', function() {
     return view('privacy_policy');
 })->name('privacy_policy ');
