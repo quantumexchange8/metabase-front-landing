@@ -643,7 +643,38 @@
             .dark-mode .slick-dots li button:before {
                 color: #00ff16;
             }
+
+            .partner-text1.tw-partner-text1 {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+            }
+            .stbl-text-mobile.tw-stbl-text-mobile {
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 12px;
+            }
+            .enjoy-text-green2.tw-enjoy-text-green2 {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+
+            .enjoy-text-white.tw-enjoy-text-white {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+            .aldy-text-mobile.tw-aldy-text-mobile {
+                font-size: 12px;
+                line-height: 14px;
+                width: 85%;
+            }
         }
+
+
     </style>
 
     <div class="partner-header">
@@ -653,12 +684,18 @@
             <div class="main-content">
                 <div class="flex flex-col">
                     <p class="partner-text1">
-                        Don't give up your forest<br>
-                        for the sake of one tree.
+                        {{-- Don't give up your forest --}}
+                        @lang('message.partner-text1-1')
+                        <br>
+                        {{-- for the sake of one tree. --}}
+                        @lang('message.partner-text1-2')
                     </p>
                     <p class="partner-text2">
-                        Solutions for Introducing Advisor (IA)<br>
-                        Build your client base, earn more revenue.
+                        {{-- Solutions for Introducing Advisor (IA) --}}
+                        @lang('message.partner-text2-1')
+                        <br>
+                        {{-- Build your client base, earn more revenue. --}}
+                        @lang('message.partner-text2-2')
                     </p>
                 </div>
             </div>
@@ -671,13 +708,19 @@
         <div class="text-overlay-mobile">
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
-                    <p class="partner-text1">
-                        Don't give up your forest<br>
-                        for the sake of one tree.
+                    <p class="partner-text1 @if(app()->getLocale() == 'tw') tw-partner-text1 @endif">
+                        {{-- Don't give up your forest --}}
+                        @lang('message.partner-text1-1')
+                        <br>
+                        {{-- for the sake of one tree. --}}
+                        @lang('message.partner-text1-2')
                     </p>
                     <p class="partner-text2">
-                        Solutions for Introducing Advisor (IA)<br>
-                        Build your client base, earn more revenue.
+                        {{-- Solutions for Introducing Advisor (IA) --}}
+                        @lang('message.partner-text2-1')
+                        <br>
+                        {{-- Build your client base, earn more revenue. --}}
+                        @lang('message.partner-text2-2')
                     </p>
                 </div>
             </div>
@@ -687,7 +730,8 @@
     <div class="main-content">
         <div class="partner1 mobile-ml-mr">
             <p class="partner-text-green">
-                Rely on a rock solid partner
+                {{-- Rely on a rock solid partner --}}
+                @lang('message.partner-text-green')
             </p>
         </div>
 
@@ -697,65 +741,102 @@
                     <img src="assets/image/partner/4.svg" class="atr-img">
                     <img src="assets/image/partner/attractive-dark.png" class="atr-dark-img">
                     <p class="stbl-text">
-                        Attractive tailored<br>
-                        reward scheme
+                        {{-- Attractive tailored --}}
+                        @lang('message.stbl-text-1')
+                        <br>
+                        {{-- reward scheme --}}
+                        @lang('message.stbl-text-2')
                     </p>
-                    <p class="stbl-text-mobile">
-                        Attractive<br>
-                        reward<br> scheme
+                    <p class="stbl-text-mobile @if(app()->getLocale() == 'tw') tw-stbl-text-mobile @endif">
+                        {{-- Attractive --}}
+                        @lang('message.stbl-text-mobile-1')
+                        <br>
+                        {{-- reward --}}
+                        @lang('message.stbl-text-mobile-2')
+                        <br> 
+                        {{-- scheme --}}
+                        @lang('message.stbl-text-mobile-3')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/partner/1.svg" class="atr-img">
                     <img src="assets/image/partner/advance-dark.png" class="atr-dark-img">
                     <p class="stbl-text">
-                        Advanced Client<br>
-                        Tracking System
+                        {{-- Advanced Client --}}
+                        @lang('message.stbl-text-3')
+                        <br>
+                        {{-- Tracking System --}}
+                        @lang('message.stbl-text-4')
                     </p>
-                    <p class="stbl-text-mobile">
-                        Client <br>
-                        Tracking<br>
-                        System
+                    <p class="stbl-text-mobile @if(app()->getLocale() == 'tw') tw-stbl-text-mobile @endif">
+                        {{-- Client  --}}
+                        @lang('message.stbl-text-mobile-4')
+                        <br>
+                        {{-- Tracking --}}
+                        @lang('message.stbl-text-mobile-5')
+                        <br>
+                        {{-- System --}}
+                        @lang('message.stbl-text-mobile-6')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/partner/2.svg" class="atr-img">
                     <img src="assets/image/partner/automated-dark.png" class="atr-dark-img">
                     <p class="stbl-text">
-                        Automated<br>
-                        revenue reporting
+                        {{-- Automated --}}
+                        @lang('message.stbl-text-5')
+                        <br>
+                        {{-- revenue reporting --}}
+                        @lang('message.stbl-text-6')
                     </p>
-                    <p class="stbl-text-mobile">
-                        Automated<br>
-                        revenue<br>
-                        reporting
+                    <p class="stbl-text-mobile @if(app()->getLocale() == 'tw') tw-stbl-text-mobile @endif">
+                        {{-- Automated --}}
+                        @lang('message.stbl-text-mobile-7')
+                        <br>
+                        {{-- revenue --}}
+                        @lang('message.stbl-text-mobile-8')
+                        <br>
+                        {{-- reporting --}}
+                        @lang('message.stbl-text-mobile-9')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/partner/3.svg" class="atr-img">
                     <img src="assets/image/partner/powerful-dark.png" class="atr-dark-img">
                     <p class="stbl-text">
-                        Powerful and<br>
-                        user-friendly CRM
+                        {{-- Powerful and --}}
+                        @lang('message.stbl-text-7')
+                        <br>
+                        {{-- user-friendly CRM --}}
+                        @lang('message.stbl-text-8')
                     </p>
-                    <p class="stbl-text-mobile">
-                        Powerful<br>
-                        and user-<br>
-                        friendly CRM
+                    <p class="stbl-text-mobile @if(app()->getLocale() == 'tw') tw-stbl-text-mobile @endif">
+                        {{-- Powerful --}}
+                        @lang('message.stbl-text-mobile-10')
+                        <br>
+                        {{-- and user- --}}
+                        @lang('message.stbl-text-mobile-11')
+                        <br>
+                        {{-- friendly CRM --}}
+                        @lang('message.stbl-text-mobile-12')
                     </p>
                 </div>
             </div>
         </div>
 
         <div class="partner3 mobile-ml-mr">
-            <p class="enjoy-text-green2">
-                Enjoy Metabase quality investment experience?
-                Don't be selfish, invite your friends now!
+            <p class="enjoy-text-green2 @if(app()->getLocale() == 'tw') tw-enjoy-text-green2 @endif">
+                {{-- Enjoy Metabase quality investment experience?
+                Don't be selfish, invite your friends now! --}}
+                @lang('message.enjoy-text-green2')
             </p>
-            <p class="enjoy-text-white">
-                Recommend Metabase and earn cash bonuses up 
-                to <br> USD 100.00 per referral*.Just follow the simple 
-                steps below:
+            <p class="enjoy-text-white @if(app()->getLocale() == 'tw') tw-enjoy-text-white @endif">
+                {{-- Recommend Metabase and earn cash bonuses up to  --}}
+                @lang('message.enjoy-text-white-1')
+                <br> 
+                {{-- USD 100.00 per referral*.Just follow the simple 
+                steps below: --}}
+                @lang('message.enjoy-text-white-2')
             </p>
         </div>
 
@@ -764,11 +845,15 @@
                 <div class="flex flex-col item">
                     <img src="assets/image/partner/5.png">
                     <div class="w-f">
-                        <p class="log-text-span">How to be a sponsor?</p>
+                        <p class="log-text-span">
+                            {{-- How to be a sponsor? --}}
+                            @lang('message.log-text-span-1')
+                        </p>
                         <p class="log-text">
-                            Just log into your ePortal to obtain
+                            {{-- Just log into your ePortal to obtain
                             your referral link, then share it
-                            with your friends.
+                            with your friends. --}}
+                            @lang('message.log-text-1')
                         </p>
                     </div>
                     
@@ -776,11 +861,15 @@
                 <div class="flex flex-col item">
                     <img src="assets/image/partner/6.png">
                     <div class="w-f">
-                        <p class="log-text-span">If you have been sponsored</p>
+                        <p class="log-text-span">
+                            {{-- If you have been sponsored --}}
+                            @lang('message.log-text-span-2')
+                        </p>
                         <p class="log-text">
-                            Your friend must register an
+                            {{-- Your friend must register an
                             investment account using your
-                            referral link.
+                            referral link. --}}
+                            @lang('message.log-text-2')
                         </p>
                     </div>
                     
@@ -788,12 +877,16 @@
                 <div class="flex flex-col item">
                     <img src="assets/image/partner/7.png">
                     <div class="w-f">
-                        <p class="log-text-span">How to claim your referral bonuses</p>
+                        <p class="log-text-span">
+                            {{-- How to claim your referral bonuses --}}
+                            @lang('message.log-text-span-3')
+                        </p>
                         <p class="log-text">
-                            Both parties will be eligible for the
+                            {{-- Both parties will be eligible for the
                             referral bonus once your friend
                             deposits and trades for a minimum
-                            of 14 business days.
+                            of 14 business days. --}}
+                            @lang('message.log-text-3')
                         </p>
                     </div>
                 </div>
@@ -857,11 +950,15 @@
                     <div class="flex flex-col item">
                         <img src="assets/image/partner/5.png" class="mobile5-img">
                         <div class="w-f-slick">
-                            <p class="log-text-span">How to be a sponsor?</p>
+                            <p class="log-text-span">
+                                {{-- How to be a sponsor? --}}
+                                @lang('message.log-text-span-1')
+                            </p>
                             <p class="log-text">
-                                Just log into your ePortal to obtain
+                                {{-- Just log into your ePortal to obtain
                                 your referral link, then share it
-                                with your friends.
+                                with your friends. --}}
+                                @lang('message.log-text-1')
                             </p>
                         </div>
                     </div>
@@ -871,11 +968,15 @@
                     <div class="flex flex-col item">
                         <img src="assets/image/partner/6.png" class="mobile5-img">
                         <div class="w-f-slick">
-                            <p class="log-text-span">If you have been sponsored</p>
+                            <p class="log-text-span">
+                                {{-- If you have been sponsored --}}
+                                @lang('message.log-text-span-2')
+                            </p>
                             <p class="log-text">
-                                Your friend must register an
+                                {{-- Your friend must register an
                                 investment account using your
-                                referral link.
+                                referral link. --}}
+                                @lang('message.log-text-2')
                             </p>
                         </div>
                         
@@ -886,12 +987,16 @@
                     <div class="flex flex-col item">
                         <img src="assets/image/partner/7.png" class="mobile5-img">
                         <div class="w-f-slick">
-                            <p class="log-text-span">How to claim your referral bonuses</p>
+                            <p class="log-text-span">
+                                {{-- How to claim your referral bonuses --}}
+                                @lang('message.log-text-span-3')
+                            </p>
                             <p class="log-text">
-                                Both parties will be eligible for the
+                                {{-- Both parties will be eligible for the
                                 referral bonus once your friend
                                 deposits and trades for a minimum
-                                of 14 business days.
+                                of 14 business days. --}}
+                                @lang('message.log-text-3')
                             </p>
                         </div>
                     </div>
@@ -900,16 +1005,25 @@
         </div>
 
         <div class="partner5 mobile-ml-mr">
-            <p class="reward-text-green">Your Rewards</p>
+            <p class="reward-text-green">
+                {{-- Your Rewards --}}
+                @lang('message.reward-text-green')
+            </p>
             <p class="reward-text-white">
-                After the referred client funds <br>
-                their account, both the sponsor and the referred client will receive a<br>
-                bonus on their accounts proportional to the deposit, as detailed below.
+                {{-- After the referred client funds  --}}
+                @lang('message.reward-text-white-1')
+                <br>
+                {{-- their account, both the sponsor and the referred client will receive a --}}
+                @lang('message.reward-text-white-2')
+                <br>
+                {{-- bonus on their accounts proportional to the deposit, as detailed below. --}}
+                @lang('message.reward-text-white-3')
             </p>
             <p class="reward-text-white-mobile">
-                After the referred client funds 
+                {{-- After the referred client funds 
                 their account, both the sponsor and the referred client will receive a
-                bonus on their accounts proportional to the deposit, as detailed below.
+                bonus on their accounts proportional to the deposit, as detailed below. --}}
+                @lang('message.reward-text-white-mobile')
             </p>
         </div>
 
@@ -917,36 +1031,72 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Amount In USD</th>
-                        <th>MIN TRADING DAYS</th>
-                        <th>Standard Reward</th>
-                        <th>Premium Reward</th>
-                        <th>VIP Reward</th>
+                        <th>
+                            {{-- Amount In USD --}}
+                            @lang('message.amount-in-usd')
+                        </th>
+                        <th>
+                            {{-- MIN TRADING DAYS --}}
+                            @lang('message.min-trading-days')
+                        </th>
+                        <th>
+                            {{-- Standard Reward --}}
+                            @lang('message.standard-reward')
+                        </th>
+                        <th>
+                            {{-- Premium Reward --}}
+                            @lang('message.premium-reward')
+                        </th>
+                        <th>
+                            {{-- VIP Reward --}}
+                            @lang('message.vip-reward')
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Minimum Deposit Referred Client</td>
+                        <td>
+                            {{-- Minimum Deposit Referred Client --}}
+                            @lang('message.minumum-deposit-referred-client')
+                        </td>
                         <td rowspan="14">14</td>
                         <td>3,000.00</td>
                         <td>5,000.00</td>
                         <td>10,000.00</td>
                     </tr>
                     <tr>
-                        <td>Minimum Trading Lot Referred Client</td>
-                        <td>5 Standard Lots</td>
-                        <td>15 Standard Lots</td>
-                        <td>50 Standard Lots</td>
+                        <td>
+                            {{-- Minimum Trading Lot Referred Client --}}
+                            @lang('message.minimum-trading-lot-referred-client')
+                        </td>
+                        <td>
+                            {{-- 5 Standard Lots --}}
+                            @lang('message.5-standard-lots')
+                        </td>
+                        <td>
+                            {{-- 15 Standard Lots --}}
+                            @lang('message.15-standard-lots')
+                        </td>
+                        <td>
+                            {{-- 50 Standard Lots --}}
+                            @lang('message.50-standard-lots')
+                        </td>
                     </tr>
                     
                     <tr>
-                        <td>Cash Bonus Referrer</td>
+                        <td>
+                            {{-- Cash Bonus Referrer --}}
+                            @lang('message.cash-bonus-referrer')
+                        </td>
                         <td>100.00</td>
                         <td>300.00</td>
                         <td>500.00</td>
                     </tr>
                     <tr>
-                        <td>Cash Bonus Referred Client</td>
+                        <td>
+                            {{-- Cash Bonus Referred Client --}}
+                            @lang('message.cash-bonus-referred-client')
+                        </td>
                         <td>100.00</td>
                         <td>300.00</td>
                         <td>500.00</td>
@@ -1003,14 +1153,18 @@
         <div class="partner9">
             <a href="/assets/pdf/METABASE_REFERRAL_RPOGRAM_T&C.pdf" target="_blank">
                 <span class="tnc-text">
-                    *See the full terms and conditions of this offer.
+                    {{-- *See the full terms and conditions of this offer. --}}
+                    @lang('message.tnc-text')
                 </span>
             </a>
         </div>
 
         <div class="partner10 mobile-ml-mr">
             <div class="wheat-container">
-                <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
+                <p class="open-text">
+                    {{-- OPEN YOUR INVESTMENT ACCOUNT --}}
+                    @lang('message.c-open-text')
+                </p>
             </div>
         </div>
 
@@ -1025,14 +1179,28 @@
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
-                <div>
+                <div class="flex content-center">
                     <p class="aldy-text">
-                        Already have a friend at Metabase?<br>
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
-                    <p class="aldy-text-mobile">
-                        Already have a friend at Metabase?
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    <p class="aldy-text-mobile @if(app()->getLocale() == 'tw') tw-aldy-text-mobile @endif">
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
                 </div>
             </div>

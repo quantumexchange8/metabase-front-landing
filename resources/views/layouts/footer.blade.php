@@ -203,23 +203,12 @@
     
                     <div>
                         <p class="ft-description">
-                            Metabase establish in 2022. <br>
-                            It committed to delivering a comprehensive
-                            and reliable trading experience for forex
-                            traders globally. With our team of industry
-                            experts and cutting-edge technology, we
-                            empower traders with the necessary tools
-                            and knowledge to navigate the dynamic
-                            foreign exchange market.
+                            @lang('message.footer-description-1') <br>
+                            @lang('message.footer-description-2')
     
                             <br><br>
     
-                            Our platform provides comprehensive resources,
-                            competitive offerings, and robust customer
-                            support to ensure a secure and successful trading
-                            journey. We strive to be the trusted partner for
-                            traders seeking a comprehensive and rewarding
-                            forex trading experience.
+                            @lang('message.footer-description-3')
                         </p>
                     </div>
                 </div>
@@ -237,73 +226,97 @@
                 <div class="flex space-btw">
                     <div class="flex flex-col gap-23">
                         <div>
-                            <p class="text-green">EXPLORE</p>
+                            <p class="text-green">{{-- EXPLORE --}}
+                                @lang('message.c-explore')
+                            </p>
                         </div>
                         <div class="flex flex-col gap-20">
                             <p class="text-white">
-                                HOME
+                                {{-- HOME --}}
+                                @lang('message.c-home')
                             </p>
                             <p class="text-white">
-                                COMPANY
+                                {{-- COMPANY --}}
+                                @lang('message.c-company')
                             </p>
                             <p class="text-white">
-                                TRADING
+                                {{-- TRADING --}}
+                                @lang('message.c-trading')
                             </p>
                             <p class="text-white">
-                                PARTNERSHIP
+                                {{-- PARTNERSHIP --}}
+                                @lang('message.c-partnership')
                             </p>
                             <p class="text-white">
-                                SUPPORT
+                                {{-- SUPPORT --}}
+                                @lang('message.c-support')
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-col gap-23">
                         <div>
-                            <p class="text-green">CLIENT</p>
+                            <p class="text-green">
+                                {{-- CLIENT --}}
+                                @lang('message.c-client')
+                            </p>
                         </div>
                         <div class="flex flex-col gap-20">
                             <p class="text-white">
-                                REGISTER
+                                {{-- REGISTER --}}
+                                @lang('message.c-register')
                             </p>
                             <p class="text-white">
-                                PORTAL
+                                {{-- PORTAL --}}
+                                @lang('message.c-portal')
                             </p>
                             <p class="text-white">
-                                CASH IN
+                                {{-- CASH IN --}}
+                                @lang('message.c-cash-in')
                             </p>
                             <p class="text-white">
-                                CASH OUT
+                                {{-- CASH OUT --}}
+                                @lang('message.c-cash-out')
                             </p>
                             <p class="text-white">
-                                PASSWORD
+                                {{-- PASSWORD --}}
+                                @lang('message.c-password')
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-col gap-20">
                         <div class="flex flex-col gap-23">
                             <div>
-                                <p class="text-green">LANGUAGE</p>
+                                <p class="text-green">
+                                    {{-- LANGUAGE --}}
+                                    @lang('message.c-language')
+                                </p>
                             </div>
                             <div class="flex flex-col gap-20">
                                 <p class="text-white">
-                                    ENGLISH
+                                    {{-- ENGLISH --}}
+                                    @lang('message.c-english')
                                 </p>
                                 <p class="text-white">
-                                    CHINESE
+                                    @lang('message.c-chinese')
                                 </p>
                             </div>
                         </div>
                         
                         <div class="flex flex-col gap-20">
                             <div>
-                                <p class="text-green">BENEFIT</p>
+                                <p class="text-green">
+                                    {{-- BENEFIT --}}
+                                    @lang('message.c-benefit')
+                                </p>
                             </div>
                             <div class="flex flex-col gap-20">
                                 <p class="text-white">
-                                    BONUSES
+                                    {{-- BONUSES --}}
+                                    @lang('message.c-bonuses')
                                 </p>
                                 <p class="text-white">
-                                    CREDIT
+                                    {{-- CREDIT --}}
+                                    @lang('message.c-credit')
                                 </p>
                             </div>
                         </div>
@@ -311,28 +324,38 @@
                     <div class="flex flex-col gap-20">
                         <div class="flex flex-col gap-23">
                             <div>
-                                <p class="text-green">THEME</p>
+                                <p class="text-green">
+                                    {{-- THEME --}}
+                                    @lang('message.c-theme')
+                                </p>
                             </div>
                             <div class="flex flex-col gap-20">
                                 <p class="text-white">
-                                    LIGHT MODE
+                                    {{-- LIGHT MODE --}}
+                                    @lang('message.c-light-mode')
                                 </p>
                                 <p class="text-white">
-                                    DARK MODE
+                                    {{-- DARK MODE --}}
+                                    @lang('message.c-dark-mode')
                                 </p>
                             </div>
                         </div>
                         
                         <div class="flex flex-col gap-20">
                             <div>
-                                <p class="text-green">INQUIRY</p>
+                                <p class="text-green">
+                                    {{-- INQUIRY --}}
+                                    @lang('message.c-inquiry')
+                                </p>
                             </div>
                             <div class="flex flex-col gap-20">
                                 <p class="text-white">
-                                    EMAIL
+                                    {{-- EMAIL --}}
+                                    @lang('message.c-email')
                                 </p>
                                 <p class="text-white">
-                                    TELEGRAM
+                                    {{-- TELEGRAM --}}
+                                    @lang('message.c-telegram')
                                 </p>
                             </div>
                         </div>
@@ -387,7 +410,8 @@
                     <div class="flex flex-col">
                         <div>
                             <p class="discover-word">
-                                Stay connect with us
+                                {{-- Stay connect with us --}}
+                                @lang('message.stay-connect-with-us')
                             </p>
                         </div>
                         <div>
@@ -403,7 +427,10 @@
     
                     <div class="flex flex-col">
                         <div>
-                            <p class="discover-word">Discover our applications</p>
+                            <p class="discover-word">
+                                {{-- Discover our applications --}}
+                                @lang('message.discover-our-applications')
+                            </p>
                         </div>
                         <div class="flex flex-col gap-16">
                             <div>
@@ -438,13 +465,17 @@
         </div>
         <div class="flex flex-col gap-6">
             <div>
-                <p class="risk-word">Risk Warning:</p>
+                <p class="risk-word">
+                    {{-- Risk Warning: --}}
+                    @lang('message.risk-warning')
+                </p>
             </div>
             <div>
                 <p class="risk-content">
-                    Trading foreign exchange, spot precious metals and any other product on the Forex platform involves significant risk of loss and may not be suitable for all investors. Prior to opening an account with Metabase, consider your level of experience, investment objectives, assets, income and risk appetite. 
+                    {{-- Trading foreign exchange, spot precious metals and any other product on the Forex platform involves significant risk of loss and may not be suitable for all investors. Prior to opening an account with Metabase, consider your level of experience, investment objectives, assets, income and risk appetite. 
                     The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not speculate, invest or hedge with capital you cannot afford to lose, that is borrowed or urgently needed or necessary for personal or family subsistence. 
-                    You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts. The content of this website represents advertising material and has not been submitted to nor approved by any supervisory authority.
+                    You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts. The content of this website represents advertising material and has not been submitted to nor approved by any supervisory authority. --}}
+                    @lang('message.risk-content')
                 </p>
             </div>
         </div>
@@ -458,19 +489,21 @@
         </div>
         <div>
             <p class="ft-description">
-                Metabase establish in 2022. It committed to delivering a 
+                {{-- Metabase establish in 2022. It committed to delivering a 
                 comprehensive and reliable trading experience for forex 
                 traders globally. With our team of industry experts and 
                 cutting-edge technology, we empower traders with the 
                 necessary tools and knowledge to navigate the dynamic 
-                foreign exchange market.
+                foreign exchange market. --}}
+                @lang('message.footer-description-1') @lang('message.footer-description-2')
                 <br>
                 <br>
-                Our platform provides comprehensive resources, competitive 
+                {{-- Our platform provides comprehensive resources, competitive 
                 offerings, and robust customer support to ensure a secure 
                 and successful trading journey. We strive to be the trusted 
                 partner for traders seeking a comprehensive and rewarding
-                forex trading experience.
+                forex trading experience. --}}
+                @lang('message.footer-description-3')
             </p>
         </div>
         <div>
@@ -482,7 +515,10 @@
     </div>
     <div class="flex flex-col gap-16 mb-36">
         <div>
-            <p class="discover-word">Discover our applications</p>
+            <p class="discover-word">
+                {{-- Discover our applications --}}
+                @lang('message.discover-our-applications')
+            </p>
         </div>
         <div class="flex gap-10">
             <img src="assets/image/apple-mobile.svg" class="app-dark-footer">
@@ -509,10 +545,11 @@
 
     <div class="flex flex-col">
         <p class="risk-text-red">
-            Risk Warning:
+            {{-- Risk Warning: --}}
+            @lang('message.risk-warning')
         </p>
         <p class="risk-content">
-            Trading foreign exchange, spot precious metals and any other product on the Forex platform involves significant risk of loss and may not be suitable for all investors. Prior to opening an account with Metabase, consider your level of experience, investment objectives, assets, income and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not speculate, invest or hedge with capital you cannot afford to lose, that is borrowed or urgently needed or necessary for personal or family subsistence. You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts. The content of this website represents advertising material and has not been submitted to nor approved by any supervisory authority.
+            @lang('message.risk-content')
         </p>
     </div>
     

@@ -528,10 +528,10 @@
 
     .acct-type {
         color: #000;
-        font-family: SF Pro Display;
+        font-family: SF Pro Text;
         font-size: 30px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 510;
         line-height: 30px; /* 100% */
     }
     .acct-type li {
@@ -1038,6 +1038,61 @@
             margin-bottom: -7px;
         }
     }
+
+    .investing-word.tw-investing-word {
+        line-height: 40px;
+    }
+    .investing-row.tw-investing-row {
+        width: 100%;
+    }
+    .our-word.tw-our-word {
+        width: 74%;
+    }
+    .explore-word.tw-explore-word {
+        line-height: 40px;
+    }
+    .invest-text.tw-invest-text {
+        width: 82%;
+    }
+    .tired-text.tw-tired-text {
+        width: 82%;
+    }
+
+    @media screen and (max-width: 1000px)
+    {
+        .our-word.tw-our-word {
+            width: 100%;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .explore-word.tw-explore-word {
+            line-height: 16px;
+        }
+        .ourcore-word.tw-ourcore-word {
+            line-height: 25px;
+        }
+        .select-word.tw-select-word {
+            width: 95%; 
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .tired-text.tw-tired-text {
+            width: 95%;
+        }
+        .aldy-text.tw-aldy-text {
+            font-size: 12px;
+            line-height: 14px;
+            width: 85%;
+        }
+        .investing-word.tw-investing-word {
+            line-height: 16px;
+        }
+        .invest-text.tw-invest-text {
+            line-height: 16px; 
+            font-size: 12px;
+            width: 100%;
+        }
+    }
 </style>
 
     <div class="home-header">
@@ -1047,7 +1102,10 @@
             <div class="main-content">
                 <div class="flex flex-col gap-56">
                     <div>
-                        <p class="unlock-word">UNLOCK YOUR POTENTIAL</p>
+                        <p class="unlock-word">
+                            {{-- UNLOCK YOUR POTENTIAL --}}
+                            @lang('message.c-unlock-your-potential')
+                        </p>
                     </div>
     
                     <div class="flex flex-col gap-26 item">
@@ -1055,14 +1113,16 @@
                             <div>
                                 <button class="btn-green">
                                     <span style="color: #FFFFFF">
-                                        Register Live Account
+                                        {{-- Register Live Account --}}
+                                        @lang('message.register-live-account')
                                     </span>
                                 </button>
                             </div>
                             <div>
                                 <button class="btn-green">
                                     <span style="color: #FFFFFF">
-                                        Log in to your portal
+                                        {{-- Log in to your portal --}}
+                                        @lang('message.log-in-to-your-portal')
                                     </span>
                                 </button>
                             </div>
@@ -1074,11 +1134,14 @@
                             <img src="assets/image/home/windows.svg">
                         </div>
     
-                        <div class="investing-row">
-                            <p class="investing-word">
-                                Investing isn't just for the wealthy. At Metabase,<br>
-                                we believe that everyone  deserves access to high-quality
-                                investment products and services.
+                        <div class="investing-row @if(app()->getLocale() == 'tw') tw-investing-row @endif">
+                            <p class="investing-word @if(app()->getLocale() == 'tw') tw-investing-word @endif">
+                                {{-- Investing isn't just for the wealthy. At Metabase, --}}
+                                @lang('message.investing-word-1')
+                                <br>
+                                {{-- we believe that everyone  deserves access to high-quality
+                                investment products and services. --}}
+                                @lang('message.investing-word-2')
                             </p>
                         </div>
                     </div>
@@ -1098,28 +1161,38 @@
                 <div class="flex flex-col item gap-16 mobile-ml-mr">
                     <div>
                         <p class="unlock-word">
-                            UNLOCK YOUR POTENTIAL
+                            {{-- UNLOCK YOUR POTENTIAL --}}
+                            @lang('message.c-unlock-your-potential')
                         </p>
                     </div>
                     <div class="flex flex-col item">
                         <div class="flex content-center gap-16">
                             <div>
                                 <button class="btn-green">
-                                    <span style="color: #FFFFFF">Register Live Account</span>
+                                    <span style="color: #FFFFFF">
+                                        {{-- Register Live Account --}}
+                                        @lang('message.register-live-account')
+                                    </span>
                                 </button>
                             </div>
                             <div>
                                 <button class="btn-green">
-                                    <span style="color: #FFFFFF">Log in to your portal</span>
+                                    <span style="color: #FFFFFF">
+                                    {{-- Log in to your portal --}}
+                                    @lang('message.log-in-to-your-portal')
+                                    </span>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="investing-row">
-                        <p class="investing-word">
-                            Investing isn't just for the wealthy. At Metabase,<br>
-                            we believe that everyone  deserves access to high-quality
-                            investment products and services.
+                        <p class="investing-word @if(app()->getLocale() == 'tw') tw-investing-word @endif">
+                            {{-- Investing isn't just for the wealthy. At Metabase, --}}
+                            @lang('message.investing-word-1')
+                            <br>
+                            {{-- we believe that everyone  deserves access to high-quality
+                            investment products and services. --}}
+                            @lang('message.investing-word-2')
                         </p>
                     </div>
                 </div>
@@ -1133,43 +1206,50 @@
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/04.png" class="invest-img">
                     <p class="invest-word">
-                        FOREX
+                        {{-- FOREX --}}
+                        @lang('message.c-forex')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/07.png" class="invest-img">
                     <p class="invest-word">
-                        METALS
+                        {{-- METALS --}}
+                        @lang('message.c-metals')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/05.png" class="invest-img">
                     <p class="invest-word">
-                        ENERGY
+                        {{-- ENERGY --}}
+                        @lang('message.c-energy')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/06.png" class="invest-img">
                     <p class="invest-word">
-                        COMMODITIES
+                        {{-- COMMODITIES --}}
+                        @lang('message.c-commodities')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/03.png" class="invest-img">
                     <p class="invest-word">
-                        STOCKS
+                        {{-- STOCKS --}}
+                        @lang('message.c-stocks')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/01.png" class="invest-img">
                     <p class="invest-word">
-                        CRYPTO
+                        {{-- CRYPTO --}}
+                        @lang('message.c-crypto')
                     </p>
                 </div>
                 <div class="flex flex-col item">
                     <img src="/assets/image/home/08.png" class="invest-img">
                     <p class="invest-word">
-                        INDICES
+                        {{-- INDICES --}}
+                        @lang('message.c-indices')
                     </p>
                 </div>
             </div>
@@ -1182,7 +1262,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/04.png" class="invest-img">
                             <p class="invest-word">
-                                FOREX
+                                {{-- FOREX --}}
+                                @lang('message.c-forex')
                             </p>
                         </div>
                     </div>
@@ -1191,7 +1272,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/07.png" class="invest-img">
                             <p class="invest-word">
-                                METALS
+                                {{-- METALS --}}
+                                @lang('message.c-metals')
                             </p>
                         </div>
                     </div>
@@ -1199,7 +1281,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/05.png" class="invest-img">
                             <p class="invest-word">
-                                ENERGY
+                                {{-- ENERGY --}}
+                                @lang('message.c-energy')
                             </p>
                         </div>
                     </div>
@@ -1207,7 +1290,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/06.png" class="invest-img">
                             <p class="invest-word">
-                                COMMODITIES
+                                {{-- COMMODITIES --}}
+                                @lang('message.c-commodities')
                             </p>
                         </div>
                     </div>
@@ -1215,7 +1299,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/03.png" class="invest-img">
                             <p class="invest-word">
-                                STOCKS
+                                {{-- STOCKS --}}
+                                @lang('message.c-stocks')
                             </p>
                         </div>
                     </div>
@@ -1223,7 +1308,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/01.png" class="invest-img">
                             <p class="invest-word">
-                                CRYPTO
+                                {{-- CRYPTO --}}
+                                @lang('message.c-crypto')
                             </p>
                         </div>
                     </div>
@@ -1231,7 +1317,8 @@
                         <div class="flex flex-col item">
                             <img src="/assets/image/home/08.png" class="invest-img">
                             <p class="invest-word">
-                                INDICES
+                                {{-- INDICES --}}
+                                @lang('message.c-indices')
                             </p>
                         </div>
                     </div>
@@ -1243,16 +1330,22 @@
             <div class="flex flex-col item gap-26">
                 <div>
                     <p class="trade-word">
-                        TRADE WITH METABASE EXCELLENCE
+                        {{-- TRADE WITH METABASE EXCELLENCE --}}
+                        @lang('message.c-trade-word')
                     </p>
                     <p class="trade-word-mobile">
-                        TRADE WITH<br> METABASE EXCELLENCE
+                        {{-- TRADE WITH --}}
+                        @lang('message.c-trade-word-mobile-1')
+                        <br> 
+                        {{-- METABASE EXCELLENCE --}}
+                        @lang('message.c-trade-word-mobile-2')
                     </p>
                 </div>
                 <div class="home2-2">
-                    <p class="our-word">
-                        Our broad range of over 300 Forex and CFD instruments
-                        accessible from a single platform of your choice.
+                    <p class="our-word @if(app()->getLocale() == 'tw') tw-our-word @endif">
+                        {{-- Our broad range of over 300 Forex and CFD instruments
+                        accessible from a single platform of your choice. --}}
+                        @lang('message.our-word')
                     </p>
                 </div>
             </div>
@@ -1274,34 +1367,55 @@
                 <div class="flex flex-col gap-60">
                     <div>
                         <p class="ourcore-word">
-                            Our Core <br>
-                            Advantage
+                            {{-- Our Core  --}}
+                            @lang('message.ourcore-word-1')
+                            <br>
+                            {{-- Advantage --}}
+                            @lang('message.ourcore-word-2')
                         </p>
                     </div>
                     <div>
-                        <p class="word-big">0</p>
-                        <p class="word-small">Requotes & Rejections</p>
+                         <p class="word-big">
+                            {{-- 0 --}}
+                            @lang('message.word-big-1')
+                        </p>
+                        <p class="word-small">
+                            {{-- Requotes & Rejections --}}
+                            @lang('message.word-small-1')
+                        </p>
                     </div>
                     <div>
-                        <div><p class="word-big">24-7</p></div>
-                        <div><p class="word-small">Support</p></div>
+                        <div>
+                            <p class="word-big">
+                                {{-- 24-7 --}}
+                                @lang('message.word-big-2')
+                            </p>
+                        </div>
+                        <div>
+                            <p class="word-small">
+                                {{-- Support --}}
+                                @lang('message.word-small-2')
+                            </p>
+                        </div>
                     </div>
                     <div class="flex space-btw">
                         <div class="explore-cont">
-                            <p class="explore-word">
-                                Explore of Forex and CFD instruments with
-                                transparent pricing tailored to your trading level.
-                                Select a tier below to view its conditions.
+                            <p class="explore-word @if(app()->getLocale() == 'tw') tw-explore-word @endif">
+                                @lang('message.Explore of Forex and CFD instruments with') <br>
+                                @lang('message.transparent pricing tailored to your trading level.')<br>
+                                @lang('message.Select a tier below to view its conditions.')
+                                {{-- @lang('message.explore-word') --}}
                             </p>
                         </div>
                         <div>
                             <div class="flex flex-end">
                                 <p class="word-big">
-                                    300
+                                    {{-- 300 --}}
+                                    @lang('message.word-big-3')
                                 </p>
                                 <span class="plus-text">+</span>
                             </div>
-                            <div><p class="word-small">Trading Instruments</p></div>
+                            <div><p class="word-small">@lang('message.word-small-3')</p></div>
                         </div>
                     </div>
                 </div>
@@ -1319,36 +1433,62 @@
         <div class="main-content-image-mobile mobile-ml-mr">
             <div class="flex content-center overlay-text-mobile gap-67">
                 <div class="explore-cont">
-                    <p class="explore-word">
-                        Explore of Forex and CFD instruments with
+                    <p class="explore-word @if(app()->getLocale() == 'tw') tw-explore-word @endif">
+                        {{-- Explore of Forex and CFD instruments with
                         transparent pricing tailored to your trading level.
-                        Select a tier below to view its conditions.
+                        Select a tier below to view its conditions. --}}
+                        @lang('message.explore-word')
                     </p>
                 </div>
                 <div>
                     <div class="flex flex-col gap-26">
                         <div>
-                            <p class="ourcore-word">
-                                Our Core <br>
-                                Advantage
+                            <p class="ourcore-word @if(app()->getLocale() == 'tw') tw-ourcore-word @endif">
+                                {{-- Our Core  --}}
+                                @lang('message.ourcore-word-1')
+                                <br>
+                                {{-- Advantage --}}
+                                @lang('message.ourcore-word-2')
                             </p>
                         </div>
                         <div>
-                            <p class="word-big">0</p>
-                            <p class="word-small">Requotes & Rejections</p>
+                            <p class="word-big">
+                                {{-- 0 --}}
+                                @lang('message.word-big-1')
+                            </p>
+                            <p class="word-small">
+                                {{-- Requotes & Rejections --}}
+                                @lang('message.word-small-1')
+                            </p>
                         </div>
                         <div>
-                            <div><p class="word-big">24-7</p></div>
-                            <div><p class="word-small">Support</p></div>
+                            <div>
+                                <p class="word-big">
+                                    {{-- 24-7 --}}
+                                    @lang('message.word-big-2')
+                                </p>
+                            </div>
+                            <div>
+                                <p class="word-small">
+                                    {{-- Support --}}
+                                    @lang('message.word-small-2')
+                                </p>
+                            </div>
                         </div>
                         <div>
                             <div class="flex flex-end">
                                 <p class="word-big">
-                                    300
+                                    {{-- 300 --}}
+                                    @lang('message.word-big-3')
                                 </p>
                                 <span class="plus-text">+</span>
                             </div>
-                            <div><p class="word-small">Trading Instruments</p></div>
+                            <div>
+                                <p class="word-small">
+                                    {{-- Trading Instruments --}}
+                                    @lang('message.word-small-3')
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1362,14 +1502,16 @@
             <div class="flex flex-col">
                 <div>
                     <p class="acc-word">
-                        Which account suitable for you?
+                        {{-- Which account suitable for you? --}}
+                        @lang('message.acc-word')
                     </p>
                 </div>
                 <div class="flex content-center">
-                    <p class="select-word">
-                        Selecting the right account type is essential to ensure you have
+                    <p class="select-word @if(app()->getLocale() == 'tw') tw-select-word @endif">
+                        {{-- Selecting the right account type is essential to ensure you have
                         the best user experience. Different account types offer varying
-                        benefit and functionalities, catering to specific needs and preferences.
+                        benefit and functionalities, catering to specific needs and preferences. --}}
+                        @lang('message.select-word')
                     </p>
                 </div>
             </div>
@@ -1379,7 +1521,13 @@
             <div class="flex content-center gap-90">
                 <div class="flex flex-col item" style="width: 150px">
                     <img src="assets/image/home/std.svg" class="std-border">
-                    <p class="std-word-purple">STANDARD<br> ACCOUNT</p>
+                    <p class="std-word-purple">
+                        {{-- STANDARD --}}
+                        @lang('message.c-std-word-purple')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
                         a common type of
@@ -1389,7 +1537,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 150px">
                     <img src="assets/image/home/ecn.svg" class="ecn-border">
-                    <p class="std-word-orange">ECN<br> ACCOUNT</p>
+                    <p class="std-word-orange">
+                        {{-- ECN --}}
+                        @lang('message.c-std-word-orange')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
                         competitive pricing
@@ -1399,7 +1553,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 150px">
                     <img src="assets/image/home/esaving.svg" class="esaving-border">
-                    <p class="std-word-green">eSAVING<br> ACCOUNT</p>
+                    <p class="std-word-green">
+                        {{-- eSAVING --}}
+                        @lang('message.c-std-word-green')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
                         a worry-free savings
@@ -1409,7 +1569,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 176px">
                     <img src="assets/image/home/einvest.svg" class="einvest-border">
-                    <p class="std-word-blue">eINVEST<br> ACCOUNT</p>
+                    <p class="std-word-blue">
+                        {{-- eINVEST --}}
+                        @lang('message.c-std-word-blue')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows
                         investors to achieve stable
@@ -1425,7 +1591,13 @@
             <div class="flex space-btw">
                 <div class="flex flex-col item" style="width: 70px">
                     <img src="assets/image/home/std-mobile.svg" class="std-border">
-                    <p class="std-word-purple">STANDARD<br> ACCOUNT</p>
+                    <p class="std-word-purple">
+                        {{-- STANDARD --}}
+                        @lang('message.c-std-word-purple')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
                         a common type of
@@ -1435,7 +1607,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
                     <img src="assets/image/home/ecn-mobile.svg" class="ecn-border">
-                    <p class="std-word-orange">ECN<br> ACCOUNT</p>
+                    <p class="std-word-orange">
+                        {{-- ECN --}}
+                        @lang('message.c-std-word-orange')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
                         competitive pricing
@@ -1445,7 +1623,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
                     <img src="assets/image/home/esaving-mobile.svg" class="esaving-border">
-                    <p class="std-word-green">eSAVING<br> ACCOUNT</p>
+                    <p class="std-word-green">
+                        {{-- eSAVING --}}
+                        @lang('message.c-std-word-green')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
                         a worry-free savings
@@ -1455,7 +1639,13 @@
                 </div>
                 <div class="flex flex-col item" style="width: 70px">
                     <img src="assets/image/home/einvest-mobile.svg" class="einvest-border">
-                    <p class="std-word-blue">eINVEST<br> ACCOUNT</p>
+                    <p class="std-word-blue">
+                        {{-- eINVEST --}}
+                        @lang('message.c-std-word-blue')
+                        <br> 
+                        {{-- ACCOUNT --}}
+                        @lang('message.c-account')
+                    </p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows
                         investors to achieve stable
@@ -1470,16 +1660,20 @@
         <div class="home5-1 mobile-ml-mr">
             <ul class="acct-type">
                 <li>
-                    STANDARD account is a common type of trading account, suitable for both individuals.
+                    {{-- STANDARD account is a common type of trading account, suitable for both individuals. --}}
+                    @lang('message.acct-type-1')
                 </li>
                 <li>
-                    ECN account obtain competitive pricing from multiple liquidity providers.
+                    {{-- ECN account obtain competitive pricing from multiple liquidity providers. --}}
+                    @lang('message.acct-type-2')
                 </li>
                 <li>
-                    eSAVING account is a worry-free saving and investment account designed for investors.
+                    {{-- eSAVING account is a worry-free saving and investment account designed for investors. --}}
+                    @lang('message.acct-type-3')
                 </li>
                 <li>
-                    eINVEST accounts empower investors to independently assess and select high-quality 'asset management masters,' enabling them to manage your funds in the volatile and unpredictable foreign exchange market.
+                    {{-- eINVEST accounts empower investors to independently assess and select high-quality 'asset management masters,' enabling them to manage your funds in the volatile and unpredictable foreign exchange market. --}}
+                    @lang('message.acct-type-4')
                 </li>
             </ul>
         </div>
@@ -1494,13 +1688,19 @@
         <div class="main-content-image">
             <div class="overlay-text" style="top:70%">
                 <p class="confidence-text">
-                    Confidence is an <br>
-                    attitude.
+                    {{-- Confidence is an  --}}
+                    @lang('message.confidence-text-1')
+                    <br>
+                    {{-- attitude. --}}
+                    @lang('message.confidence-text-2')
                 </p>
                 <p class="taking-word">
-                    Taking your investment plan seriously
-                    is equivalent to taking your<br>
-                    future prospects seriously.
+                    {{-- Taking your investment plan seriously
+                    is equivalent to taking your --}}
+                    @lang('message.talking-word-1')
+                    <br>
+                    {{-- future prospects seriously. --}}
+                    @lang('message.talking-word-2')
                 </p>
             </div>
         </div>
@@ -1513,12 +1713,14 @@
             <div class="overlay-text-mobile2">
                 <div class="flex flex-col mobile-ml-mr">
                     <p class="confidence-text">
-                        Confidence is an attitude.
+                        {{-- Confidence is an attitude. --}}
+                        @lang('message.confidence-text')
                     </p>
                     <p class="taking-word">
-                        Taking your investment plan seriously
+                        {{-- Taking your investment plan seriously
                         is equivalent to taking your
-                        future prospects seriously.
+                        future prospects seriously. --}}
+                        @lang('message.talking-word')
                     </p>
                 </div>
                 
@@ -1530,20 +1732,25 @@
         <div class="home6 mobile-ml-mr">
             <div>
                 <p class="open-text-green">
-                    Open your free investment account
+                    {{-- Open your free investment account --}}
+                    @lang('message.open-text-green')
                 </p>
-                <p class="invest-text">
-                    Your Investment Account is a full-featured Metabase account,
+                <p class="invest-text @if(app()->getLocale() == 'tw') tw-invest-text @endif">
+                    {{-- Your Investment Account is a full-featured Metabase account,
                     without opening or maintenance fees. All you need to open your
                     account online is your ID, a proof of residence (phone or utility
-                    bill), just a few minutes.
+                    bill), just a few minutes. --}}
+                    @lang('message.invest-text')
                 </p>
             </div>
         </div>
 
         <div class="home7 mobile-ml-mr">
             <div class="wheat-container">
-                <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
+                <p class="open-text">
+                    {{-- OPEN YOUR INVESTMENT ACCOUNT --}}
+                    @lang('message.c-open-text')
+                </p>
             </div>
         </div>
         <div class="home8">
@@ -1555,8 +1762,15 @@
                 </div>
                 <div>
                     <p class="aldy-text">
-                        Already have a friend at Metabase?<br>
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
                 </div>
             </div>
@@ -1569,13 +1783,18 @@
                     <img src="assets/image/google-mobile.svg" class="app-dark">
                     <img src="assets/image/windows-mobile.svg" class="app-dark app-window">
                 </div>
-                <div>
+                <div class="flex content-center">
                     {{-- <p class="aldy-text">
                         Already have a friend at Metabase?
                         Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
                     </p> --}}
-                    <p class="aldy-text">
-                        Already have a friend at Metabase? Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span> 
+                    <p class="aldy-text @if(app()->getLocale() == 'tw') tw-aldy-text @endif">
+                       {{-- Already have a friend at Metabase? Ask them for their referral code so you both get  --}}
+                       @lang('message.aldy-text-1') @lang('message.aldy-text-2')
+                       <span class="span-text-grn">
+                           {{-- USD$100.00 - Rewards! --}}
+                           @lang('message.aldy-text-3')
+                       </span> 
                     </p>
                     
                 </div>
@@ -1590,15 +1809,19 @@
             <div class="flex flex-col gap-30">
                 <div class="tired-content">
                     <p class="tired-text-green">
-                        Are you tired of the<br>
-                        traditional personal dashboard?
+                        {{-- Are you tired of the --}}
+                        @lang('message.tired-text-green-1')
+                        <br>
+                        {{-- traditional personal dashboard? --}}
+                        @lang('message.tired-text-green-2')
                     </p>
                 </div>
                 <div class="flex content-center">
-                    <p class="tired-text">
-                        Open a trading account quickly, and you will discover
+                    <p class="tired-text @if(app()->getLocale() == 'tw') tw-tired-text @endif">
+                        {{-- Open a trading account quickly, and you will discover
                         our powerful personal management dashboard that will make it
-                        easier for you to control your trading account and investment.
+                        easier for you to control your trading account and investment. --}}
+                        @lang('message.tired-text')
                     </p>
                 </div>
             </div>
@@ -1645,12 +1868,18 @@
             <div class="flex gap-10">
                 <div>
                     <button class="btn-green">
-                        <span>Register Live Account</span>
+                        <span>
+                            {{-- Register Live Account --}}
+                            @lang('message.register-live-account')
+                        </span>
                     </button>
                 </div>
                 <div>
                     <button class="btn-green">
-                        <span>Log in to your portal</span>
+                        <span>
+                            {{-- Log in to your portal --}}
+                            @lang('message.log-in-to-your-portal')
+                        </span>
                     </button>
                 </div>
             </div>

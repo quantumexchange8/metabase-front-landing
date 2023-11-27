@@ -252,6 +252,10 @@
             text-decoration-color: red;
         }
     }
+
+    /* .active-language {
+            color: #5CA346 !important;
+        } */
 </style>
 
 <div class="center-top">
@@ -263,22 +267,28 @@
                 </li>
                 <div class="flex content-center gap-40">
                     <li class="{{ Route::currentRouteName() === 'home' ? 'active' : '' }}">
-                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('home') }}">@lang('message.home')</a>
                     </li>
                     <li class="{{ Route::currentRouteName() === 'company' ? 'active' : '' }}">
-                        <a href="{{ route('company') }}">Company</a>
+                        <a href="{{ route('company') }}">@lang('message.company')</a>
                     </li>
                     <li class="{{ Route::currentRouteName() === 'trading' ? 'active' : '' }}">
-                        <a href="{{ route('trading') }}">Trading</a>
+                        <a href="{{ route('trading') }}">@lang('message.trading')</a>
                     </li>
                     <li class="{{ Route::currentRouteName() === 'partnership' ? 'active' : '' }}">
-                        <a href="{{ route('partnership') }}">Partner</a>
+                        <a href="{{ route('partnership') }}">@lang('message.partner')</a>
                     </li>
                     <li class="{{ Route::currentRouteName() === 'support' ? 'active' : '' }}">
-                        <a href="{{ route('support') }}">Support</a>
+                        <a href="{{ route('support') }}">@lang('message.support')</a>
                     </li>
-                    <li>
-                        <i class="mdi mdi-web"></i>
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0);" class="nav-link dropdown-toggle text-danger" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 3px">
+                            <i class="mdi mdi-web"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: none; border-radius: 5px;position: fixed;top:70px">
+                            <a href="{{ url('locale/en') }}" class="dropdown-item {{ app()->getLocale() === 'en' ? 'englang' : '' }}" id="englishLink" style="padding: 10px;display: flex;justify-content: center;">English</a>
+                            <a href="{{ url('locale/tw') }}" class="dropdown-item {{ app()->getLocale() === 'tw' ? 'cnlang' : '' }}" id="chineseLink" style="padding: 10px;display: flex;justify-content: center;">中文</a>
+                        </div>
                     </li>
                       <!-- light/dark mode -->
                     <li class="{{ Request::is('dark-mode') ? '' : 'active' }}" id="mode-toggle" style="cursor: pointer;">
@@ -291,14 +301,14 @@
                     <li class="nav-btn">
                         <a href="#">
                             <button class="btn1 btn-primary"><a class="log" href="http://127.0.0.1:8080/login">
-                                <span>Register</span>
+                                <span>@lang('message.register')</span>
                             </button>
                         </a>
                     </li>
                     <li class="nav-btn">
                         <a href="#">
                             <button class="btn1 btn-primary"><a class="log" href="http://127.0.0.1:8080/login">
-                                <span>Log In</span>
+                                <span>@lang('message.login')</span>
                             </button>
                         </a>
                     </li>
@@ -324,7 +334,8 @@
                             <div>
                                 <a href="#">
                                     <span class="nav-text-green">
-                                        EXPLORE
+                                        {{-- EXPLORE --}}
+                                        @lang('message.c-explore')
                                     </span> 
                                 </a>
                             </div>
@@ -333,7 +344,8 @@
                                 <div>
                                     <a href="{{ route('home') }}" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            HOME
+                                            {{-- HOME --}}
+                                            @lang('message.c-home')
                                         </span>
                                     </a>
                                 </div>
@@ -341,7 +353,8 @@
                                 <div>
                                     <a href="{{ route('company') }}" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            COMPANY
+                                            {{-- COMPANY --}}
+                                            @lang('message.c-company')
                                         </span>
                                     </a>
                                 </div>
@@ -349,7 +362,8 @@
                                 <div>
                                     <a href="{{ route('trading') }}" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            TRADING
+                                            {{-- TRADING --}}
+                                            @lang('message.c-trading')
                                         </span>
                                     </a>
                                 </div>
@@ -357,7 +371,8 @@
                                 <div>
                                     <a href="{{ route('partnership') }}" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            PARTNER
+                                            {{-- PARTNER --}}
+                                            @lang('message.c-partner')
                                         </span>
                                     </a>
                                 </div>
@@ -365,7 +380,8 @@
                                 <div>
                                     <a href="{{ route('support') }}" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            SUPPORT
+                                            {{-- SUPPORT --}}
+                                            @lang('message.c-support')
                                         </span>
                                     </a>
                                 </div>
@@ -376,7 +392,8 @@
                             <div>
                                 <a href="#"> 
                                     <span class="nav-text-green">
-                                        CLIENT
+                                        {{-- CLIENT --}}
+                                        @lang('message.c-client')
                                     </span>
                                 </a>
                             </div>
@@ -385,7 +402,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            REGISTER
+                                            {{-- REGISTER --}}
+                                            @lang('message.c-register')
                                         </span>
                                     </a>
                                 </div>
@@ -393,7 +411,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            PORTAL
+                                            {{-- PORTAL --}}
+                                            @lang('message.c-portal')
                                         </span>
                                     </a>
                                 </div>
@@ -401,7 +420,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            CASH IN
+                                            {{-- CASH IN --}}
+                                            @lang('message.c-cash-in')
                                         </span>
                                     </a>
                                 </div>
@@ -409,7 +429,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            CASH OUT
+                                            {{-- CASH OUT --}}
+                                            @lang('message.c-cash-out')
                                         </span>
                                     </a>
                                 </div>
@@ -417,7 +438,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            PASSWORD
+                                            {{-- PASSWORD --}}
+                                            @lang('message.c-password')
                                         </span>
                                     </a>
                                 </div>
@@ -428,7 +450,8 @@
                             <div>
                                 <a href="#"> 
                                     <span class="nav-text-green">
-                                        BENEFIT
+                                        {{-- BENEFIT --}}
+                                        @lang('message.c-benefit')
                                     </span> 
                                 </a>
                             </div>
@@ -437,7 +460,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            BONUSES
+                                            {{-- BONUSES --}}
+                                            @lang('message.c-bonuses')
                                         </span>
                                     </a>
                                 </div>
@@ -445,7 +469,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            CREDIT
+                                            {{-- CREDIT --}}
+                                            @lang('message.c-credit')
                                         </span>
                                     </a>
                                 </div>
@@ -453,7 +478,8 @@
                                 <div>
                                     <a href="#">
                                         <span class="nav-text-green">
-                                            INQUIRY
+                                            {{-- INQUIRY --}}
+                                            @lang('message.c-inquiry')
                                         </span>
                                     </a>
                                 </div>
@@ -461,7 +487,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            EMAIL
+                                            {{-- EMAIL --}}
+                                            @lang('message.c-email')
                                         </span>
                                     </a>
                                 </div>
@@ -469,7 +496,8 @@
                                 <div>
                                     <a href="#" class="nav-mobile">
                                         <span class="nav-text-dark">
-                                            TELEGRAM
+                                            {{-- TELEGRAM --}}
+                                            @lang('message.c-telegram')
                                         </span>
                                     </a>
                                 </div>
@@ -524,23 +552,25 @@
                         <div class="flex flex-col gap-10 item" id="lightMode">
                             <img src="assets/image/light-mobile.svg" class="light-mobile-img" alt="">
                             <span class="light-green-text">
-                                Light
+                                {{-- Light --}}
+                                @lang('message.light')
                             </span>
                         </div>
                         <div class="flex flex-col gap-10 item" id="darkMode">
                             <img src="assets/image/dark-mobile.svg" class="light-mobile-img" alt="">
                             <span class="light-green-text">
-                                Dark
+                                {{-- Dark --}}
+                                @lang('message.dark')
                             </span>
                         </div>
                         <div class="flex flex-col gap-10 item">
-                            <img src="assets/image/en-mobile.svg" class="light-mobile-img" alt="">
+                            <img src="assets/image/en-mobile.svg" class="light-mobile-img" alt="" id="enLanguage">
                             <span class="light-green-text">
                                 English
                             </span>
                         </div>
                         <div class="flex flex-col gap-10 item">
-                            <img src="assets/image/cn-mobile.svg" class="light-mobile-img" alt="">
+                            <img src="assets/image/cn-mobile.svg" class="light-mobile-img" alt="" id="twLanguage">
                             <span class="light-green-text">
                                 中文
                             </span>
@@ -552,16 +582,16 @@
                     <div class="flex flex-col gap-40">
                         <div class="flex content-center gap-15">
                             <button class="btn-green-mobile">
-                                <span>REGISTER<br> LIVE ACCOUNT</span>
+                                <span>@lang('message.c-register') <br> @lang('message.c-live-account')</span>
                             </button>
                             <button class="btn-green-mobile">
-                                <span>LOG IN TO YOUR<br> PORTAL</span>
+                                <span>@lang('message.c-log-in-to-your')<br> @lang('message.c-portal')</span>
                             </button>
                         </div>
             
                         <div class="flex content-center">
                             {{-- <button class="btn-green-mobile" > --}}
-                                <span class="close-word" onclick="toggleNav()">CLOSE</span>
+                                <span class="close-word" onclick="toggleNav()">@lang('message.close')</span>
                             {{-- </button> --}}
                         </div>
                     </div>
@@ -573,3 +603,4 @@
     </div>
     
 </div>
+

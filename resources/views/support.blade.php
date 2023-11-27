@@ -350,6 +350,51 @@
                 border-radius: 10px;
             }
         }
+
+        .sup-text-green.tw-sup-text-green {
+            width: 75%;
+            line-height: 25px;
+        }
+
+        @media screen and (max-width: 1000px)
+        {
+            .support-text2.tw-support-text2 {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: 16px; 
+                font-family: SF Pro Text;
+            }
+            .sup-text-green.tw-sup-text-green {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 14px; 
+            }
+            .resolved-text-green.tw-resolved-text-green {
+                font-weight: 700;
+                line-height: 25px;
+                font-size: 20px;
+            }
+            .touch-text-white.tw-touch-text-white {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: center;
+                width: 78%;
+            }
+            .support4 {
+                display: flex;
+                justify-content: center;
+
+            }
+            .aldy-text-mobile.tw-aldy-text-mobile {
+                font-size: 12px;
+                line-height: 14px;
+                width: 85%;
+            }
+        }
     </style>
 
 
@@ -359,12 +404,18 @@
         <div class="text-overlay">
             <div class="main-content">
                 <p class="support-text1">
-                    Tell us about the challenges you've faced.
+                    {{-- Tell us about the challenges you've faced. --}}
+                    @lang('message.support-text1')
                 </p>
                 <p class="support-text2">
-                    Instead of dwelling on it, why not share your thoughts with us,<br>
-                    and we can work together with your approach.<br>
-                    You're looking for a beginning, and we're interested in long-term benefits.
+                    {{-- Instead of dwelling on it, why not share your thoughts with us, --}}
+                    @lang('message.support-text2-1')
+                    <br>
+                    {{-- and we can work together with your approach. --}}
+                    @lang('message.support-text2-2')
+                    <br>
+                    {{-- You're looking for a beginning, and we're interested in long-term benefits. --}}
+                    @lang('message.support-text2-3')
                 </p>
             </div>
         </div>
@@ -377,12 +428,21 @@
             <div class="main-content">
                 <div class="flex flex-col gap-16 mobile-ml-mr">
                     <p class="support-text1">
-                        Tell us about the challenges<br> you've faced.
+                        {{-- Tell us about the challenges --}}
+                        @lang('message.support-text1-1')
+                        <br> 
+                        {{-- you've faced. --}}
+                        @lang('message.support-text1-2')
                     </p>
-                    <p class="support-text2">
-                        Instead of dwelling on it, why not share your thoughts with us,<br>
-                        and we can work together with your approach.<br>
-                        You're looking for a beginning, and we're interested in long-term benefits.
+                    <p class="support-text2 @if(app()->getLocale() == 'tw') tw-support-text2 @endif">
+                        {{-- Instead of dwelling on it, why not share your thoughts with us, --}}
+                        @lang('message.support-text2-1')
+                        
+                        {{-- and we can work together with your approach. --}}
+                        @lang('message.support-text2-2')
+                        
+                        {{-- You're looking for a beginning, and we're interested in long-term benefits. --}}
+                        @lang('message.support-text2-3')
                     </p>
                 </div>
             </div>
@@ -394,27 +454,37 @@
             <div class="flex flex-col item gap-36">
                 <img src="assets/image/support/support1.png" class="suport1-img">
                 <div class="flex content-center">
-                    <p class="sup-text-green">CUSTOMER SUPPORT</p>
+                    <p class="sup-text-green @if(app()->getLocale() == 'tw') tw-sup-text-green @endif">
+                        {{-- CUSTOMER SUPPORT --}}
+                        @lang('message.c-sup-text-green-1')
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col item gap-36">
                 <img src="assets/image/support/support2.png" class="suport1-img">
                 <div class="flex content-center">
-                    <p class="sup-text-green">TECH TEAM SUPPORT</p>
+                    <p class="sup-text-green @if(app()->getLocale() == 'tw') tw-sup-text-green @endif">
+                        {{-- TECH TEAM SUPPORT --}}
+                        @lang('message.c-sup-text-green-2')
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col item gap-36">
                 <img src="assets/image/support/support3.png" class="suport1-img">
                 <div class="flex content-center">
-                    <p class="sup-text-green">SALES TEAM SUPPORT</p>
+                    <p class="sup-text-green @if(app()->getLocale() == 'tw') tw-sup-text-green @endif">
+                        {{-- SALES TEAM SUPPORT --}}
+                        @lang('message.c-sup-text-green-3')
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="support2 mobile-ml-mr">
-            <p class="resolved-text-green">
-                There is nothing in the world that cannot be resolved;
-                all we need is communication.
+            <p class="resolved-text-green @if(app()->getLocale() == 'tw') tw-resolved-text-green @endif">
+                {{-- There is nothing in the world that cannot be resolved;
+                all we need is communication. --}}
+                @lang('message.resolved-text-green')
             </p>
         </div>
 
@@ -427,10 +497,11 @@
         </div>
 
         <div class="support4 mobile-ml-mr">
-            <p class="touch-text-white">
-                You can get in touch with our customer service by clicking on the email icon and sending an email. 
+            <p class="touch-text-white @if(app()->getLocale() == 'tw') tw-touch-text-white @endif">
+                {{-- You can get in touch with our customer service by clicking on the email icon and sending an email. 
                 Our customer service will respond to your questions as quickly as possible. You can also 
-                seamlessly contact us by clicking on the Telegram instant chat icon.
+                seamlessly contact us by clicking on the Telegram instant chat icon. --}}
+                @lang('message.touch-text-white')
             </p>
         </div>
 
@@ -438,12 +509,14 @@
             <div class="flex content-center item gap-10">
                 <button class="btn-register-green">
                     <span>
-                        Register Live Account
+                        {{-- Register Live Account --}}
+                        @lang('message.register-live-account')
                     </span>
                 </button>
                 <button class="btn-register-green">
                     <span>
-                        Log in to your portal
+                        {{-- Log in to your portal --}}
+                        @lang('message.log-in-to-your-portal')
                     </span>
                 </button>
             </div>
@@ -451,7 +524,10 @@
 
         <div class="support6 mobile-ml-mr">
             <div class="wheat-container">
-                <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
+                <p class="open-text">
+                    {{-- OPEN YOUR INVESTMENT ACCOUNT --}}
+                    @lang('message.c-open-text')
+                </p>
             </div>
         </div>
         <div class="support7 mobile-ml-mr">
@@ -465,14 +541,28 @@
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
-                <div>
+                <div class="flex content-center">
                     <p class="aldy-text">
-                        Already have a friend at Metabase?<br>
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
-                    <p class="aldy-text-mobile">
-                        Already have a friend at Metabase?
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    <p class="aldy-text-mobile @if(app()->getLocale() == 'tw') tw-aldy-text-mobile @endif">
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
                 </div>
             </div>

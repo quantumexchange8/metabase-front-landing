@@ -602,6 +602,56 @@
                 height: 70px;
             }
         }
+
+        .trading-text2.tw-trading-text2-text {
+            width: 80%;
+        }
+        .worry-text-white2.tw-worry-text-white2 {
+            width: 52%;
+        }
+
+        @media screen and (max-width: 1000px)
+        {
+            .trading-text2.tw-trading-text2-text {
+                font-size: 12px;
+                line-height: 14px;
+                width: 90%;
+            }
+            .aldy-text-mobile.tw-aldy-text-mobile {
+                font-size: 12px;
+                line-height: 14px;
+                width: 85%;
+            }
+            .worry-text-green.tw-worry-text-green {
+                line-height: 25px;
+                font-size: 20px;
+            }
+            .worry-text-white.tw-worry-text-white {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+            }
+            .worry-text-white2.tw-worry-text-white2 {
+                width: 100%;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+            }
+            .worry-text-white3.tw-worry-text-white3 {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+            }
+            .aldy-text-mobile.tw-aldy-text-mobile {
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 400;
+            }
+            .tw-numbered-list {
+                line-height: 18px !important;
+                font-size: 14px !important;
+            }
+        }
     </style>
 
     
@@ -613,13 +663,15 @@
 
                 <div class="flex flex-col item">
                     <p class="trading-text1">
-                        One account - a world of opportunities
+                        {{-- One account - a world of opportunities --}}
+                        @lang('message.trading-text1')
                     </p>
-                    <p class="trading-text2">
-                        Access a wealth of trading, investment and saving solutions from the
+                    <p class="trading-text2 @if(app()->getLocale() == 'tw') tw-trading-text2-text @endif">
+                        {{-- Access a wealth of trading, investment and saving solutions from the
                         comfort and security of your multi-currency Metabase account.
                         Enjoy the freedom offered by a versatile Super-CRM and all the popular
-                        digital currencies payment options.
+                        digital currencies payment options. --}}
+                        @lang('message.trading-text2')
                     </p>
                 </div>
             </div>
@@ -631,15 +683,20 @@
         <img src="assets/image/trading/trading-mobile-dark.png" class="trading-mobile-dark" alt="">
         <div class="text-overlay-mobile">
             <div class="main-content">
-                <div class="flex flex-col gap-16 mobile-ml-mr">
+                <div class="flex flex-col gap-16 mobile-ml-mr item">
                     <p class="trading-text1">
-                        One account - <br> a world of opportunities
+                        {{-- One account -  --}}
+                        @lang('message.trading-text3')
+                        <br> 
+                        {{-- a world of opportunities --}}
+                        @lang('message.trading-text4')
                     </p>
-                    <p class="trading-text2">
-                        Access a wealth of trading, investment and saving solutions from the
+                    <p class="trading-text2 @if(app()->getLocale() == 'tw') tw-trading-text2-text @endif">
+                        {{-- Access a wealth of trading, investment and saving solutions from the
                         comfort and security of your multi-currency Metabase account.
                         Enjoy the freedom offered by a versatile Super-CRM and all the popular
-                        digital currencies payment options.
+                        digital currencies payment options. --}}
+                        @lang('message.trading-text2')
                     </p>
                 </div>
             </div>
@@ -649,7 +706,10 @@
     <div class="main-content">
         <div class="trading1 mobile-ml-mr">
             <div class="wheat-container">
-                <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
+                <p class="open-text">
+                    {{-- OPEN YOUR INVESTMENT ACCOUNT --}}
+                    @lang('message.c-open-text')
+                </p>
             </div>
         </div>
         <div class="trading2 mobile-ml-mr">
@@ -663,14 +723,28 @@
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
-                <div>
+                <div class="flex item content-center">
                     <p class="aldy-text">
-                        Already have a friend at Metabase?<br>
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                       {{-- Already have a friend at Metabase? --}}
+                       @lang('message.aldy-text-1')
+                       <br>
+                       {{-- Ask them for their referral code so you both get  --}}
+                       @lang('message.aldy-text-2')
+                       <span class="span-text-grn">
+                           {{-- USD$100.00 - Rewards! --}}
+                           @lang('message.aldy-text-3')
+                       </span>
                     </p>
-                    <p class="aldy-text-mobile">
-                        Already have a friend at Metabase?
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    <p class="aldy-text-mobile @if(app()->getLocale() == 'tw') tw-aldy-text-mobile @endif">
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
                 </div>
             </div>
@@ -678,7 +752,8 @@
 
         <div class="trading2-3 mobile-ml-mr">
             <p class="low-text-green">
-                LOW TO HIGH RISK STRATEGIES
+                {{-- LOW TO HIGH RISK STRATEGIES --}}
+                @lang('message.c-low-text-green')
             </p>
         </div>
 
@@ -688,28 +763,44 @@
                     <img src="assets/image/trading/4.png" class="stable-img">
                     <img src="assets/image/trading/stable-dark.png" class="stable-dark-img">
                     <p class="stbl-text">
-                        STABLE<br>SAVING
+                        {{-- STABLE --}}
+                        @lang('message.c-stbl-text-1')
+                        <br>
+                        {{-- SAVING --}}
+                        @lang('message.c-stbl-text-2')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/trading/3.png" class="stable-img">
                     <img src="assets/image/trading/passive-dark.png" class="stable-dark-img">
                     <p class="stbl-text">
-                        PASSIVE<br>INVESTING
+                        {{-- PASSIVE --}}
+                        @lang('message.c-stbl-text-3')
+                        <br>
+                        {{-- INVESTING --}}
+                        @lang('message.c-stbl-text-4')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/trading/2.png" class="stable-img">
                     <img src="assets/image/trading/ative-dark.png" class="stable-dark-img">
                     <p class="stbl-text">
-                        ATIVE<br>DIVERSIFY
+                        {{-- ATIVE --}}
+                        @lang('message.c-stbl-text-5')
+                        <br>
+                        {{-- DIVERSIFY --}}
+                        @lang('message.c-stbl-text-6')
                     </p>
                 </div>
                 <div class="flex flex-col item gap-36">
                     <img src="assets/image/trading/1.png" class="stable-img">
                     <img src="assets/image/trading/aggressive-dark.png" class="stable-dark-img">
                     <p class="stbl-text">
-                        AGGRESSIVE<br>SPECULATION
+                        {{-- AGGRESSIVE --}}
+                        @lang('message.c-stbl-text-7')
+                        <br>
+                        {{-- SPECULATION --}}
+                        @lang('message.c-stbl-text-8')
                     </p>
                 </div>
             </div>
@@ -718,24 +809,29 @@
         <div class="trading4 mobile-ml-mr">
             <div class="flex flex-col">
                 <div>
-                    <p class="worry-text-green">
-                        Worry-Free and <br>
-                        boosting your Investment
+                    <p class="worry-text-green @if(app()->getLocale() == 'tw') tw-worry-text-green @endif">
+                        {{-- Worry-Free and  --}}
+                        @lang('message.worry-text-green-1')
+                        <br>
+                        {{-- boosting your Investment --}}
+                        @lang('message.worry-text-green-2')
                     </p>
                 </div>
                 <div>
-                    <p class="worry-text-white">
-                        SPAA is a custom-tailored investment solution designed by Metabase for the future. It is based on 
+                    <p class="worry-text-white @if(app()->getLocale() == 'tw') tw-worry-text-white @endif">
+                        {{-- SPAA is a custom-tailored investment solution designed by Metabase for the future. It is based on 
                         the client's risk tolerance and offers four distinct investment modes: Stable, Passive, Active, and 
                         Aggressive. SPAA incorporates the Metabase Fintech System, which effectively reduces investment 
                         risk for clients, aiming to maximize returns. One of SPAA's key features is that it does not charge any 
-                        entry fees and has very low service fees.
+                        entry fees and has very low service fees. --}}
+                        @lang('message.worry-text-white-1')
                         <br>
                         <br>
-                        In addition to these appealing features, clients can easily monitor their investment 
+                        {{-- In addition to these appealing features, clients can easily monitor their investment 
                         portfolio's performance within the Metabase Super App after investing. 
                         Clients can almost experience the joy of worry-free investment and enhance the 
-                        quality of their investments.
+                        quality of their investments. --}}
+                        @lang('message.worry-text-white-2')
                     </p>
                 </div>
             </div>
@@ -747,17 +843,19 @@
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
-                        Currencies & Precious Metals
+                        {{-- Currencies & Precious Metals --}}
+                        @lang('message.worry-text-green-3')
                     </p>
                 </div>
                 <div>
-                    <p class="worry-text-white2">
-                        Metabase's offer comprises major, minor and 
+                    <p class="worry-text-white2 @if(app()->getLocale() == 'tw') tw-worry-text-white2 @endif">
+                        {{-- Metabase's offer comprises major, minor and 
                         emerging currency pairs as well as precious metals, 
                         allowing you to trade around the clock and take 
                         advantage of opportunities all over the world. We 
                         also provide exclusive research on these assets to 
-                        help you optimize your strategy.
+                        help you optimize your strategy. --}}
+                        @lang('message.worry-text-white2-1')
                     </p>
                 </div>
             </div>
@@ -767,11 +865,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>SYMBOL</th>
-                        <th class="mobile-desc">DESCRIPTIONS</th>
-                        <th>MIN SPREADS (pips)</th>
-                        <th>MIN TRADE SIZE</th>
-                        <th class="mobile-desc">MAX TRADE SIZE</th>
+                        <th>
+                            {{-- SYMBOL --}}
+                            @lang('message.c-symbol')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- DESCRIPTIONS --}}
+                            @lang('message.c-descriptions')
+                        </th>
+                        <th>
+                            {{-- MIN SPREADS (pips) --}}
+                            @lang('message.c-min-speads')
+                        </th>
+                        <th>
+                            {{-- MIN TRADE SIZE --}}
+                            @lang('message.c-min-trade-size')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- MAX TRADE SIZE --}}
+                            @lang('message.c-max-trade-size')
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -992,11 +1105,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>SYMBOL</th>
-                        <th class="mobile-desc">DESCRIPTIONS</th>
-                        <th>MIN SPREADS (pips)</th>
-                        <th>MIN TRADE SIZE</th>
-                        <th class="mobile-desc">MAX TRADE SIZE</th>
+                        <th>
+                            {{-- SYMBOL --}}
+                            @lang('message.c-symbol')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- DESCRIPTIONS --}}
+                            @lang('message.c-descriptions')
+                        </th>
+                        <th>
+                            {{-- MIN SPREADS (pips) --}}
+                            @lang('message.c-min-speads')
+                        </th>
+                        <th>
+                            {{-- MIN TRADE SIZE --}}
+                            @lang('message.c-min-trade-size')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- MAX TRADE SIZE --}}
+                            @lang('message.c-max-trade-size')
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1046,12 +1174,14 @@
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
-                        CFDs Indices
+                        {{-- CFDs Indices --}}
+                        @lang('message.worry-text-green-4')
                     </p>
                 </div>
                 <div>
-                    <p class="worry-text-white2">
-                        Metabase's FX platforms also allow you to trade on the movements of all the main European and American indices, as well as Japan’s. Most of these CFDs are available both as Forward (with an expiration date) or Spot/Synthetic (no expiration date, overnight rollover/swap interest applies).
+                    <p class="worry-text-white2 @if(app()->getLocale() == 'tw') tw-worry-text-white2 @endif">
+                        {{-- Metabase's FX platforms also allow you to trade on the movements of all the main European and American indices, as well as Japan’s. Most of these CFDs are available both as Forward (with an expiration date) or Spot/Synthetic (no expiration date, overnight rollover/swap interest applies). --}}
+                        @lang('message.worry-text-white2-2')
                     </p>
                 </div>
             </div>
@@ -1061,11 +1191,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>SYMBOL</th>
-                        <th class="mobile-desc">DESCRIPTIONS</th>
-                        <th>MIN SPREADS (pips)</th>
-                        <th>MIN TRADE SIZE</th>
-                        <th class="mobile-desc">MAX TRADE SIZE</th>
+                        <th>
+                            {{-- SYMBOL --}}
+                            @lang('message.c-symbol')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- DESCRIPTIONS --}}
+                            @lang('message.c-descriptions')
+                        </th>
+                        <th>
+                            {{-- MIN SPREADS (pips) --}}
+                            @lang('message.c-min-speads')
+                        </th>
+                        <th>
+                            {{-- MIN TRADE SIZE --}}
+                            @lang('message.c-min-trade-size')
+                        </th>
+                        <th class="mobile-desc">
+                            {{-- MAX TRADE SIZE --}}
+                            @lang('message.c-max-trade-size')
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1158,13 +1303,17 @@
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
-                        Stop Out Level
+                        {{-- Stop Out Level --}}
+                        @lang('message.worry-text-green-5')
                     </p>
                 </div>
                 <div>
-                    <p class="worry-text-white3">
-                        Subject to the limitations set forth in the General Terms and Conditions, the Risk Disclosure Statement and the Special Terms and Conditions for Forex to which we draw your attention, Metabase's trading platforms are designed to automatically trigger a liquidation of open positions when the Margin Level ([equity/used margin] x 100) reaches the Stop Out level, which varies depending on the technology you are using (the “Automatic Liquidation System”).   <br><br>
-                        The Automatic Liquidation System has been set up for the sole benefit of Metabase Ltd. While the Automatic Liquidation System aims at avoiding that the Client is losing more than the Forex Margin and while Metabase Ltd will ensure that, in the vast majority of cases, the Automatic Liquidation System is activated as soon as the Liquidation Percentage is reached, it is entitled but not obliged to do so. No warranty is given by Metabase Ltd in this regard. The Client may still suffer a loss much higher than the Forex Margin.
+                    <p class="worry-text-white3 @if(app()->getLocale() == 'tw') tw-worry-text-white3 @endif">
+                        {{-- Subject to the limitations set forth in the General Terms and Conditions, the Risk Disclosure Statement and the Special Terms and Conditions for Forex to which we draw your attention, Metabase's trading platforms are designed to automatically trigger a liquidation of open positions when the Margin Level ([equity/used margin] x 100) reaches the Stop Out level, which varies depending on the technology you are using (the “Automatic Liquidation System”).    --}}
+                        @lang('message.worry-text-white3-1')
+                        <br><br>
+                        {{-- The Automatic Liquidation System has been set up for the sole benefit of Metabase Ltd. While the Automatic Liquidation System aims at avoiding that the Client is losing more than the Forex Margin and while Metabase Ltd will ensure that, in the vast majority of cases, the Automatic Liquidation System is activated as soon as the Liquidation Percentage is reached, it is entitled but not obliged to do so. No warranty is given by Metabase Ltd in this regard. The Client may still suffer a loss much higher than the Forex Margin. --}}
+                        @lang('message.worry-text-white3-2')
                     </p>
                 </div>
             </div>
@@ -1174,13 +1323,17 @@
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
-                        Risk Warning
+                        {{-- Risk Warning --}}
+                        @lang('message.worry-text-green-6')
                     </p>
                 </div>
                 <div>
-                    <p class="worry-text-white3">
-                        The content of this guide is purely informative and does not constitute an offer or a recommendation to trade a specific product and is not to be understood as a piece of advice of any sort, in particular regarding trading, tax and legal questions. The information or opinion regarding a product expressed in this guide do not take into consideration the investment objectives, the assets, the experience or the knowledge of a single investor.   <br><br>
-                        Metabase Ltd and its employees shall in no event be liable for damages or losses arising directly or indirectly from decisions made on the basis of the content of this guide. The content of this guide was produced by Metabase Ltd as per the current date and may be subject to change without prior notification. Although the content of this guide has been obtained from and is based upon sources that Metabase Ltd believes to be reliable, Metabase Ltd assumes no responsibility for the quality, correctness, timeliness or completeness of the content of this guide. This guide may not be reproduced in part or full without the written prior consent of Metabase Ltd.  Forex transactions are highly speculative, involve an extreme degree of risk and are generally suitable only for persons who can assume and sustain a risk of loss in excess of their Forex margin. Forex transactions may, by their nature, generate losses that are in theory unlimited. In the absence of prior intervention, the loss could greatly exceed all the client's assets deposited with the Metabase Ltd.
+                    <p class="worry-text-white3 @if(app()->getLocale() == 'tw') tw-worry-text-white3 @endif">
+                        {{-- The content of this guide is purely informative and does not constitute an offer or a recommendation to trade a specific product and is not to be understood as a piece of advice of any sort, in particular regarding trading, tax and legal questions. The information or opinion regarding a product expressed in this guide do not take into consideration the investment objectives, the assets, the experience or the knowledge of a single investor.    --}}
+                        @lang('message.worry-text-white3-3')
+                        <br><br>
+                        {{-- Metabase Ltd and its employees shall in no event be liable for damages or losses arising directly or indirectly from decisions made on the basis of the content of this guide. The content of this guide was produced by Metabase Ltd as per the current date and may be subject to change without prior notification. Although the content of this guide has been obtained from and is based upon sources that Metabase Ltd believes to be reliable, Metabase Ltd assumes no responsibility for the quality, correctness, timeliness or completeness of the content of this guide. This guide may not be reproduced in part or full without the written prior consent of Metabase Ltd.  Forex transactions are highly speculative, involve an extreme degree of risk and are generally suitable only for persons who can assume and sustain a risk of loss in excess of their Forex margin. Forex transactions may, by their nature, generate losses that are in theory unlimited. In the absence of prior intervention, the loss could greatly exceed all the client's assets deposited with the Metabase Ltd. --}}
+                        @lang('message.worry-text-white3-4')
                     </p>
                 </div>
             </div>
@@ -1194,7 +1347,9 @@
 
         <div class="trading13 mobile-ml-mr">
             <div class="wheat-container">
-                <p class="open-text">OPEN YOUR INVESTMENT ACCOUNT</p>
+                <p class="open-text">{{-- OPEN YOUR INVESTMENT ACCOUNT --}}
+                    @lang('message.c-open-text')
+                </p>
             </div>
         </div>
 
@@ -1209,14 +1364,28 @@
                     <img src="assets/image/company/apple-mobile-new.svg" class="app-dark-mobile">
                     <img src="assets/image/company/window-mobile-new.svg" class="app-dark-mobile app-window">
                 </div>
-                <div>
+                <div class="flex content-center">
                     <p class="aldy-text">
-                        Already have a friend at Metabase?<br>
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
-                    <p class="aldy-text-mobile">
-                        Already have a friend at Metabase?
-                        Ask them for their referral code so you both get <span class="span-text-grn">USD$100.00 - Rewards!</span>
+                    <p class="aldy-text-mobile @if(app()->getLocale() == 'tw') tw-aldy-text-mobile @endif">
+                        {{-- Already have a friend at Metabase? --}}
+                        @lang('message.aldy-text-1')
+                        <br>
+                        {{-- Ask them for their referral code so you both get  --}}
+                        @lang('message.aldy-text-2')
+                        <span class="span-text-grn">
+                            {{-- USD$100.00 - Rewards! --}}
+                            @lang('message.aldy-text-3')
+                        </span>
                     </p>
                 </div>
             </div>
@@ -1226,25 +1395,54 @@
             <div class="flex flex-col">
                 <div>
                     <p class="worry-text-green">
-                        Disclaimer - Forex Trading Losses
+                        {{-- Disclaimer - Fo/rex Trading Losses --}}
+                        @lang('message.worry-text-green-7')
                     </p>
                 </div>
                 <div>
                     <p class="worry-text-white3">
-                        <span class="disclaimer-text-white">This disclaimer aims to clarify the following matters:</span>
+                        <span class="disclaimer-text-white">
+                            {{-- This disclaimer aims to clarify the following matters: --}}
+                            @lang('message.disclaimer-text-white')
+                        </span>
                         <ol class="numbered-list">
-                            <li>Risks of Forex Trading: The Forex trading market involves high volatility and may lead to investment losses. Forex investment is a high-risk activity that may result in the loss of invested capital.</li>
-                            <li>Individual Differences: Each investor has different risk tolerance and investment objectives. Performance in Forex trading will vary due to individual differences.</li>
-                            <li>Disclaimer: This company is not responsible for any Forex trading losses incurred by investors. All risks and losses in Forex trading will be borne by the investors.</li>
-                            <li>Consultation and Education: This company encourages investors to seek independent financial and legal advice to understand the risks and legal responsibilities associated with Forex trading.</li>
-                            <li>Investor Decision: Investors bear ultimate responsibility for their Forex trading decisions. Investors should carefully consider risks and only invest funds they can afford to lose.</li>
-                            <li>Risk Management: Investors should take appropriate risk management measures, including stop-loss orders, to mitigate potential losses.</li>
-                            <li>Trading Results: The results of Forex trading may vary due to market fluctuations. Past performance does not guarantee future results.</li>
-                            <li>Market Manipulation: Investors are not allowed to engage in any market manipulation activities, including but not limited to manipulating prices, spreading false information, or abusing market rules.</li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Risks of Forex Trading: The Forex trading market involves high volatility and may lead to investment losses. Forex investment is a high-risk activity that may result in the loss of invested capital. --}}
+                                @lang('message.numbered-list-1')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Individual Differences: Each investor has different risk tolerance and investment objectives. Performance in Forex trading will vary due to individual differences. --}}
+                                @lang('message.numbered-list-2')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Disclaimer: This company is not responsible for any Forex trading losses incurred by investors. All risks and losses in Forex trading will be borne by the investors. --}}
+                                @lang('message.numbered-list-3')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Consultation and Education: This company encourages investors to seek independent financial and legal advice to understand the risks and legal responsibilities associated with Forex trading. --}}
+                                @lang('message.numbered-list-4')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Investor Decision: Investors bear ultimate responsibility for their Forex trading decisions. Investors should carefully consider risks and only invest funds they can afford to lose. --}}
+                                @lang('message.numbered-list-5')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Risk Management: Investors should take appropriate risk management measures, including stop-loss orders, to mitigate potential losses. --}}
+                                @lang('message.numbered-list-6')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Trading Results: The results of Forex trading may vary due to market fluctuations. Past performance does not guarantee future results. --}}
+                                @lang('message.numbered-list-7')
+                            </li>
+                            <li class="@if(app()->getLocale() == 'tw') tw-numbered-list @endif">
+                                {{-- Market Manipulation: Investors are not allowed to engage in any market manipulation activities, including but not limited to manipulating prices, spreading false information, or abusing market rules. --}}
+                                @lang('message.numbered-list-8')
+                            </li>
                         </ol>
                         <span class="note-text">
-                            Please note that this company does not provide any guarantees or representations, either express or implied, regarding the success or failure of Forex trading results or any specific investment strategy. Investors should carefully read and understand these risks before engaging in Forex trading and seek professional advice when necessary.
-                        </span> 
+                            {{-- Please note that this company does not provide any guarantees or representations, either express or implied, regarding the success or failure of Forex trading results or any specific investment strategy. Investors should carefully read and understand these risks before engaging in Forex trading and seek professional advice when necessary. --}}
+                            @lang('message.note-text')
+                        </span>  
                     </p>
                 </div>
             </div>
