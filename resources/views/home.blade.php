@@ -660,10 +660,10 @@
         .marquee-content {
             white-space: nowrap;
             display: flex;
+            display: -webkit-flex;
             animation: marquee-animation 150s linear infinite;
             /* width: fit-content; Adjust the width based on your image size */
             gap: 25px;
-            transform: translate3d(0, 0, 0);
         }
         .marquee-item {
             flex-shrink: 0; /* Prevent items from shrinking */
@@ -769,7 +769,7 @@
         }
         .overlay-text-mobile2 {
             position: absolute;
-            top: 60%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
@@ -904,7 +904,7 @@
         .confidence-text {
             font-size: 32px;
             line-height: 30px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .taking-word {
             font-size: 14px;
@@ -1091,6 +1091,9 @@
             line-height: 16px; 
             font-size: 12px;
             width: 100%;
+        }
+        .overlay-text-mobile2.tw-overlay-text-mobile2 {
+            top: 75%;
         }
     }
 </style>
@@ -1441,7 +1444,7 @@
                     </p>
                 </div>
                 <div>
-                    <div class="flex flex-col gap-26">
+                    <div class="flex flex-col gap-15">
                         <div>
                             <p class="ourcore-word @if(app()->getLocale() == 'tw') tw-ourcore-word @endif">
                                 {{-- Our Core  --}}
@@ -1523,10 +1526,11 @@
                     <img src="assets/image/home/std.svg" class="std-border">
                     <p class="std-word-purple">
                         {{-- STANDARD --}}
-                        @lang('message.c-std-word-purple')
-                        <br> 
+                        {{-- @lang('message.c-std-word-purple') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.standard_account')
                     </p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
@@ -1539,10 +1543,11 @@
                     <img src="assets/image/home/ecn.svg" class="ecn-border">
                     <p class="std-word-orange">
                         {{-- ECN --}}
-                        @lang('message.c-std-word-orange')
-                        <br> 
+                        {{-- @lang('message.c-std-word-orange') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.ecn_account')
                     </p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
@@ -1555,10 +1560,11 @@
                     <img src="assets/image/home/esaving.svg" class="esaving-border">
                     <p class="std-word-green">
                         {{-- eSAVING --}}
-                        @lang('message.c-std-word-green')
-                        <br> 
+                        {{-- @lang('message.c-std-word-green') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.esaving_account')
                     </p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
@@ -1571,10 +1577,11 @@
                     <img src="assets/image/home/einvest.svg" class="einvest-border">
                     <p class="std-word-blue">
                         {{-- eINVEST --}}
-                        @lang('message.c-std-word-blue')
-                        <br> 
+                        {{-- @lang('message.c-std-word-blue') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.einvest_account')
                     </p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows
@@ -1593,10 +1600,11 @@
                     <img src="assets/image/home/std-mobile.svg" class="std-border">
                     <p class="std-word-purple">
                         {{-- STANDARD --}}
-                        @lang('message.c-std-word-purple')
-                        <br> 
+                        {{-- @lang('message.c-std-word-purple') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.standard_account')
                     </p>
                     {{-- <p class="std-word-text">
                         STANDARD account is
@@ -1609,10 +1617,11 @@
                     <img src="assets/image/home/ecn-mobile.svg" class="ecn-border">
                     <p class="std-word-orange">
                         {{-- ECN --}}
-                        @lang('message.c-std-word-orange')
-                        <br> 
+                        {{-- @lang('message.c-std-word-orange') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.ecn_account')
                     </p>
                     {{-- <p class="std-word-text" style="width: 115px">
                         ECN account obtain
@@ -1625,10 +1634,11 @@
                     <img src="assets/image/home/esaving-mobile.svg" class="esaving-border">
                     <p class="std-word-green">
                         {{-- eSAVING --}}
-                        @lang('message.c-std-word-green')
-                        <br> 
+                        {{-- @lang('message.c-std-word-green') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.esaving_account')
                     </p>
                     {{-- <p class="std-word-text">
                         eSAVING account is
@@ -1641,10 +1651,11 @@
                     <img src="assets/image/home/einvest-mobile.svg" class="einvest-border">
                     <p class="std-word-blue">
                         {{-- eINVEST --}}
-                        @lang('message.c-std-word-blue')
-                        <br> 
+                        {{-- @lang('message.c-std-word-blue') --}}
+                        {{-- <br>  --}}
                         {{-- ACCOUNT --}}
-                        @lang('message.c-account')
+                        {{-- @lang('message.c-account') --}}
+                        @lang('message.einvest_account')
                     </p>
                     {{-- <p class="std-word-text">
                         eINVEST account allows
@@ -1710,7 +1721,7 @@
         <img src="assets/image/home/idk-mobile.png" alt="" class="idk-img-mobile">
         <img src="assets/image/home/idk-mobile-dark.png" alt="" class="idk-img-mobile-dark">
         <div class="main-content-image-mobile mobile-ml-mr">
-            <div class="overlay-text-mobile2">
+            <div class="overlay-text-mobile2 @if(app()->getLocale() == 'tw') tw-overlay-text-mobile2 @endif">
                 <div class="flex flex-col mobile-ml-mr">
                     <p class="confidence-text">
                         {{-- Confidence is an attitude. --}}

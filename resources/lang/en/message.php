@@ -38,6 +38,13 @@ return[
     'c-log-in-to-your' => 'LOG IN TO YOUR',
     'close' => 'Close',
 
+    'c-log-in-to-your-portal' => 'LOG IN TO YOUR PORTAL',
+
+    'standard_account' => 'STANDARD ACCOUNT',
+    'ecn_account' => 'ECN<br>ACCOUNT',
+    'esaving_account' => 'eSAVING<br>ACCOUNT',
+    'einvest_account' => 'eINVEST<br>ACCOUNT',
+
     // footer
     'footer-description-1' => 'Metabase establish in 2022.',
     'footer-description-2' => 'It committed to delivering a comprehensive

@@ -585,7 +585,7 @@
                                 <span>@lang('message.c-register') <br> @lang('message.c-live-account')</span>
                             </button>
                             <button class="btn-green-mobile">
-                                <span>@lang('message.c-log-in-to-your')<br> @lang('message.c-portal')</span>
+                                <span>@lang('message.c-log-in-to-your-portal') </span>
                             </button>
                         </div>
             

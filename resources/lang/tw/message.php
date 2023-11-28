@@ -38,6 +38,13 @@ return[
     'c-log-in-to-your' => '登入您的',
     'close' => '關閉',
 
+    'c-log-in-to-your-portal' => '登入您的<br>個人後台',
+
+    'standard_account' => '標準<br>交易賬戶',
+    'ecn_account' => 'ECN<br>交易賬戶',
+    'esaving_account' => '儲蓄計劃<br>賬戶',
+    'einvest_account' => '投資計畫<br>交易賬戶',
+
     // footer
     'footer-description-1' => '邁達倍成立於2022年。',
     'footer-description-2' => '我們致力於為全球外匯
