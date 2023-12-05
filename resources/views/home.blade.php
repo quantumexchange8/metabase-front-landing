@@ -446,7 +446,7 @@
     }
     .span-text-grn {
         color: #5CA346;
-        font-family: SF Pro Display;
+        font-family: SF Pro Text;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
