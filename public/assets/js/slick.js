@@ -25,4 +25,14 @@ $(document).ready(function(){
         infinite: true,
         dots: true,
       });
+      $('.marquee-slick-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 5000, // Adjust the speed as needed
+        autoplaySpeed: 0, // Set to 0 for continuous scrolling
+        cssEase: 'linear', // Use linear easing for a smooth marquee effect
+        variableWidth: true,
+      });
 });

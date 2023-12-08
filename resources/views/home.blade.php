@@ -650,6 +650,7 @@
         .home1-mobile {
             display: block;
             margin-bottom: 50px;
+            width: 100%;
         }
         .marquee1 {
             overflow: hidden;
@@ -1095,6 +1096,10 @@
         .overlay-text-mobile2.tw-overlay-text-mobile2 {
             top: 75%;
         }
+        .slick-slide {
+            margin-right: 29px; /* Adjust the value to set the desired gap */
+        }
+
     }
 </style>
 
@@ -1259,71 +1264,65 @@
         </div>
 
         <div class="home1-mobile">
-            <div class="marquee1">
-                <div class="marquee-content">
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/04.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- FOREX --}}
-                                @lang('message.c-forex')
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/07.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- METALS --}}
-                                @lang('message.c-metals')
-                            </p>
-                        </div>
+            <div class="marquee-slick-slider">
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/04.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- FOREX --}}
+                            @lang('message.c-forex')
+                        </p>
                     </div>
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/05.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- ENERGY --}}
-                                @lang('message.c-energy')
-                            </p>
-                        </div>
+                </div>
+
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/07.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- METALS --}}
+                            @lang('message.c-metals')
+                        </p>
                     </div>
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/06.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- COMMODITIES --}}
-                                @lang('message.c-commodities')
-                            </p>
-                        </div>
+                </div>
+
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/05.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- ENERGY --}}
+                            @lang('message.c-energy')
+                        </p>
                     </div>
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/03.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- STOCKS --}}
-                                @lang('message.c-stocks')
-                            </p>
-                        </div>
+                </div>
+
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/06.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- COMMODITIES --}}
+                            @lang('message.c-commodities')
+                        </p>
                     </div>
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/01.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- CRYPTO --}}
-                                @lang('message.c-crypto')
-                            </p>
-                        </div>
+                </div>
+
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/03.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- STOCKS --}}
+                            @lang('message.c-stocks')
+                        </p>
                     </div>
-                    <div class="marquee-item">
-                        <div class="flex flex-col item">
-                            <img src="/assets/image/home/08.png" class="invest-img">
-                            <p class="invest-word">
-                                {{-- INDICES --}}
-                                @lang('message.c-indices')
-                            </p>
-                        </div>
+                </div>
+
+                <div class="marquee-slider-item">
+                    <div class="flex flex-col item">
+                        <img src="/assets/image/home/08.png" class="invest-img">
+                        <p class="invest-word">
+                            {{-- INDICES --}}
+                            @lang('message.c-indices')
+                        </p>
                     </div>
                 </div>
             </div>
